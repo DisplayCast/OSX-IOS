@@ -1,0 +1,26 @@
+dependencies: \
+  /Volumes/chandra/Src/DisplayCast/Utilities/xmppframework/Extensions/XEP-0054/XMPPvCardTemp.m \
+  /Volumes/chandra/Src/DisplayCast/Utilities/xmppframework/Extensions/XEP-0054/XMPPvCardTemp.h \
+  /Volumes/chandra/Src/DisplayCast/Utilities/xmppframework/Core/XMPPIQ.h \
+  /Volumes/chandra/Src/DisplayCast/Utilities/xmppframework/Core/XMPPElement.h \
+  /Volumes/chandra/Src/DisplayCast/Utilities/xmppframework/Core/XMPPJID.h \
+  /Volumes/chandra/Src/DisplayCast/Utilities/xmppframework/Extensions/Roster/XMPPUser.h \
+  /Volumes/chandra/Src/DisplayCast/Utilities/xmppframework/Core/XMPP.h \
+  /Volumes/chandra/Src/DisplayCast/Utilities/xmppframework/Core/XMPPStream.h \
+  /Volumes/chandra/Src/DisplayCast/Utilities/xmppframework/Vendor/CocoaAsyncSocket/GCDAsyncSocket.h \
+  /Volumes/chandra/Src/DisplayCast/Utilities/xmppframework/Utilities/GCDMulticastDelegate.h \
+  /Volumes/chandra/Src/DisplayCast/Utilities/xmppframework/Core/XMPPMessage.h \
+  /Volumes/chandra/Src/DisplayCast/Utilities/xmppframework/Core/XMPPPresence.h \
+  /Volumes/chandra/Src/DisplayCast/Utilities/xmppframework/Core/XMPPModule.h \
+  /Volumes/chandra/Src/DisplayCast/Utilities/xmppframework/Categories/NSXMLElement+XMPP.h \
+  /Volumes/chandra/Src/DisplayCast/Utilities/xmppframework/Extensions/XEP-0054/XMPPvCardTempAdr.h \
+  /Volumes/chandra/Src/DisplayCast/Utilities/xmppframework/Extensions/XEP-0054/XMPPvCardTempAdrTypes.h \
+  /Volumes/chandra/Src/DisplayCast/Utilities/xmppframework/Extensions/XEP-0054/XMPPvCardTempBase.h \
+  /Volumes/chandra/Src/DisplayCast/Utilities/xmppframework/Extensions/XEP-0054/XMPPvCardTempEmail.h \
+  /Volumes/chandra/Src/DisplayCast/Utilities/xmppframework/Extensions/XEP-0054/XMPPvCardTempLabel.h \
+  /Volumes/chandra/Src/DisplayCast/Utilities/xmppframework/Extensions/XEP-0054/XMPPvCardTempTel.h \
+  /Volumes/chandra/Src/DisplayCast/Utilities/xmppframework/Core/XMPPLogging.h \
+  /Volumes/chandra/Src/DisplayCast/Utilities/xmppframework/Vendor/CocoaLumberjack/DDLog.h \
+  /Volumes/chandra/Src/DisplayCast/Utilities/xmppframework/Categories/NSData+XMPP.h \
+  /Volumes/chandra/Src/DisplayCast/Utilities/xmppframework/Extensions/XEP-0082/XMPPDateTimeProfiles.h \
+  /Volumes/chandra/Src/DisplayCast/Utilities/xmppframework/Extensions/XEP-0082/NSDate+XMPPDateTimeProfiles.h

@@ -1,0 +1,552 @@
+TPlayer
+v5
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Info.plist Player/Player-Info.plist
+cProcessPCH /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Player-Prefix-hhswdlbdsxkqkxgocbvehoirdjtd/Player-Prefix.pch.pth Player/Player-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Player-Prefix-bhmyrwbesjgjxzggkjdkyhebkvda/Player-Prefix.pch.pth Player/Player-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.analyzer
+cAnalyze /Volumes/chandra/Src/DisplayCast/OSX/Player/main.m
+cAnalyze /Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.m
+cAnalyze /Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerAppDelegate.m
+cAnalyze /Volumes/chandra/Src/DisplayCast/OSX/Player/MenuEntry.m
+cCompileC build/OSX.build/Release/Player.build/Objects-normal/x86_64/main.o /Volumes/chandra/Src/DisplayCast/OSX/Player/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/OSX.build/Release/Player.build/Objects-normal/x86_64/PlayerListing.o /Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/OSX.build/Release/Player.build/Objects-normal/x86_64/PlayerAppDelegate.o /Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerAppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/OSX.build/Release/Player.build/Objects-normal/x86_64/MenuEntry.o /Volumes/chandra/Src/DisplayCast/OSX/Player/MenuEntry.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/OSX.build/Release/Player.build/Objects-normal/x86_64/GetUniqueID.o /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cAnalyze /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m
+cLd /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/MacOS/Player normal x86_64
+cCompileXIB /Volumes/chandra/Src/DisplayCast/OSX/Player/../Player/en.lproj/PlayerMenu.xib
+cCpResource Images/Archiver.icns build/Release/Player.app/Contents/Resources/Archiver.icns
+cCopyTiffFile /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Resources/icon.tiff Player/icon.tiff
+cCpResource Images/Player.icns build/Release/Player.app/Contents/Resources/Player.icns
+cCpResource Images/Streamer.icns build/Release/Player.app/Contents/Resources/Streamer.icns
+cCpResource ../README.txt build/Release/Player.app/Contents/Resources/README.txt
+cCpResource ../License.rtf build/Release/Player.app/Contents/Resources/License.rtf
+cCpResource ../Credits.rtf build/Release/Player.app/Contents/Resources/Credits.rtf
+cProcessProductPackaging "/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile" /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/embedded.provisionprofile
+cProcessProductPackaging "/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile" /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/embedded.provisionprofile
+cTouch /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app
+cProcessProductPackaging /Volumes/chandra/Src/DisplayCast/OSX/Player/Player.entitlements /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player.xcent
+cCodeSign /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
+c000000004F7B817900000000000000EE
+t1333494137
+s238
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000004F57E6620000000000002470
+t1331160674
+s9328
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c000000004F57E66200000000000001E5
+t1331160674
+s485
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/IOBluetooth.framework/IOBluetooth
+c000000004F57E6630000000000049FF0
+t1331160675
+s303088
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/libxml2.dylib
+c000000004F57E66900000000000389F4
+t1331160681
+s231924
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/libz.dylib
+c000000004F57E66900000000000043C4
+t1331160681
+s17348
+
+N/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile
+c000000004F6B6B6E0000000000001CC7
+t1332439918
+s7367
+
+N/Volumes/chandra/Src/DisplayCast/OSX/../Credits.rtf
+c000000004FA213760000000000000291
+t1336021878
+s657
+
+N/Volumes/chandra/Src/DisplayCast/OSX/../License.rtf
+c000000004FA19E1300000000000108EA
+t1335991827
+s67818
+
+N/Volumes/chandra/Src/DisplayCast/OSX/../README.txt
+c000000004FA3814A0000000000001618
+t1336115530
+s5656
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Images/Archiver.icns
+c000000004F889FE8000000000002639B
+t1334353896
+s156571
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Images/Player.icns
+c000000004E1B808A00000000000292C0
+t1310425226
+s168640
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Images/Streamer.icns
+c000000004F889F9800000000000202F1
+t1334353816
+s131825
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Player/../Player/en.lproj/PlayerMenu.xib
+c000000004FA44D92000000000002591E
+t1336167826
+s153886
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Player/MenuEntry.h
+c000000004FA232A500000000000001AD
+t1336029861
+s429
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Player/MenuEntry.m
+c000000004FB1538000000000000003F7
+t1337021312
+s1015
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Player/Player-Prefix.pch
+c000000004FA2F5C400000000000000B5
+t1336079812
+s181
+i<Cocoa/Cocoa.h>
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Player/Player.entitlements
+c000000004FB2E2FE00000000000000B5
+t1337123582
+s181
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerAppDelegate.h
+c000000004FA44D6C0000000000000885
+t1336167788
+s2181
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerAppDelegate.m
+c000000004FB2D2C0000000000000EA8D
+t1337119424
+s60045
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.h
+c000000004FA232A50000000000000194
+t1336029861
+s404
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.m
+c000000004FA232A500000000000000EF
+t1336029861
+s239
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Player/icon.tiff
+c000000004EEF80540000000000000A8E
+t1324318804
+s2702
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Player/main.m
+c000000004FA3007000000000000000EE
+t1336082544
+s238
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.h
+c000000004FA232A400000000000000C4
+t1336029860
+s196
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m
+c000000004FB1A34B0000000000000590
+t1337041739
+s1424
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Shared/Globals.h
+c000000004FB4078B0000000000000819
+t1337198475
+s2073
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Objects-normal/x86_64/GetUniqueID.o
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Objects-normal/x86_64/MenuEntry.o
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Objects-normal/x86_64/Player.LinkFileList
+c000000004FB410820000000000000225
+t1337200770
+s549
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Objects-normal/x86_64/PlayerAppDelegate.o
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Objects-normal/x86_64/PlayerListing.o
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Objects-normal/x86_64/main.o
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player.xcent
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/StaticAnalyzer/normal/x86_64/GetUniqueID.plist
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/StaticAnalyzer/normal/x86_64/MenuEntry.plist
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/StaticAnalyzer/normal/x86_64/PlayerAppDelegate.plist
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/StaticAnalyzer/normal/x86_64/PlayerListing.plist
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/StaticAnalyzer/normal/x86_64/main.plist
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Info.plist
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/MacOS/Player
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/PkgInfo
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Resources/Archiver.icns
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Resources/Credits.rtf
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Resources/License.rtf
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Resources/Player.icns
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Resources/README.txt
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Resources/Streamer.icns
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Resources/en.lproj/PlayerMenu.nib
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Resources/icon.tiff
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/embedded.provisionprofile
+t2
+s0
+
+N/var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Player-Prefix-bhmyrwbesjgjxzggkjdkyhebkvda/Player-Prefix.pch.pth
+t2
+s0
+
+N/var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Player-Prefix-hhswdlbdsxkqkxgocbvehoirdjtd/Player-Prefix.pch.pth
+t2
+s0
+
+NPlayer/Player-Info.plist
+c000000004FA2EF050000000000000580
+t1336078085
+s1408
+
+CAnalyze /Volumes/chandra/Src/DisplayCast/OSX/Player/MenuEntry.m
+s358893571.454595
+e358893571.631895
+r1
+xAnalyze
+x/Volumes/chandra/Src/DisplayCast/OSX/Player/MenuEntry.m
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection63"Analyze /Volumes/chandra/Src/DisplayCast/OSX/Player/MenuEntry.m848074034864b541^dbc4a1034864b541^---0#0#0#-19%DVTDocumentLocation2@71"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Player/MenuEntry.m0000000000000000^2764"Analyze Player/MenuEntry.m    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -Xclang -analyzer-disable-checker -Xclang deadcode.IdempotentOperations -Xclang -analyzer-checker -Xclang osx.cocoa.experimental.SelfInit -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-generated-files.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-own-target-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-all-target-headers.hmap -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-project-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Player-Prefix-bhmyrwbesjgjxzggkjdkyhebkvda/Player-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/StaticAnalyzer/normal/x86_64/MenuEntry.d --analyze /Volumes/chandra/Src/DisplayCast/OSX/Player/MenuEntry.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/StaticAnalyzer/normal/x86_64/MenuEntry.plist36"8261693E-F850-4124-8951-A0F7F48D6821-
+
+CAnalyze /Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerAppDelegate.m
+s358893571.227496
+e358893573.672844
+r1
+xAnalyze
+x/Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerAppDelegate.m
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"Analyze /Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerAppDelegate.m2b513a034864b541^1840ac054864b541^---0#0#0#-19%DVTDocumentLocation2@79"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerAppDelegate.m0000000000000000^2796"Analyze Player/PlayerAppDelegate.m    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -Xclang -analyzer-disable-checker -Xclang deadcode.IdempotentOperations -Xclang -analyzer-checker -Xclang osx.cocoa.experimental.SelfInit -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-generated-files.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-own-target-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-all-target-headers.hmap -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-project-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Player-Prefix-bhmyrwbesjgjxzggkjdkyhebkvda/Player-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/StaticAnalyzer/normal/x86_64/PlayerAppDelegate.d --analyze /Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerAppDelegate.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/StaticAnalyzer/normal/x86_64/PlayerAppDelegate.plist36"040892E0-CE85-4CB6-ABE9-C77C66C2B525-
+
+CAnalyze /Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.m
+s358893571.227089
+e358893571.578120
+r1
+xAnalyze
+x/Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.m
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Analyze /Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.m083a3a034864b541^930194034864b541^---0#0#0#-19%DVTDocumentLocation2@75"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.m0000000000000000^2780"Analyze Player/PlayerListing.m    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -Xclang -analyzer-disable-checker -Xclang deadcode.IdempotentOperations -Xclang -analyzer-checker -Xclang osx.cocoa.experimental.SelfInit -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-generated-files.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-own-target-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-all-target-headers.hmap -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-project-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Player-Prefix-bhmyrwbesjgjxzggkjdkyhebkvda/Player-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/StaticAnalyzer/normal/x86_64/PlayerListing.d --analyze /Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/StaticAnalyzer/normal/x86_64/PlayerListing.plist36"A974977E-6F65-4503-9495-A607138BB3BA-
+
+CAnalyze /Volumes/chandra/Src/DisplayCast/OSX/Player/main.m
+s358893571.227084
+e358893571.578911
+r1
+xAnalyze
+x/Volumes/chandra/Src/DisplayCast/OSX/Player/main.m
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"Analyze /Volumes/chandra/Src/DisplayCast/OSX/Player/main.m193a3a034864b541^1a3494034864b541^---0#0#0#-19%DVTDocumentLocation2@66"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Player/main.m0000000000000000^2744"Analyze Player/main.m    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -Xclang -analyzer-disable-checker -Xclang deadcode.IdempotentOperations -Xclang -analyzer-checker -Xclang osx.cocoa.experimental.SelfInit -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-generated-files.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-own-target-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-all-target-headers.hmap -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-project-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Player-Prefix-bhmyrwbesjgjxzggkjdkyhebkvda/Player-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/StaticAnalyzer/normal/x86_64/main.d --analyze /Volumes/chandra/Src/DisplayCast/OSX/Player/main.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/StaticAnalyzer/normal/x86_64/main.plist36"91153564-79CC-4D82-8C45-03D198871C31-
+
+CAnalyze /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m
+s358893571.733884
+e358893571.899985
+r1
+xAnalyze
+x/Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Analyze /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m6c06bc034864b541^5666e6034864b541^---0#0#0#-19%DVTDocumentLocation2@73"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m0000000000000000^2772"Analyze Shared/GetUniqueID.m    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -Xclang -analyzer-disable-checker -Xclang deadcode.IdempotentOperations -Xclang -analyzer-checker -Xclang osx.cocoa.experimental.SelfInit -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-generated-files.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-own-target-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-all-target-headers.hmap -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-project-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Player-Prefix-bhmyrwbesjgjxzggkjdkyhebkvda/Player-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/StaticAnalyzer/normal/x86_64/GetUniqueID.d --analyze /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/StaticAnalyzer/normal/x86_64/GetUniqueID.plist36"C7A47D2F-C795-475C-A27E-98AB6286F57B-
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesb1f938024864b541^94fa76024864b541^---0#1#0#--18"Check dependencies36"77FB909D-FB5F-4B90-93BC-0C48299C0081-
+
+CCodeSign /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app
+s358893573.890826
+e358893574.186250
+r1
+xCodeSign
+x/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection33"CodeSign build/Release/Player.app431be4054864b541^6cb12f064864b541^---0#0#0#-19%DVTDocumentLocation2@78"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/0000000000000000^454"CodeSign build/Release/Player.app    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv CODESIGN_ALLOCATE /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate    /usr/bin/codesign --force --sign 828e24b9d147f915d6fb1378e4ccbc8a3ed1c2bf --entitlements /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player.xcent /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app36"00BC1BA0-DD77-49A0-8884-17EA9E2A15A7-
+
+CCompileC build/OSX.build/Release/Player.build/Objects-normal/x86_64/GetUniqueID.o /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s358893571.655596
+e358893571.749613
+r1
+xCompileC
+xbuild/OSX.build/Release/Player.build/Objects-normal/x86_64/GetUniqueID.o
+x/Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Compile /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m1c3fa8034864b541^4be7bf034864b541^---0#0#0#-19%DVTDocumentLocation2@73"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m0000000000000000^2889"CompileC build/OSX.build/Release/Player.build/Objects-normal/x86_64/GetUniqueID.o Shared/GetUniqueID.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-generated-files.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-own-target-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-all-target-headers.hmap -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-project-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Player-Prefix-hhswdlbdsxkqkxgocbvehoirdjtd/Player-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Objects-normal/x86_64/GetUniqueID.d --serialize-diagnostics /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Objects-normal/x86_64/GetUniqueID.dia -c /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Objects-normal/x86_64/GetUniqueID.o36"2D95543C-D749-4842-8155-558947DC1E24-
+
+CCompileC build/OSX.build/Release/Player.build/Objects-normal/x86_64/MenuEntry.o /Volumes/chandra/Src/DisplayCast/OSX/Player/MenuEntry.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s358893571.646840
+e358893571.732619
+r1
+xCompileC
+xbuild/OSX.build/Release/Player.build/Objects-normal/x86_64/MenuEntry.o
+x/Volumes/chandra/Src/DisplayCast/OSX/Player/MenuEntry.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection63"Compile /Volumes/chandra/Src/DisplayCast/OSX/Player/MenuEntry.md9b1a5034864b541^c495bb034864b541^---0#0#0#-19%DVTDocumentLocation2@71"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Player/MenuEntry.m0000000000000000^2877"CompileC build/OSX.build/Release/Player.build/Objects-normal/x86_64/MenuEntry.o Player/MenuEntry.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-generated-files.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-own-target-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-all-target-headers.hmap -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-project-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Player-Prefix-hhswdlbdsxkqkxgocbvehoirdjtd/Player-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Objects-normal/x86_64/MenuEntry.d --serialize-diagnostics /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Objects-normal/x86_64/MenuEntry.dia -c /Volumes/chandra/Src/DisplayCast/OSX/Player/MenuEntry.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Objects-normal/x86_64/MenuEntry.o36"717116C0-CE0D-4EFB-B793-DB55F01DEC2F-
+
+CCompileC build/OSX.build/Release/Player.build/Objects-normal/x86_64/PlayerAppDelegate.o /Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerAppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s358893571.633232
+e358893571.990263
+r1
+xCompileC
+xbuild/OSX.build/Release/Player.build/Objects-normal/x86_64/PlayerAppDelegate.o
+x/Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerAppDelegate.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"Compile /Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerAppDelegate.m0b41a2034864b541^6b81fd034864b541^---0#0#0#-19%DVTDocumentLocation2@79"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerAppDelegate.m0000000000000000^2925"CompileC build/OSX.build/Release/Player.build/Objects-normal/x86_64/PlayerAppDelegate.o Player/PlayerAppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-generated-files.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-own-target-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-all-target-headers.hmap -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-project-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Player-Prefix-hhswdlbdsxkqkxgocbvehoirdjtd/Player-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Objects-normal/x86_64/PlayerAppDelegate.d --serialize-diagnostics /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Objects-normal/x86_64/PlayerAppDelegate.dia -c /Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerAppDelegate.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Objects-normal/x86_64/PlayerAppDelegate.o36"3E587C7A-CFB8-4F96-95E7-D9AB7DD1FA8F-
+
+CCompileC build/OSX.build/Release/Player.build/Objects-normal/x86_64/PlayerListing.o /Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s358893571.580212
+e358893571.652316
+r1
+xCompileC
+xbuild/OSX.build/Release/Player.build/Objects-normal/x86_64/PlayerListing.o
+x/Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Compile /Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.md6a794034864b541^fcfda6034864b541^---0#0#0#-19%DVTDocumentLocation2@75"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.m0000000000000000^2901"CompileC build/OSX.build/Release/Player.build/Objects-normal/x86_64/PlayerListing.o Player/PlayerListing.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-generated-files.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-own-target-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-all-target-headers.hmap -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-project-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Player-Prefix-hhswdlbdsxkqkxgocbvehoirdjtd/Player-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Objects-normal/x86_64/PlayerListing.d --serialize-diagnostics /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Objects-normal/x86_64/PlayerListing.dia -c /Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Objects-normal/x86_64/PlayerListing.o36"5A088476-BF0D-4C13-A32D-972C8B5B695D-
+
+CCompileC build/OSX.build/Release/Player.build/Objects-normal/x86_64/main.o /Volumes/chandra/Src/DisplayCast/OSX/Player/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s358893571.579406
+e358893571.645572
+r1
+xCompileC
+xbuild/OSX.build/Release/Player.build/Objects-normal/x86_64/main.o
+x/Volumes/chandra/Src/DisplayCast/OSX/Player/main.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"Compile /Volumes/chandra/Src/DisplayCast/OSX/Player/main.m4c8994034864b541^0647a5034864b541^---0#0#0#-19%DVTDocumentLocation2@66"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Player/main.m0000000000000000^2847"CompileC build/OSX.build/Release/Player.build/Objects-normal/x86_64/main.o Player/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-generated-files.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-own-target-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-all-target-headers.hmap -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-project-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Player-Prefix-hhswdlbdsxkqkxgocbvehoirdjtd/Player-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Objects-normal/x86_64/main.dia -c /Volumes/chandra/Src/DisplayCast/OSX/Player/main.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Objects-normal/x86_64/main.o36"A01347BE-6645-4AA1-93A1-F8D2B4FCDF8A-
+
+CCompileXIB /Volumes/chandra/Src/DisplayCast/OSX/Player/../Player/en.lproj/PlayerMenu.xib
+s358893573.681373
+e358893573.797474
+r1
+xCompileXIB
+x/Volumes/chandra/Src/DisplayCast/OSX/Player/../Player/en.lproj/PlayerMenu.xib
+o/* com.apple.ibtool.document.warnings */
+o/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib:655: warning: Full Screen behavior on Mac OS X prior to 10.7 [5]
+o/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib:665: warning: Full Screen behavior on Mac OS X prior to 10.7 [5]
+o/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib:661: warning: Full Screen behavior on Mac OS X prior to 10.7 [5]
+o/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib:657: warning: Full Screen behavior on Mac OS X prior to 10.7 [5]
+o/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib:634: warning: Full Screen behavior on Mac OS X prior to 10.7 [5]
+o/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib:637: warning: Full Screen behavior on Mac OS X prior to 10.7 [5]
+o/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib:705: warning: Full Screen behavior on Mac OS X prior to 10.7 [5]
+o/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib:663: warning: Full Screen behavior on Mac OS X prior to 10.7 [5]
+o/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib:659: warning: Full Screen behavior on Mac OS X prior to 10.7 [5]
+o/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib:639: warning: Full Screen behavior on Mac OS X prior to 10.7 [5]
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compiling /Volumes/chandra/Src/DisplayCast/OSX/Player/../Player/en.lproj/PlayerMenu.xib8789ae054864b541^fa27cc054864b541^-1371"/* com.apple.ibtool.document.warnings *//Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib:655: warning: Full Screen behavior on Mac OS X prior to 10.7 [5]/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib:665: warning: Full Screen behavior on Mac OS X prior to 10.7 [5]/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib:661: warning: Full Screen behavior on Mac OS X prior to 10.7 [5]/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib:657: warning: Full Screen behavior on Mac OS X prior to 10.7 [5]/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib:634: warning: Full Screen behavior on Mac OS X prior to 10.7 [5]/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib:637: warning: Full Screen behavior on Mac OS X prior to 10.7 [5]/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib:705: warning: Full Screen behavior on Mac OS X prior to 10.7 [5]/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib:663: warning: Full Screen behavior on Mac OS X prior to 10.7 [5]/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib:659: warning: Full Screen behavior on Mac OS X prior to 10.7 [5]/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib:639: warning: Full Screen behavior on Mac OS X prior to 10.7 [5]10(21%IDEActivityLogMessage2@46"Full Screen behavior on Mac OS X prior to 10.7-358893573#18446744073709551615#0#-1#-23%DVTTextDocumentLocation3@83"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib0000000000000000^654#18446744073709551615#654#18446744073709551615#18446744073709551615#0#21"Attribute Unavailable--2@46"Full Screen behavior on Mac OS X prior to 10.7-358893573#18446744073709551615#0#-1#-3@83"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib0000000000000000^664#18446744073709551615#664#18446744073709551615#18446744073709551615#0#21"Attribute Unavailable--2@46"Full Screen behavior on Mac OS X prior to 10.7-358893573#18446744073709551615#0#-1#-3@83"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib0000000000000000^660#18446744073709551615#660#18446744073709551615#18446744073709551615#0#21"Attribute Unavailable--2@46"Full Screen behavior on Mac OS X prior to 10.7-358893573#18446744073709551615#0#-1#-3@83"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib0000000000000000^656#18446744073709551615#656#18446744073709551615#18446744073709551615#0#21"Attribute Unavailable--2@46"Full Screen behavior on Mac OS X prior to 10.7-358893573#18446744073709551615#0#-1#-3@83"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib0000000000000000^633#18446744073709551615#633#18446744073709551615#18446744073709551615#0#21"Attribute Unavailable--2@46"Full Screen behavior on Mac OS X prior to 10.7-358893573#18446744073709551615#0#-1#-3@83"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib0000000000000000^636#18446744073709551615#636#18446744073709551615#18446744073709551615#0#21"Attribute Unavailable--2@46"Full Screen behavior on Mac OS X prior to 10.7-358893573#18446744073709551615#0#-1#-3@83"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib0000000000000000^704#18446744073709551615#704#18446744073709551615#18446744073709551615#0#21"Attribute Unavailable--2@46"Full Screen behavior on Mac OS X prior to 10.7-358893573#18446744073709551615#0#-1#-3@83"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib0000000000000000^662#18446744073709551615#662#18446744073709551615#18446744073709551615#0#21"Attribute Unavailable--2@46"Full Screen behavior on Mac OS X prior to 10.7-358893573#18446744073709551615#0#-1#-3@83"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib0000000000000000^658#18446744073709551615#658#18446744073709551615#18446744073709551615#0#21"Attribute Unavailable--2@46"Full Screen behavior on Mac OS X prior to 10.7-358893573#18446744073709551615#0#-1#-3@83"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Player/en.lproj/PlayerMenu.xib0000000000000000^638#18446744073709551615#638#18446744073709551615#18446744073709551615#0#21"Attribute Unavailable--0#0#0#-19%DVTDocumentLocation4@93"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Player/../Player/en.lproj/PlayerMenu.xib0000000000000000^612"CompileXIB Player/../Player/en.lproj/PlayerMenu.xib    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Resources/en.lproj/PlayerMenu.nib /Volumes/chandra/Src/DisplayCast/OSX/Player/../Player/en.lproj/PlayerMenu.xib --sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk36"4A29FC6D-130A-4474-A5D5-6B8049BBA0FF-
+
+CCopyTiffFile /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Resources/icon.tiff Player/icon.tiff
+s358893573.681378
+e358893573.713973
+r1
+xCopyTiffFile
+x/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Resources/icon.tiff
+xPlayer/icon.tiff
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection21"Copy Player/icon.tiff0281ae054864b541^86c7b6054864b541^---0#0#0#-19%DVTDocumentLocation2@69"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Player/icon.tiff0000000000000000^259"CopyTiffFile build/Release/Player.app/Contents/Resources/icon.tiff Player/icon.tiff    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-copyTiff --outdir /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Resources -- Player/icon.tiff36"08C22BC6-4FC1-4EEB-B8E3-0E6070723121-
+
+CCpResource ../Credits.rtf build/Release/Player.app/Contents/Resources/Credits.rtf
+s358893573.733581
+e358893573.742548
+r1
+xCpResource
+x../Credits.rtf
+xbuild/Release/Player.app/Contents/Resources/Credits.rtf
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"Copy build/Release/Player.app/Contents/Resources/Credits.rtf17d8bb054864b541^8e1fbe054864b541^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Resources/Credits.rtf000000000080d041^497"CpResource ../Credits.rtf build/Release/Player.app/Contents/Resources/Credits.rtf    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip /Volumes/chandra/Src/DisplayCast/OSX/../Credits.rtf /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Resources36"A68E97E8-8502-4165-BFA2-47EF270BAB6F-
+
+CCpResource ../License.rtf build/Release/Player.app/Contents/Resources/License.rtf
+s358893573.720065
+e358893573.736995
+r1
+xCpResource
+x../License.rtf
+xbuild/Release/Player.app/Contents/Resources/License.rtf
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"Copy build/Release/Player.app/Contents/Resources/License.rtf0e65b8054864b541^2bbfbc054864b541^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Resources/License.rtf000000000080d041^497"CpResource ../License.rtf build/Release/Player.app/Contents/Resources/License.rtf    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip /Volumes/chandra/Src/DisplayCast/OSX/../License.rtf /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Resources36"C31DF5D5-6CCE-474A-B404-99065F3068D6-
+
+CCpResource ../README.txt build/Release/Player.app/Contents/Resources/README.txt
+s358893573.714683
+e358893573.734024
+r1
+xCpResource
+x../README.txt
+xbuild/Release/Player.app/Contents/Resources/README.txt
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"Copy build/Release/Player.app/Contents/Resources/README.txt8a04b7054864b541^2deabb054864b541^---0#0#0#-19%DVTDocumentLocation2@107"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Resources/README.txt000000000080d041^494"CpResource ../README.txt build/Release/Player.app/Contents/Resources/README.txt    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip /Volumes/chandra/Src/DisplayCast/OSX/../README.txt /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Resources36"EA4C73C2-9670-4E46-A637-EB1BB12650FC-
+
+CCpResource Images/Archiver.icns build/Release/Player.app/Contents/Resources/Archiver.icns
+s358893573.681376
+e358893573.713507
+r1
+xCpResource
+xImages/Archiver.icns
+xbuild/Release/Player.app/Contents/Resources/Archiver.icns
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Copy build/Release/Player.app/Contents/Resources/Archiver.icnse080ae054864b541^b9a8b6054864b541^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Resources/Archiver.icns000000000080d041^511"CpResource Images/Archiver.icns build/Release/Player.app/Contents/Resources/Archiver.icns    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip /Volumes/chandra/Src/DisplayCast/OSX/Images/Archiver.icns /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Resources36"431DF354-C620-46A6-B53B-749FD34AC2B3-
+
+CCpResource Images/Player.icns build/Release/Player.app/Contents/Resources/Player.icns
+s358893573.681572
+e358893573.718850
+r1
+xCpResource
+xImages/Player.icns
+xbuild/Release/Player.app/Contents/Resources/Player.icns
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"Copy build/Release/Player.app/Contents/Resources/Player.icnsfd85ae054864b541^5707b8054864b541^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Resources/Player.icns000000000080d041^505"CpResource Images/Player.icns build/Release/Player.app/Contents/Resources/Player.icns    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip /Volumes/chandra/Src/DisplayCast/OSX/Images/Player.icns /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Resources36"BD82A5F4-2C3D-41B0-B770-EAA5BFA4D0AA-
+
+CCpResource Images/Streamer.icns build/Release/Player.app/Contents/Resources/Streamer.icns
+s358893573.714672
+e358893573.732358
+r1
+xCpResource
+xImages/Streamer.icns
+xbuild/Release/Player.app/Contents/Resources/Streamer.icns
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Copy build/Release/Player.app/Contents/Resources/Streamer.icns7a00b7054864b541^bb7cbb054864b541^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Resources/Streamer.icns000000000080d041^511"CpResource Images/Streamer.icns build/Release/Player.app/Contents/Resources/Streamer.icns    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip /Volumes/chandra/Src/DisplayCast/OSX/Images/Streamer.icns /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Resources36"5462A8E7-A730-4C3F-A4B2-15D849ED7322-
+
+CLd /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/MacOS/Player normal x86_64
+s358893571.997024
+e358893572.077260
+r1
+xLd
+x/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/MacOS/Player
+xnormal
+xx86_64
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Link /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/MacOS/Player0d53ff034864b541^6dc813044864b541^---0#0#0#--764"Ld build/Release/Player.app/Contents/MacOS/Player normal x86_64    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -L/Volumes/chandra/Src/DisplayCast/OSX/build/Release -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -filelist /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Objects-normal/x86_64/Player.LinkFileList -mmacosx-version-min=10.6 -lxml2 -lz -framework Cocoa -framework IOBluetooth -o /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/MacOS/Player36"CD967613-80D9-4044-88CB-ECB641708D63-
+
+CProcessInfoPlistFile /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Info.plist Player/Player-Info.plist
+s358893570.475573
+e358893570.497676
+r1
+xProcessInfoPlistFile
+x/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Info.plist
+xPlayer/Player-Info.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection32"Process Player/Player-Info.plist6cce79024864b541^d3677f024864b541^---0#0#0#-19%DVTDocumentLocation2@77"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Player/Player-Info.plist0000000000000000^403"ProcessInfoPlistFile build/Release/Player.app/Contents/Info.plist Player/Player-Info.plist    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-infoPlistUtility Player/Player-Info.plist -genpkginfo /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/Info.plist36"7496E1F2-CC1C-4439-9055-A1B078F386D6-
+
+CProcessPCH /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Player-Prefix-bhmyrwbesjgjxzggkjdkyhebkvda/Player-Prefix.pch.pth Player/Player-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.analyzer
+s358893570.506118
+e358893571.220076
+r1
+xProcessPCH
+x/var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Player-Prefix-bhmyrwbesjgjxzggkjdkyhebkvda/Player-Prefix.pch.pth
+xPlayer/Player-Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.analyzer
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection35"Precompile Player/Player-Prefix.pchfab581024864b541^5c5738034864b541^---0#0#0#-19%DVTDocumentLocation2@77"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Player/Player-Prefix.pch0000000000000000^2926"ProcessPCH /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Player-Prefix-bhmyrwbesjgjxzggkjdkyhebkvda/Player-Prefix.pch.pth Player/Player-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.analyzer    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -Xclang -analyzer-disable-checker -Xclang deadcode.IdempotentOperations -Xclang -analyzer-checker -Xclang osx.cocoa.experimental.SelfInit -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-generated-files.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-own-target-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-all-target-headers.hmap -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-project-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -c /Volumes/chandra/Src/DisplayCast/OSX/Player/Player-Prefix.pch -o /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Player-Prefix-bhmyrwbesjgjxzggkjdkyhebkvda/Player-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Player-Prefix-bhmyrwbesjgjxzggkjdkyhebkvda/Player-Prefix.pch.d36"E6C0EF42-D8F3-401A-8F1F-B681C2F2F19A-
+
+CProcessPCH /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Player-Prefix-hhswdlbdsxkqkxgocbvehoirdjtd/Player-Prefix.pch.pth Player/Player-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s358893570.506117
+e358893571.453345
+r1
+xProcessPCH
+x/var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Player-Prefix-hhswdlbdsxkqkxgocbvehoirdjtd/Player-Prefix.pch.pth
+xPlayer/Player-Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection35"Precompile Player/Player-Prefix.pche9b581024864b541^130f74034864b541^---0#0#0#-19%DVTDocumentLocation2@77"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Player/Player-Prefix.pch0000000000000000^2971"ProcessPCH /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Player-Prefix-hhswdlbdsxkqkxgocbvehoirdjtd/Player-Prefix.pch.pth Player/Player-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-generated-files.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-own-target-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-all-target-headers.hmap -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player-project-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release --serialize-diagnostics /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Player-Prefix-hhswdlbdsxkqkxgocbvehoirdjtd/Player-Prefix.pch.dia -c /Volumes/chandra/Src/DisplayCast/OSX/Player/Player-Prefix.pch -o /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Player-Prefix-hhswdlbdsxkqkxgocbvehoirdjtd/Player-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Player-Prefix-hhswdlbdsxkqkxgocbvehoirdjtd/Player-Prefix.pch.d36"77D4C58A-EA1D-4E3D-B821-F151F1370DD5-
+
+CProcessProductPackaging "/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile" /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/embedded.provisionprofile
+s358893573.827334
+e358893573.840426
+r1
+xProcessProductPackaging
+x/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile
+x/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/embedded.provisionprofile
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection197"ProcessProductPackaging "/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile" build/Release/Player.app/Contents/embedded.provisionprofile83ded3054864b541^3e25d7054864b541^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/embedded.provisionprofile0000000000000000^492"ProcessProductPackaging "/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile" build/Release/Player.app/Contents/embedded.provisionprofile    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-productPackagingUtility "/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile" -o /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app/Contents/embedded.provisionprofile36"79BD66B0-B425-495A-AEAD-4E704978FA1D-
+
+CProcessProductPackaging /Volumes/chandra/Src/DisplayCast/OSX/Player/Player.entitlements /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player.xcent
+s358893573.863469
+e358893573.882878
+r1
+xProcessProductPackaging
+x/Volumes/chandra/Src/DisplayCast/OSX/Player/Player.entitlements
+x/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player.xcent
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"ProcessProductPackaging Player/Player.entitlements build/OSX.build/Release/Player.build/Player.xcenta018dd054864b541^c004e2054864b541^---0#0#0#-19%DVTDocumentLocation2@102"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player.xcent000000000080d041^361"ProcessProductPackaging Player/Player.entitlements build/OSX.build/Release/Player.build/Player.xcent    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-productPackagingUtility /Volumes/chandra/Src/DisplayCast/OSX/Player/Player.entitlements -entitlements -format xml -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Player.build/Player.xcent36"0E071311-CC2F-4938-8A53-73287C7C9A5B-
+
+CTouch /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app
+s358893573.847852
+e358893573.854100
+r1
+xTouch
+x/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Touch /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app2a1cd9054864b541^8fa6da054864b541^---0#0#0#--159"Touch build/Release/Player.app    cd /Volumes/chandra/Src/DisplayCast/OSX    /usr/bin/touch -c /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Player.app36"758F45D8-35E0-4360-8805-5B9F208A27EE-
+

@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Archiver' target in the 'Archiver' project
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+#endif

@@ -1,0 +1,538 @@
+TArchiver
+v5
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Info.plist Archiver/Archiver-Info.plist
+cCompileC build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/main.o /Volumes/chandra/Src/DisplayCast/OSX/Archiver/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/PlayerListing.o /Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/ArchiverAppDelegate.o /Volumes/chandra/Src/DisplayCast/OSX/Archiver/ArchiverAppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/OCR.o /Volumes/chandra/Src/DisplayCast/OSX/Archiver/OCR.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/GetUniqueID.o /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/Archiver_vers.o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources/Archiver_vers.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cAnalyze /Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.m
+cAnalyze /Volumes/chandra/Src/DisplayCast/OSX/Archiver/main.m
+cAnalyze /Volumes/chandra/Src/DisplayCast/OSX/Archiver/ArchiverAppDelegate.m
+cAnalyze /Volumes/chandra/Src/DisplayCast/OSX/Archiver/OCR.m
+cAnalyze /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m
+cLd /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/MacOS/Archiver normal x86_64
+cCompileXIB /Volumes/chandra/Src/DisplayCast/OSX/Archiver/en.lproj/ArchiverMenu.xib
+cCpResource Images/Archiver.icns build/Release/Archiver.app/Contents/Resources/Archiver.icns
+cCopyStringsFile /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Resources/en.lproj/InfoPlist.strings Archiver/en.lproj/InfoPlist.strings
+cCpResource Images/Player.icns build/Release/Archiver.app/Contents/Resources/Player.icns
+cCpResource Images/Streamer.icns build/Release/Archiver.app/Contents/Resources/Streamer.icns
+cCpResource ../README.txt build/Release/Archiver.app/Contents/Resources/README.txt
+cCpResource ../License.rtf build/Release/Archiver.app/Contents/Resources/License.rtf
+cCpResource ../Credits.rtf build/Release/Archiver.app/Contents/Resources/Credits.rtf
+cProcessProductPackaging "/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile" /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/embedded.provisionprofile
+cProcessProductPackaging "/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile" /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/embedded.provisionprofile
+cTouch /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app
+cProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Entitlements.plist /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Archiver.xcent
+cCodeSign /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
+c000000004F7B817900000000000000EE
+t1333494137
+s238
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+c000000004F57E6620000000000068C50
+t1331160674
+s429136
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000004F57E6620000000000002470
+t1331160674
+s9328
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c000000004F57E66200000000000001E5
+t1331160674
+s485
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/CoreMedia.framework/CoreMedia
+c000000004F57E6630000000000029918
+t1331160675
+s170264
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/CoreVideo.framework/CoreVideo
+c000000004F57E6630000000000016044
+t1331160675
+s90180
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
+c000000004F57E666000000000002B934
+t1331160678
+s178484
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/libz.dylib
+c000000004F57E66900000000000043C4
+t1331160681
+s17348
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Entitlements.plist
+c000000004F57E66A0000000000000127
+t1331160682
+s295
+
+N/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile
+c000000004F6B6B6E0000000000001CC7
+t1332439918
+s7367
+
+N/Volumes/chandra/Src/DisplayCast/OSX/../Credits.rtf
+c000000004FA213760000000000000291
+t1336021878
+s657
+
+N/Volumes/chandra/Src/DisplayCast/OSX/../License.rtf
+c000000004FA19E1300000000000108EA
+t1335991827
+s67818
+
+N/Volumes/chandra/Src/DisplayCast/OSX/../README.txt
+c000000004FA3814A0000000000001618
+t1336115530
+s5656
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Archiver/Archiver-Prefix.pch
+c000000004E7B9B1D0000000000000090
+t1316723485
+s144
+i<Cocoa/Cocoa.h>
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Archiver/ArchiverAppDelegate.h
+c000000004FA232A50000000000000545
+t1336029861
+s1349
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Archiver/ArchiverAppDelegate.m
+c000000004FB2D87E000000000000D420
+t1337120894
+s54304
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Archiver/OCR.h
+c000000004FA232A5000000000000025B
+t1336029861
+s603
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Archiver/OCR.m
+c000000004FA232A400000000000001E1
+t1336029860
+s481
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Archiver/en.lproj/ArchiverMenu.xib
+c000000004E976084000000000001B6AC
+t1318543492
+s112300
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Archiver/en.lproj/InfoPlist.strings
+c000000004E7B9B1D000000000000002D
+t1316723485
+s45
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Archiver/main.m
+c000000004FA232A400000000000000F4
+t1336029860
+s244
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Images/Archiver.icns
+c000000004F889FE8000000000002639B
+t1334353896
+s156571
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Images/Player.icns
+c000000004E1B808A00000000000292C0
+t1310425226
+s168640
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Images/Streamer.icns
+c000000004F889F9800000000000202F1
+t1334353816
+s131825
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.h
+c000000004FA232A50000000000000194
+t1336029861
+s404
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.m
+c000000004FA232A500000000000000EF
+t1336029861
+s239
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.h
+c000000004FA232A400000000000000C4
+t1336029860
+s196
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m
+c000000004FB1A34B0000000000000590
+t1337041739
+s1424
+
+N/Volumes/chandra/Src/DisplayCast/OSX/Shared/Globals.h
+c000000004FB4078B0000000000000819
+t1337198475
+s2073
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Archiver.xcent
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources/Archiver_vers.c
+c000000004FB4108800000000000000B9
+t1337200776
+s185
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/Archiver.LinkFileList
+c000000004FB41088000000000000029D
+t1337200776
+s669
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/ArchiverAppDelegate.o
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/Archiver_vers.o
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/GetUniqueID.o
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/OCR.o
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/PlayerListing.o
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/main.o
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/StaticAnalyzer/normal/x86_64/ArchiverAppDelegate.plist
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/StaticAnalyzer/normal/x86_64/GetUniqueID.plist
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/StaticAnalyzer/normal/x86_64/OCR.plist
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/StaticAnalyzer/normal/x86_64/PlayerListing.plist
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/StaticAnalyzer/normal/x86_64/main.plist
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Info.plist
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/MacOS/Archiver
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/PkgInfo
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Resources/Archiver.icns
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Resources/Credits.rtf
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Resources/License.rtf
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Resources/Player.icns
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Resources/README.txt
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Resources/Streamer.icns
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Resources/en.lproj/ArchiverMenu.nib
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Resources/en.lproj/InfoPlist.strings
+t2
+s0
+
+N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/embedded.provisionprofile
+t2
+s0
+
+NArchiver/Archiver-Info.plist
+c000000004FA2EF0F00000000000004C7
+t1336078095
+s1223
+
+CAnalyze /Volumes/chandra/Src/DisplayCast/OSX/Archiver/ArchiverAppDelegate.m
+s358893577.134153
+e358893579.546937
+r1
+xAnalyze
+x/Volumes/chandra/Src/DisplayCast/OSX/Archiver/ArchiverAppDelegate.m
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Analyze /Volumes/chandra/Src/DisplayCast/OSX/Archiver/ArchiverAppDelegate.mea7a22094864b541^86048c0b4864b541^---0#0#0#-19%DVTDocumentLocation2@83"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Archiver/ArchiverAppDelegate.m0000000000000000^2408"Analyze Archiver/ArchiverAppDelegate.m    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -Xclang -analyzer-disable-checker -Xclang deadcode.IdempotentOperations -Xclang -analyzer-checker -Xclang osx.cocoa.experimental.SelfInit -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Archiver.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /Volumes/chandra/Src/DisplayCast/OSX/Archiver/Archiver-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/StaticAnalyzer/normal/x86_64/ArchiverAppDelegate.d --analyze /Volumes/chandra/Src/DisplayCast/OSX/Archiver/ArchiverAppDelegate.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/StaticAnalyzer/normal/x86_64/ArchiverAppDelegate.plist36"B1D51D21-86CD-4060-8F30-505D7DF20BBE-
+
+CAnalyze /Volumes/chandra/Src/DisplayCast/OSX/Archiver/OCR.m
+s358893577.177656
+e358893577.664603
+r1
+xAnalyze
+x/Volumes/chandra/Src/DisplayCast/OSX/Archiver/OCR.m
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"Analyze /Volumes/chandra/Src/DisplayCast/OSX/Archiver/OCR.m209a2d094864b541^3524aa094864b541^---0#0#0#-19%DVTDocumentLocation2@67"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Archiver/OCR.m0000000000000000^2344"Analyze Archiver/OCR.m    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -Xclang -analyzer-disable-checker -Xclang deadcode.IdempotentOperations -Xclang -analyzer-checker -Xclang osx.cocoa.experimental.SelfInit -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Archiver.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /Volumes/chandra/Src/DisplayCast/OSX/Archiver/Archiver-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/StaticAnalyzer/normal/x86_64/OCR.d --analyze /Volumes/chandra/Src/DisplayCast/OSX/Archiver/OCR.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/StaticAnalyzer/normal/x86_64/OCR.plist36"B3A78429-0288-441A-8CF3-237D62F66E63-
+
+CAnalyze /Volumes/chandra/Src/DisplayCast/OSX/Archiver/main.m
+s358893576.663965
+e358893577.207623
+r1
+xAnalyze
+x/Volumes/chandra/Src/DisplayCast/OSX/Archiver/main.m
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"Analyze /Volumes/chandra/Src/DisplayCast/OSX/Archiver/main.m151caa084864b541^dc2935094864b541^---0#0#0#-19%DVTDocumentLocation2@68"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Archiver/main.m0000000000000000^2348"Analyze Archiver/main.m    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -Xclang -analyzer-disable-checker -Xclang deadcode.IdempotentOperations -Xclang -analyzer-checker -Xclang osx.cocoa.experimental.SelfInit -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Archiver.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /Volumes/chandra/Src/DisplayCast/OSX/Archiver/Archiver-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/StaticAnalyzer/normal/x86_64/main.d --analyze /Volumes/chandra/Src/DisplayCast/OSX/Archiver/main.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/StaticAnalyzer/normal/x86_64/main.plist36"2824EAF3-E8FB-4EC9-AD7B-7F48877EB7D9-
+
+CAnalyze /Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.m
+s358893576.630929
+e358893577.176388
+r1
+xAnalyze
+x/Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.m
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Analyze /Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.mb5a6a1084864b541^4c372d094864b541^---0#0#0#-19%DVTDocumentLocation2@75"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.m0000000000000000^2380"Analyze Player/PlayerListing.m    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -Xclang -analyzer-disable-checker -Xclang deadcode.IdempotentOperations -Xclang -analyzer-checker -Xclang osx.cocoa.experimental.SelfInit -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Archiver.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /Volumes/chandra/Src/DisplayCast/OSX/Archiver/Archiver-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/StaticAnalyzer/normal/x86_64/PlayerListing.d --analyze /Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/StaticAnalyzer/normal/x86_64/PlayerListing.plist36"D46D38BB-6DFC-452E-8D17-0FBE09ADA805-
+
+CAnalyze /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m
+s358893577.189706
+e358893577.666516
+r1
+xAnalyze
+x/Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Analyze /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m43ae30094864b541^c7a1aa094864b541^---0#0#0#-19%DVTDocumentLocation2@73"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m0000000000000000^2372"Analyze Shared/GetUniqueID.m    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -Xclang -analyzer-disable-checker -Xclang deadcode.IdempotentOperations -Xclang -analyzer-checker -Xclang osx.cocoa.experimental.SelfInit -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Archiver.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /Volumes/chandra/Src/DisplayCast/OSX/Archiver/Archiver-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/StaticAnalyzer/normal/x86_64/GetUniqueID.d --analyze /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/StaticAnalyzer/normal/x86_64/GetUniqueID.plist36"4D757527-AF3D-43C5-AA25-8A578F81D8F0-
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies47e4b3074864b541^7b84ea074864b541^---0#1#0#--18"Check dependencies36"472753E1-5098-4B87-92B9-55C1F82C6742-
+
+CCodeSign /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app
+s358893579.920824
+e358893580.224003
+r1
+xCodeSign
+x/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection35"CodeSign build/Release/Archiver.app69c9eb0b4864b541^675f390c4864b541^---0#0#0#-19%DVTDocumentLocation2@80"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/0000000000000000^462"CodeSign build/Release/Archiver.app    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv CODESIGN_ALLOCATE /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate    /usr/bin/codesign --force --sign 828e24b9d147f915d6fb1378e4ccbc8a3ed1c2bf --entitlements /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Archiver.xcent /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app36"89BDD1DC-EA13-4128-AE24-6A3A47CEE750-
+
+CCompileC build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/ArchiverAppDelegate.o /Volumes/chandra/Src/DisplayCast/OSX/Archiver/ArchiverAppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s358893575.961561
+e358893577.132281
+r1
+xCompileC
+xbuild/OSX.build/Release/Archiver.build/Objects-normal/x86_64/ArchiverAppDelegate.o
+x/Volumes/chandra/Src/DisplayCast/OSX/Archiver/ArchiverAppDelegate.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Volumes/chandra/Src/DisplayCast/OSX/Archiver/ArchiverAppDelegate.mb550f6074864b541^68ea21094864b541^---0#0#0#-19%DVTDocumentLocation2@83"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Archiver/ArchiverAppDelegate.m0000000000000000^2545"CompileC build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/ArchiverAppDelegate.o Archiver/ArchiverAppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Archiver.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /Volumes/chandra/Src/DisplayCast/OSX/Archiver/Archiver-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/ArchiverAppDelegate.d --serialize-diagnostics /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/ArchiverAppDelegate.dia -c /Volumes/chandra/Src/DisplayCast/OSX/Archiver/ArchiverAppDelegate.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/ArchiverAppDelegate.o36"0871C63F-663A-4946-A337-10389C0D15B3-
+
+CCompileC build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/Archiver_vers.o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources/Archiver_vers.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s358893576.623938
+e358893576.661635
+r1
+xCompileC
+xbuild/OSX.build/Release/Archiver.build/Objects-normal/x86_64/Archiver_vers.o
+x/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources/Archiver_vers.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection114"Compile /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources/Archiver_vers.cd7da9f084864b541^9a5fa9084864b541^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources/Archiver_vers.c0000000000000000^2189"CompileC build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/Archiver_vers.o build/OSX.build/Release/Archiver.build/DerivedSources/Archiver_vers.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-conversion -Wno-sign-conversion -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Archiver.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/Archiver_vers.d --serialize-diagnostics /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/Archiver_vers.dia -c /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources/Archiver_vers.c -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/Archiver_vers.o36"321EF719-3C63-408E-B286-D1237AE0C454-
+
+CCompileC build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/GetUniqueID.o /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s358893576.615552
+e358893577.188437
+r1
+xCompileC
+xbuild/OSX.build/Release/Archiver.build/Objects-normal/x86_64/GetUniqueID.o
+x/Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Compile /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m62bd9d084864b541^624e30094864b541^---0#0#0#-19%DVTDocumentLocation2@73"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m0000000000000000^2493"CompileC build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/GetUniqueID.o Shared/GetUniqueID.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Archiver.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /Volumes/chandra/Src/DisplayCast/OSX/Archiver/Archiver-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/GetUniqueID.d --serialize-diagnostics /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/GetUniqueID.dia -c /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/GetUniqueID.o36"DA4A0CF2-E842-48B4-BA9A-C351C53786BD-
+
+CCompileC build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/OCR.o /Volumes/chandra/Src/DisplayCast/OSX/Archiver/OCR.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s358893575.961662
+e358893576.629727
+r1
+xCompileC
+xbuild/OSX.build/Release/Archiver.build/Objects-normal/x86_64/OCR.o
+x/Volumes/chandra/Src/DisplayCast/OSX/Archiver/OCR.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"Compile /Volumes/chandra/Src/DisplayCast/OSX/Archiver/OCR.ma54cf6074864b541^0438a1084864b541^---0#0#0#-19%DVTDocumentLocation2@67"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Archiver/OCR.m0000000000000000^2449"CompileC build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/OCR.o Archiver/OCR.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Archiver.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /Volumes/chandra/Src/DisplayCast/OSX/Archiver/Archiver-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/OCR.d --serialize-diagnostics /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/OCR.dia -c /Volumes/chandra/Src/DisplayCast/OSX/Archiver/OCR.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/OCR.o36"74C4DDB3-AB73-4A66-B89C-40FCF27EF7BB-
+
+CCompileC build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/PlayerListing.o /Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s358893575.961358
+e358893576.622581
+r1
+xCompileC
+xbuild/OSX.build/Release/Archiver.build/Objects-normal/x86_64/PlayerListing.o
+x/Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Compile /Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.m274af6074864b541^46619f084864b541^---0#0#0#-19%DVTDocumentLocation2@75"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.m0000000000000000^2505"CompileC build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/PlayerListing.o Player/PlayerListing.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Archiver.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /Volumes/chandra/Src/DisplayCast/OSX/Archiver/Archiver-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/PlayerListing.d --serialize-diagnostics /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/PlayerListing.dia -c /Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/PlayerListing.o36"2531D3B2-D750-4C4B-8680-3B48B098E89A-
+
+CCompileC build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/main.o /Volumes/chandra/Src/DisplayCast/OSX/Archiver/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s358893575.961355
+e358893576.614275
+r1
+xCompileC
+xbuild/OSX.build/Release/Archiver.build/Objects-normal/x86_64/main.o
+x/Volumes/chandra/Src/DisplayCast/OSX/Archiver/main.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"Compile /Volumes/chandra/Src/DisplayCast/OSX/Archiver/main.m7c42f6074864b541^d13f9d084864b541^---0#0#0#-19%DVTDocumentLocation2@68"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Archiver/main.m0000000000000000^2455"CompileC build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/main.o Archiver/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Archiver.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /Volumes/chandra/Src/DisplayCast/OSX/Archiver/Archiver-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/main.dia -c /Volumes/chandra/Src/DisplayCast/OSX/Archiver/main.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/main.o36"C729D210-3353-48E1-A507-E04824E501BE-
+
+CCompileXIB /Volumes/chandra/Src/DisplayCast/OSX/Archiver/en.lproj/ArchiverMenu.xib
+s358893579.554947
+e358893579.835789
+r1
+xCompileXIB
+x/Volumes/chandra/Src/DisplayCast/OSX/Archiver/en.lproj/ArchiverMenu.xib
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compiling /Volumes/chandra/Src/DisplayCast/OSX/Archiver/en.lproj/ArchiverMenu.xibe1278e0b4864b541^2e1ad60b4864b541^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Archiver/en.lproj/ArchiverMenu.xib0000000000000000^604"CompileXIB Archiver/en.lproj/ArchiverMenu.xib    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Resources/en.lproj/ArchiverMenu.nib /Volumes/chandra/Src/DisplayCast/OSX/Archiver/en.lproj/ArchiverMenu.xib --sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk36"98A0A649-D318-4B2B-BE70-29B32555714D-
+
+CCopyStringsFile /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Resources/en.lproj/InfoPlist.strings Archiver/en.lproj/InfoPlist.strings
+s358893579.554958
+e358893579.617459
+r1
+xCopyStringsFile
+x/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Resources/en.lproj/InfoPlist.strings
+xArchiver/en.lproj/InfoPlist.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection40"Copy Archiver/en.lproj/InfoPlist.strings03248e0b4864b541^e8129e0b4864b541^---0#0#0#-19%DVTDocumentLocation2@88"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Archiver/en.lproj/InfoPlist.strings0000000000000000^390"CopyStringsFile build/Release/Archiver.app/Contents/Resources/en.lproj/InfoPlist.strings Archiver/en.lproj/InfoPlist.strings    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding UTF-16 --outdir /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Resources/en.lproj -- Archiver/en.lproj/InfoPlist.strings36"890131C1-C5C2-451D-A2B7-E011B377761D-
+
+CCpResource ../Credits.rtf build/Release/Archiver.app/Contents/Resources/Credits.rtf
+s358893579.626720
+e358893579.639050
+r1
+xCpResource
+x../Credits.rtf
+xbuild/Release/Archiver.app/Contents/Resources/Credits.rtf
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Copy build/Release/Archiver.app/Contents/Resources/Credits.rtffe7fa00b4864b541^3d99a30b4864b541^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Resources/Credits.rtf000000000080d041^501"CpResource ../Credits.rtf build/Release/Archiver.app/Contents/Resources/Credits.rtf    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip /Volumes/chandra/Src/DisplayCast/OSX/../Credits.rtf /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Resources36"2A57028B-1D60-4B6D-9EE7-CAF626FD3CB1-
+
+CCpResource ../License.rtf build/Release/Archiver.app/Contents/Resources/License.rtf
+s358893579.621386
+e358893579.634492
+r1
+xCpResource
+x../License.rtf
+xbuild/Release/Archiver.app/Contents/Resources/License.rtf
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Copy build/Release/Archiver.app/Contents/Resources/License.rtf91299f0b4864b541^1e6fa20b4864b541^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Resources/License.rtf000000000080d041^501"CpResource ../License.rtf build/Release/Archiver.app/Contents/Resources/License.rtf    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip /Volumes/chandra/Src/DisplayCast/OSX/../License.rtf /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Resources36"4085ECEC-14C3-4D52-8881-677F4D06CF42-
+
+CCpResource ../README.txt build/Release/Archiver.app/Contents/Resources/README.txt
+s358893579.615081
+e358893579.631527
+r1
+xCpResource
+x../README.txt
+xbuild/Release/Archiver.app/Contents/Resources/README.txt
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Copy build/Release/Archiver.app/Contents/Resources/README.txte3889d0b4864b541^f3aba10b4864b541^---0#0#0#-19%DVTDocumentLocation2@109"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Resources/README.txt000000000080d041^498"CpResource ../README.txt build/Release/Archiver.app/Contents/Resources/README.txt    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip /Volumes/chandra/Src/DisplayCast/OSX/../README.txt /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Resources36"971BB4DE-50F5-48AA-BEEC-7029BD084D20-
+
+CCpResource Images/Archiver.icns build/Release/Archiver.app/Contents/Resources/Archiver.icns
+s358893579.554953
+e358893579.602568
+r1
+xCpResource
+xImages/Archiver.icns
+xbuild/Release/Archiver.app/Contents/Resources/Archiver.icns
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Copy build/Release/Archiver.app/Contents/Resources/Archiver.icns8b338e0b4864b541^304c9a0b4864b541^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Resources/Archiver.icns000000000080d041^515"CpResource Images/Archiver.icns build/Release/Archiver.app/Contents/Resources/Archiver.icns    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip /Volumes/chandra/Src/DisplayCast/OSX/Images/Archiver.icns /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Resources36"A3CFDD46-028E-4DEC-8632-E9D1565926E3-
+
+CCpResource Images/Player.icns build/Release/Archiver.app/Contents/Resources/Player.icns
+s358893579.555156
+e358893579.583348
+r1
+xCpResource
+xImages/Player.icns
+xbuild/Release/Archiver.app/Contents/Resources/Player.icns
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Copy build/Release/Archiver.app/Contents/Resources/Player.icns48338e0b4864b541^315c950b4864b541^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Resources/Player.icns000000000080d041^509"CpResource Images/Player.icns build/Release/Archiver.app/Contents/Resources/Player.icns    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip /Volumes/chandra/Src/DisplayCast/OSX/Images/Player.icns /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Resources36"4E8FB7DB-81F7-45A2-A33A-AB87E32104D8-
+
+CCpResource Images/Streamer.icns build/Release/Archiver.app/Contents/Resources/Streamer.icns
+s358893579.584603
+e358893579.625505
+r1
+xCpResource
+xImages/Streamer.icns
+xbuild/Release/Archiver.app/Contents/Resources/Streamer.icns
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Copy build/Release/Archiver.app/Contents/Resources/Streamer.icnsc7b9950b4864b541^1422a00b4864b541^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Resources/Streamer.icns000000000080d041^515"CpResource Images/Streamer.icns build/Release/Archiver.app/Contents/Resources/Streamer.icns    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip /Volumes/chandra/Src/DisplayCast/OSX/Images/Streamer.icns /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Resources36"10F658C6-A01F-4035-9D11-AEE733A578E6-
+
+CLd /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/MacOS/Archiver normal x86_64
+s358893577.208824
+e358893577.314580
+r1
+xLd
+x/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/MacOS/Archiver
+xnormal
+xx86_64
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Link /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/MacOS/Archiverd28c35094864b541^109350094864b541^---0#0#0#--854"Ld build/Release/Archiver.app/Contents/MacOS/Archiver normal x86_64    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv MACOSX_DEPLOYMENT_TARGET 10.7    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -L/Volumes/chandra/Src/DisplayCast/OSX/build/Release -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -filelist /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Objects-normal/x86_64/Archiver.LinkFileList -mmacosx-version-min=10.7 -fobjc-arc -lz -framework SystemConfiguration -framework CoreMedia -framework AVFoundation -framework CoreVideo -framework Cocoa -o /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/MacOS/Archiver36"4D5325FD-953C-433E-A135-5B8A893C8217-
+
+CProcessInfoPlistFile /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Info.plist Archiver/Archiver-Info.plist
+s358893575.925340
+e358893575.948205
+r1
+xProcessInfoPlistFile
+x/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Info.plist
+xArchiver/Archiver-Info.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Process Archiver/Archiver-Info.plist49f6ec074864b541^7253f3074864b541^---0#0#0#-19%DVTDocumentLocation2@81"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Archiver/Archiver-Info.plist0000000000000000^417"ProcessInfoPlistFile build/Release/Archiver.app/Contents/Info.plist Archiver/Archiver-Info.plist    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-infoPlistUtility Archiver/Archiver-Info.plist -genpkginfo /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/Info.plist36"CF4A719C-C894-4A52-9FE2-59FB9B9A4E7A-
+
+CProcessProductPackaging "/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile" /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/embedded.provisionprofile
+s358893579.863624
+e358893579.875722
+r1
+xProcessProductPackaging
+x/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile
+x/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/embedded.provisionprofile
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection199"ProcessProductPackaging "/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile" build/Release/Archiver.app/Contents/embedded.provisionprofile7829dd0b4864b541^992ee00b4864b541^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/embedded.provisionprofile0000000000000000^496"ProcessProductPackaging "/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile" build/Release/Archiver.app/Contents/embedded.provisionprofile    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-productPackagingUtility "/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile" -o /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app/Contents/embedded.provisionprofile36"B9B673B3-8D8E-4F9D-B253-378AC9ECC718-
+
+CProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Entitlements.plist /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Archiver.xcent
+s358893579.897642
+e358893579.911722
+r1
+xProcessProductPackaging
+x/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Entitlements.plist
+x/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Archiver.xcent
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection165"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Entitlements.plist build/OSX.build/Release/Archiver.build/Archiver.xcentaddae50b4864b541^cf66e90b4864b541^---0#0#0#-19%DVTDocumentLocation2@106"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Archiver.xcent000000000080d041^454"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Entitlements.plist build/OSX.build/Release/Archiver.build/Archiver.xcent    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-productPackagingUtility /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Entitlements.plist -entitlements -format xml -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Archiver.build/Archiver.xcent36"081C53BB-8D25-4EDB-A875-AB297B0D4A4E-
+
+CTouch /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app
+s358893579.883695
+e358893579.889665
+r1
+xTouch
+x/Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Touch /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.appdc47e20b4864b541^9cc1e30b4864b541^---0#0#0#--163"Touch build/Release/Archiver.app    cd /Volumes/chandra/Src/DisplayCast/OSX    /usr/bin/touch -c /Volumes/chandra/Src/DisplayCast/OSX/build/Release/Archiver.app36"78199372-F31A-4859-9DD1-279FA649FBCA-
+
