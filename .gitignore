@@ -18,3 +18,5 @@ OSX/build/OSX.build/Release/.DS_Store
 OSX/Packager/build_debug/DisplayCast.pkg
 
 OSX/build/Release/.DS_Store
+
+OSX/Utilities/xmppframework
