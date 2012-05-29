@@ -1,22 +1,28 @@
-
 DisplayCast.xcworkspace/xcuserdata/chandra.xcuserdatad/UserInterfaceState.xcuserstate
-
-OSX/build/OSX.build/.DS_Store
-
-DisplayCast.xcworkspace/xcuserdata/chandra.xcuserdatad/UserInterfaceState.xcuserstate
-
-OSX/Archiver/.DS_Store
-
-OSX/Player/.DS_Store
-
-OSX/Player/.afpDeleted30897927
-
-OSX/Preferences/.DS_Store
-
-OSX/build/OSX.build/Release/.DS_Store
 
 OSX/Packager/build_debug/DisplayCast.pkg
 
-OSX/build/Release/.DS_Store
+OSX/Packager/Installers/DisplayCast.dmg
 
-OSX/Utilities/xmppframework
+OSX/build/*
+
+.DS_Store
+.git/.DS_Store
+OSX/.DS_Store
+OSX/Archiver/.DS_Store
+OSX/Packager/.DS_Store
+OSX/Player/.DS_Store
+OSX/Preferences/.DS_Store
+OSX/Streamer/.DS_Store
+OSX/Streamer/PrefsPane/.DS_Store
+OSX/Utilities/.DS_Store
+OSX/Utilities/xmppframework/.DS_Store
+OSX/Utilities/xmppframework/Vendor/.DS_Store
+OSX/Utilities/xmppframework/Xcode/.DS_Store
+OSX/Utilities/xmppframework/Xcode/DesktopXMPP/.DS_Store
+OSX/build/.DS_Store
+OSX/build/OSX.build/.DS_Store
+OSX/build/OSX.build/Release/.DS_Store
+OSX/build/Release/.DS_Store
+iOS/.DS_Store
+iOS/Player/.DS_Store
