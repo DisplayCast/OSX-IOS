@@ -100,7 +100,6 @@
 		762FD03D1539357D00BBA23A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7601E6A0145F6E7300A75829 /* CoreLocation.framework */; };
 		762FD03E1539359100BBA23A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7601E522145A352400A75829 /* Security.framework */; };
 		762FD040153935C100BBA23A /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7601E591145A367800A75829 /* libresolv.dylib */; };
-		762FD0411539364900BBA23A /* libidn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7602C8BD14D0C10B00BB0686 /* libidn.a */; };
 		763E40C4141AE67200B0FD3F /* Streamer.m in Sources */ = {isa = PBXBuildFile; fileRef = 763E40C3141AE67200B0FD3F /* Streamer.m */; };
 		7648EF6F141FF1060088F833 /* MenuEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 7648EF6E141FF1050088F833 /* MenuEntry.m */; };
 		76514C021422960000FEA92B /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76EEDAA8142120F400A306E1 /* PreferencePanes.framework */; };
@@ -119,6 +118,19 @@
 		766BF66A15642BAC0088E361 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 766BF66815642BAC0088E361 /* Credits.rtf */; };
 		766BF66B15642BAC0088E361 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 766BF66815642BAC0088E361 /* Credits.rtf */; };
 		766BF66C15642BAC0088E361 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 766BF66815642BAC0088E361 /* Credits.rtf */; };
+		76A61AED15656B3300564A86 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FF750113CA5F4600633C80 /* libz.dylib */; };
+		76A61B1B15656C0D00564A86 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A61B1A15656C0D00564A86 /* Cocoa.framework */; };
+		76A61B1D15656F0000564A86 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A61B1C15656F0000564A86 /* CFNetwork.framework */; };
+		76A61B1F15656F2600564A86 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A61B1E15656F2600564A86 /* CoreGraphics.framework */; };
+		76A61B2015656F3F00564A86 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A61B1A15656C0D00564A86 /* Cocoa.framework */; };
+		76A61B2115656F6D00564A86 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F74D2C142BD2DF00F2A647 /* CoreMedia.framework */; };
+		76A61B231565703E00564A86 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A61B221565703E00564A86 /* SystemConfiguration.framework */; };
+		76A61B241565710100564A86 /* libidn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7602C8BD14D0C10B00BB0686 /* libidn.a */; };
+		76A61B261565714600564A86 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A61B251565714600564A86 /* ImageIO.framework */; };
+		76A61B281565743300564A86 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A61B271565743300564A86 /* CoreServices.framework */; };
+		76A61B2B15657C1500564A86 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A61B1C15656F0000564A86 /* CFNetwork.framework */; };
+		76A61B2C15657C3C00564A86 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A61B1A15656C0D00564A86 /* Cocoa.framework */; };
+		76A61B2D15657C4A00564A86 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FF750113CA5F4600633C80 /* libz.dylib */; };
 		76A807E515511D0400EAB544 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 76A807E415511D0400EAB544 /* main.c */; };
 		76B2374C14A3B98500A0B3FF /* IOBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B2374B14A3B98500A0B3FF /* IOBluetooth.framework */; };
 		76B2374E14A3B99000A0B3FF /* IOBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B2374B14A3B98500A0B3FF /* IOBluetooth.framework */; };
@@ -143,7 +155,6 @@
 		76F74D29142BD2C100F2A647 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F74D28142BD2C100F2A647 /* CoreVideo.framework */; };
 		76F74D2B142BD2CD00F2A647 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F74D2A142BD2CD00F2A647 /* AVFoundation.framework */; };
 		76F74D2D142BD2DF00F2A647 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F74D2C142BD2DF00F2A647 /* CoreMedia.framework */; };
-		76FDC1E41541C93A000FA5B3 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FDC1E31541C93A000FA5B3 /* libxml2.dylib */; };
 		76FF74DB13CA5E2E00633C80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FF74DA13CA5E2E00633C80 /* main.m */; };
 		76FF74E113CA5E2E00633C80 /* StreamerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FF74E013CA5E2E00633C80 /* StreamerAppDelegate.m */; };
 		76FF750213CA5F4600633C80 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FF750113CA5F4600633C80 /* libz.dylib */; };
@@ -353,6 +364,13 @@
 		768354BC13D40AFE0000F224 /* InstallerPlugins.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InstallerPlugins.framework; path = System/Library/Frameworks/InstallerPlugins.framework; sourceTree = SDKROOT; };
 		76A417D5142C0F3C0010C39C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ArchiverMenu.xib; sourceTree = "<group>"; };
 		76A417D8142C100F0010C39C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = Player/en.lproj/PlayerMenu.xib; sourceTree = "<group>"; };
+		76A61B1A15656C0D00564A86 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		76A61B1C15656F0000564A86 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		76A61B1E15656F2600564A86 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		76A61B221565703E00564A86 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		76A61B251565714600564A86 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		76A61B271565743300564A86 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		76A61B2E15657C8A00564A86 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		76A807E415511D0400EAB544 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		76A807E615511D0400EAB544 /* All.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = All.1; sourceTree = "<group>"; };
 		76B2374B14A3B98500A0B3FF /* IOBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetooth.framework; path = System/Library/Frameworks/IOBluetooth.framework; sourceTree = SDKROOT; };
@@ -417,9 +435,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76A61B1B15656C0D00564A86 /* Cocoa.framework in Frameworks */,
 				76F74D2D142BD2DF00F2A647 /* CoreMedia.framework in Frameworks */,
 				76F74D2B142BD2CD00F2A647 /* AVFoundation.framework in Frameworks */,
 				76F74D29142BD2C100F2A647 /* CoreVideo.framework in Frameworks */,
+				76A61AED15656B3300564A86 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,8 +447,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76FDC1E41541C93A000FA5B3 /* libxml2.dylib in Frameworks */,
+				76A61B2C15657C3C00564A86 /* Cocoa.framework in Frameworks */,
+				76A61B2B15657C1500564A86 /* CFNetwork.framework in Frameworks */,
 				76B2374E14A3B99000A0B3FF /* IOBluetooth.framework in Frameworks */,
+				76A61B2D15657C4A00564A86 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,11 +458,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76A61B281565743300564A86 /* CoreServices.framework in Frameworks */,
+				76A61B261565714600564A86 /* ImageIO.framework in Frameworks */,
+				76A61B1F15656F2600564A86 /* CoreGraphics.framework in Frameworks */,
+				76A61B231565703E00564A86 /* SystemConfiguration.framework in Frameworks */,
+				76A61B2115656F6D00564A86 /* CoreMedia.framework in Frameworks */,
+				76A61B2015656F3F00564A86 /* Cocoa.framework in Frameworks */,
+				762FD03D1539357D00BBA23A /* CoreLocation.framework in Frameworks */,
+				76A61B1D15656F0000564A86 /* CFNetwork.framework in Frameworks */,
 				76B2374C14A3B98500A0B3FF /* IOBluetooth.framework in Frameworks */,
 				762FD03E1539359100BBA23A /* Security.framework in Frameworks */,
-				762FD03D1539357D00BBA23A /* CoreLocation.framework in Frameworks */,
+				76A61B241565710100564A86 /* libidn.a in Frameworks */,
 				762FD040153935C100BBA23A /* libresolv.dylib in Frameworks */,
-				762FD0411539364900BBA23A /* libidn.a in Frameworks */,
 				76FF750213CA5F4600633C80 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -998,6 +1027,13 @@
 		76FF74CC13CA5E2E00633C80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				76A61B2E15657C8A00564A86 /* libz.1.2.5.dylib */,
+				76A61B271565743300564A86 /* CoreServices.framework */,
+				76A61B251565714600564A86 /* ImageIO.framework */,
+				76A61B221565703E00564A86 /* SystemConfiguration.framework */,
+				76A61B1E15656F2600564A86 /* CoreGraphics.framework */,
+				76A61B1C15656F0000564A86 /* CFNetwork.framework */,
+				76A61B1A15656C0D00564A86 /* Cocoa.framework */,
 				7601E6A0145F6E7300A75829 /* CoreLocation.framework */,
 				76F74D28142BD2C100F2A647 /* CoreVideo.framework */,
 				7617B38F154A094E00C5A355 /* CoreGraphics.framework */,
@@ -1158,7 +1194,7 @@
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = "FX Palo Alto Lab. Inc.";
 			};
 			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "OSX" */;
@@ -1572,7 +1608,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = DisplayCast;
 				PROVISIONING_PROFILE = "";
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = prefPane;
 			};
 			name = Debug;
@@ -1595,7 +1631,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = DisplayCast;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = prefPane;
 			};
 			name = Release;
@@ -1621,7 +1657,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1643,7 +1679,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1652,7 +1688,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_OBJCPP_ARC_ABI = NO;
 				CLANG_X86_VECTOR_INSTRUCTIONS = default;
@@ -1662,7 +1698,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_ENABLE_SSE3_EXTENSIONS = NO;
 				GCC_ENABLE_SSE42_EXTENSIONS = "";
-				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "Archiver/Archiver-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1675,7 +1711,7 @@
 				INFOPLIST_FILE = "Archiver/Archiver-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = macosx;
@@ -1689,7 +1725,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_OBJCPP_ARC_ABI = NO;
 				CLANG_X86_VECTOR_INSTRUCTIONS = default;
@@ -1699,7 +1735,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_ENABLE_SSE3_EXTENSIONS = NO;
 				GCC_ENABLE_SSE42_EXTENSIONS = "";
-				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "Archiver/Archiver-Prefix.pch";
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
@@ -1708,7 +1744,7 @@
 				INFOPLIST_FILE = "Archiver/Archiver-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = macosx;
@@ -1725,7 +1761,7 @@
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = Player/Player.entitlements;
 				COPY_PHASE_STRIP = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_ENABLE_SSE3_EXTENSIONS = NO;
@@ -1736,7 +1772,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = "";
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
 				INFOPLIST_FILE = "Player/Player-Info.plist";
 				INSTALL_PATH = /Applications/FXPAL;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -1756,7 +1792,7 @@
 				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = Player/Player.entitlements;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_ENABLE_SSE3_EXTENSIONS = NO;
@@ -1766,7 +1802,7 @@
 				GCC_PREFIX_HEADER = "Player/Player-Prefix.pch";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = "";
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
 				INFOPLIST_FILE = "Player/Player-Info.plist";
 				INSTALL_PATH = /Applications/FXPAL;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -1792,19 +1828,18 @@
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				INFOPLIST_FILE = "Streamer/Streamer-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../xmppframework/Vendor/libidn\"",
 					"\"$(SRCROOT)/Utilities/xmppframework/Vendor/libidn\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = "";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1821,19 +1856,18 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Streamer/Streamer-Prefix.pch";
 				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				INFOPLIST_FILE = "Streamer/Streamer-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../xmppframework/Vendor/libidn\"",
 					"\"$(SRCROOT)/Utilities/xmppframework/Vendor/libidn\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = "";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

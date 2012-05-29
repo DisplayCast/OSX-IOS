@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>11E53</string>
+	<string>12A206j</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -25,23 +25,25 @@
 	<key>CFBundleVersion</key>
 	<string>2</string>
 	<key>DTCompiler</key>
-	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<string></string>
 	<key>DTPlatformBuild</key>
-	<string>4E2002</string>
+	<string>4F183f</string>
 	<key>DTPlatformVersion</key>
 	<string>GM</string>
 	<key>DTSDKBuild</key>
-	<string>11E53</string>
+	<string>12A206f</string>
 	<key>DTSDKName</key>
-	<string></string>
+	<string>macosx10.8</string>
 	<key>DTXcode</key>
-	<string>0432</string>
+	<string>0440</string>
 	<key>DTXcodeBuild</key>
-	<string>4E2002</string>
+	<string>4F183f</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.utilities</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.6</string>
+	<key>LSUIElement</key>
+	<true/>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2012, Fuji Xerox Co., Ltd., All rights reserved.</string>
 	<key>NSMainNibFile</key>

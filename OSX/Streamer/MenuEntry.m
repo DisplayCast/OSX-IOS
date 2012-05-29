@@ -56,15 +56,13 @@
 	
 	int remoteSocket = socket(AF_INET, SOCK_STREAM, 0);
 	boolean_t connected = false;
-    NSArray *addresses = [ns addresses];
-    NSUInteger arrayCount = [addresses count];
-    for (unsigned long i = 0; i < arrayCount; i++) {
-        NSData *address = [addresses objectAtIndex:i];
+
+	for (NSData *address in [ns addresses]) {
         struct sockaddr_in *address_sin = (struct sockaddr_in *)[address bytes];
         
         char buffer[1024];
-        NSLog(@"DEBUG: Trying... %s:%d", inet_ntop(AF_INET, &(address_sin->sin_addr), buffer, sizeof(buffer)), ntohs(address_sin->sin_port));
-        
+        NSLog(@"DEBUG: Trying... %s:%d (size: %ld vs %ld)", inet_ntop(AF_INET, &(address_sin->sin_addr), buffer, sizeof(buffer)), ntohs(address_sin->sin_port), [address length], sizeof(struct sockaddr_in));
+
         if (address_sin->sin_family == AF_INET) {
             if (connect(remoteSocket, (struct sockaddr *)address_sin, (socklen_t)sizeof(struct sockaddr_in)) == 0) {
                 connected = true;

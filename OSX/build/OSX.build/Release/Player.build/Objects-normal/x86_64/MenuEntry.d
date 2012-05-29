@@ -1,2 +1,2 @@
-dependencies: /Volumes/chandra/Src/DisplayCast/OSX/Player/MenuEntry.m \
-  /Volumes/chandra/Src/DisplayCast/OSX/Player/MenuEntry.h
+dependencies: /Users/chandra/Src/DisplayCast/OSX/Player/MenuEntry.m \
+  /Users/chandra/Src/DisplayCast/OSX/Player/MenuEntry.h

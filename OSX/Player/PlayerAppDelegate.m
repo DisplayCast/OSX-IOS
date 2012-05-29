@@ -317,13 +317,16 @@ void receiveCmdData(CFSocketRef s, CFSocketCallBackType type, CFDataRef address,
                 result = PlayerCommandSyntaxErrorMove;
         }
     }
-    
-    // Send the result back to the client
-    CFSocketSendData(s, address, (CFDataRef)[result dataUsingEncoding:NSASCIIStringEncoding], 0);
-    
-    // We only take one command in each session
-    CFSocketInvalidate(s);
-    CFRelease(s);
+
+	@try {
+			// Send the result back to the client
+		CFSocketSendData(s, address, (CFDataRef)[result dataUsingEncoding:NSASCIIStringEncoding], 0);
+		
+			// We only take one command in each session
+		CFSocketInvalidate(s);
+		CFRelease(s);
+	} @catch (NSException *e) {
+	}
 }
 
 // Listening. Now setup to call receivedCmdData whenever a client connects to us
@@ -335,6 +338,11 @@ static void ListeningSocketCallback(CFSocketRef s, CFSocketCallBackType type, CF
     CFSocketContext CTX = { 0, obj, NULL, NULL, NULL };
     
     CFSocketNativeHandle csock = *(CFSocketNativeHandle *)data;
+
+		// Do not generate SIGPIPE signal. 
+	int set = 1;
+	setsockopt(csock, SOL_SOCKET, SO_NOSIGPIPE, (void *)&set, sizeof(int));
+	
     CFSocketRef sn = CFSocketCreateWithNative(NULL, csock, kCFSocketDataCallBack, receiveCmdData, &CTX);
     CFRunLoopSourceRef source = CFSocketCreateRunLoopSource(NULL, sn, 0);
     
@@ -387,159 +395,164 @@ void catchallExceptionHandler(NSException *exception) {
 
 #pragma mark -
 #pragma mark Basic initialization
+- (in_port_t)createServerSocketWithAcceptCallBack:(CFSocketCallBack)callback {
+	int fdForListening = socket(AF_INET6, SOCK_STREAM, 0);
+	
+	struct sockaddr_in6 serverAddress6;
+	memset(&serverAddress6, 0, sizeof(serverAddress6));
+	serverAddress6.sin6_family = AF_INET6;
+	serverAddress6.sin6_port = 0;
+	serverAddress6.sin6_len = sizeof(serverAddress6);
+	bind(fdForListening, (const struct sockaddr *) &serverAddress6, sizeof(serverAddress6));
+	
+	listen(fdForListening, 1);
+	
+	CFSocketContext context = {0, self, NULL, NULL, NULL};
+	CFRunLoopSourceRef  rls;
+	CFSocketRef listeningSocket = CFSocketCreateWithNative(NULL, fdForListening, kCFSocketAcceptCallBack, callback, &context);
+	if (listeningSocket == NULL) {
+		return -1;
+	} else {
+		assert( CFSocketGetSocketFlags(listeningSocket) & kCFSocketCloseOnInvalidate );
+		
+		rls = CFSocketCreateRunLoopSource(NULL, listeningSocket, 0);
+		assert(rls != NULL);
+		
+		CFRunLoopAddSource(CFRunLoopGetCurrent(), rls, kCFRunLoopDefaultMode);
+		CFRelease(rls);
+		CFRelease(listeningSocket);
+	} 
+	
+	socklen_t namelen = sizeof(serverAddress6);
+	getsockname(fdForListening, (struct sockaddr *) &serverAddress6, &namelen);
+	
+	return ntohs(serverAddress6.sin6_port);
+}
+
 static NSMutableDictionary *myKeys = NULL;         // Advertise myself using these TXT records
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {
 #pragma unused(notification)
     
     NSSetUncaughtExceptionHandler(&catchallExceptionHandler);
-    
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-    
-    // Do not show in dock. Works in OSX 10.7+
-    ProcessSerialNumber psn = {0, kCurrentProcess};
-    TransformProcessType(&psn, kProcessTransformToUIElementApplication);
-    
-    // Create a uniqueID for ourselves if none existed
-    if (myUniqueID == nil) {
-        GetUniqueID *uid = [[GetUniqueID alloc] init];
-        myUniqueID = [[NSString stringWithFormat:@"player-%@", [uid GetHWAddress]] retain];
-    }
-    
-    // Register to listen for preferencepane notifications
-    NSDistributedNotificationCenter *center = [NSDistributedNotificationCenter defaultCenter];
-    [center addObserver:self selector:@selector(prefcallbackWithNotification:) name:@"Preferences Changed" object:@"com.fxpal.displaycast.Player"];
-    
-#ifdef PLAYER_USE_XIB
-    // Ugly initialization and making sure that all synthesized windows are minimized!!
-	windows[0] = rw0;
-    windows[1] = rw1;
-    windows[2] = rw2;
-    windows[3] = rw3;
-    windows[4] = rw4;
-    windows[5] = rw5;
-    windows[6] = rw6;
-    windows[7] = rw7;
-    windows[8] = rw8;
-    windows[9] = rw9;
-    
-    imageviewers[0] = riv0;
-    imageviewers[1] = riv1;
-    imageviewers[2] = riv2;
-    imageviewers[3] = riv3;
-    imageviewers[4] = riv4;
-    imageviewers[5] = riv5;
-    imageviewers[6] = riv6;
-    imageviewers[7] = riv7;
-    imageviewers[8] = riv8;
-    imageviewers[9] = riv9;
-    
-    // Hide all of our windows
-    for (int indx = 0; indx < NUM_SESSIONS; indx++) {
-        NSWindow *win = windows[indx];
-
-        activeNSSessions[indx] = nil;
-        [win orderOut:self];
-    }
-#endif /* PLAYER_USE_XIB */
-    
-    // Start the Bonjour browser.
-    self.browser = [[NSNetServiceBrowser alloc] init];
-    [self.browser setDelegate:self];
-    [self.browser searchForServicesOfType:STREAMER inDomain:BONJOUR_DOMAIN];
-    
-    // Next, start listening for requests to myself
-    int fdForListening = socket(AF_INET6, SOCK_STREAM, 0);
-    struct sockaddr_in6 serverAddress6;
-    
-    memset(&serverAddress6, 0, sizeof(serverAddress6));
-    serverAddress6.sin6_family = AF_INET6;
-    serverAddress6.sin6_port = 0; // htons(11223);
-    serverAddress6.sin6_len = sizeof(serverAddress6);
-    bind(fdForListening, (const struct sockaddr *) &serverAddress6, sizeof(serverAddress6));
-    
-    socklen_t namelen = sizeof(serverAddress6);
-    getsockname(fdForListening, (struct sockaddr *) &serverAddress6, &namelen);
-    
-    listen(fdForListening, 1);
-    
-    CFSocketContext context = {0, self, NULL, NULL, NULL};
-    CFRunLoopSourceRef  rls;
-    CFSocketRef listeningSocket = CFSocketCreateWithNative(NULL, fdForListening, kCFSocketAcceptCallBack, ListeningSocketCallback, &context);
-    if (listeningSocket != NULL) {
-        assert( CFSocketGetSocketFlags(listeningSocket) & kCFSocketCloseOnInvalidate );
-        fdForListening = -1;        // so that the clean up code doesn't close it
-        
-        rls = CFSocketCreateRunLoopSource(NULL, listeningSocket, 0);
-        assert(rls != NULL);
-        
-        CFRunLoopAddSource(CFRunLoopGetCurrent(), rls, kCFRunLoopDefaultMode);
-        CFRelease(rls);
-    }
-    
-    // Register our service with Bonjour.
-    unsigned int chosenPort = ntohs(serverAddress6.sin6_port);
-    
-    NSString *playerID = [[NSUserDefaults standardUserDefaults] stringForKey:myUniqueID];
-    if (playerID == nil) {  // Generate a new player ID
-        NSLog(@"Generating new unique ID for myself");
-        
-        CFUUIDRef uuidObj = CFUUIDCreate(nil);
-        playerID = (NSString*)CFUUIDCreateString(kCFAllocatorDefault, uuidObj); // [(NSString*)CFUUIDCreateString(kCFAllocatorDefault, uuidObj) substringToIndex:8];
-        [[NSUserDefaults standardUserDefaults] setObject:playerID forKey:myUniqueID];
-        CFRelease(uuidObj);
-        
-        NSString *nm = NSFullUserName();
-        NSString *str;
-        if (nm == nil)
-            str = @"Unknown's Player";
-        else
-            str = [NSString stringWithFormat:@"%@'s Player", nm];
-        [[NSUserDefaults standardUserDefaults] setObject:str forKey:[NSString stringWithFormat:@"%@-Name", myUniqueID]];
-    }
-    
-    // Register ourselves in Bonjour
-    netService = [[NSNetService alloc] initWithDomain:BONJOUR_DOMAIN type:PLAYER name:playerID port:chosenPort];
-    if (netService != nil) {
-        // Deprecated in 10.8
-        // SInt32 major, minor, bugfix;
-        // Gestalt(gestaltSystemVersion, &OSversion);
-        // Gestalt(gestaltSystemVersionMajor, &major);
-        // Gestalt(gestaltSystemVersionMinor, &minor);
-        // Gestalt(gestaltSystemVersionBugFix, &bugfix);
-        // NSString *systemVersion = [NSString stringWithFormat:@"OSX %d.%d.%d", major, minor, bugfix];
-        NSString *systemVersion = [NSString stringWithFormat:@"OSX %@", [[NSProcessInfo processInfo] operatingSystemVersionString]];
-        
-        // The screen size of the primary display.
-        CGRect screenBounds = CGDisplayBounds(CGMainDisplayID());
-        
-        NSString *ver = [[NSString alloc] initWithFormat:@"%f", VERSION];
-        
-        NSString *bluetoothID = @"NotSupported";
-        /*
-         myKeys = [NSMutableDictionary dictionaryWithObjectsAndKeys:self.serviceName, @"name", [ NSString stringWithFormat:@"0x0x%.0fx%.0f", screenBounds.size.width, screenBounds.size.height], @"screen0", systemVersion, @"osVersion", @"NOTIMPL", @"locationID", [[NSHost currentHost] localizedName], @"machineName", nil];
-         */
-        myKeys = [[NSMutableDictionary alloc] initWithObjectsAndKeys:self.serviceName, @"name", [ NSString stringWithFormat:@"0x0x%.0fx%.0f", screenBounds.size.width, screenBounds.size.height], @"screen0", systemVersion, @"osVersion", @"NOTIMPL", @"locationID", [[NSHost currentHost] localizedName], @"machineName", ver, @"version", NSUserName(), @"userid", bluetoothID, @"bluetooth", nil];
-        [netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:myKeys]];
-        [netService setDelegate:self];
-        [netService publishWithOptions:NSNetServiceNoAutoRename /* 0 */];
+		// Actually need to set this in the Info.plist file
+    [NSApp setActivationPolicy:NSApplicationActivationPolicyAccessory];
+	
+	@autoreleasepool {
+			// Do not show in dock. Works in OSX 10.7+
+			// But stopped working in 10.8, sigh
+			// ProcessSerialNumber psn = {0, kCurrentProcess};
+			// TransformProcessType(&psn, kProcessTransformToUIElementApplication);
 		
+			// Create a uniqueID for ourselves if none existed
+		if (myUniqueID == nil) {
+			GetUniqueID *uid = [[GetUniqueID alloc] init];
+			myUniqueID = [[NSString stringWithFormat:@"player-%@", [uid GetHWAddress]] retain];
+		}
+		
+			// Register to listen for preferencepane notifications
+		NSDistributedNotificationCenter *center = [NSDistributedNotificationCenter defaultCenter];
+		[center addObserver:self selector:@selector(prefcallbackWithNotification:) name:@"Preferences Changed" object:@"com.fxpal.displaycast.Player"];
+		
+#ifdef PLAYER_USE_XIB
+			// Ugly initialization and making sure that all synthesized windows are minimized!!
+		windows[0] = rw0;
+		windows[1] = rw1;
+		windows[2] = rw2;
+		windows[3] = rw3;
+		windows[4] = rw4;
+		windows[5] = rw5;
+		windows[6] = rw6;
+		windows[7] = rw7;
+		windows[8] = rw8;
+		windows[9] = rw9;
+		
+		imageviewers[0] = riv0;
+		imageviewers[1] = riv1;
+		imageviewers[2] = riv2;
+		imageviewers[3] = riv3;
+		imageviewers[4] = riv4;
+		imageviewers[5] = riv5;
+		imageviewers[6] = riv6;
+		imageviewers[7] = riv7;
+		imageviewers[8] = riv8;
+		imageviewers[9] = riv9;
+		
+			// Hide all of our windows
+		for (int indx = 0; indx < NUM_SESSIONS; indx++) {
+			NSWindow *win = windows[indx];
+			
+			activeNSSessions[indx] = nil;
+			[win orderOut:self];
+		}
+#endif /* PLAYER_USE_XIB */
+		
+			// Start the Bonjour browser.
+		self.browser = [[NSNetServiceBrowser alloc] init];
+		[self.browser setDelegate:self];
+		[self.browser searchForServicesOfType:STREAMER inDomain:BONJOUR_DOMAIN];
+
+			// Register our service with Bonjour.
+		in_port_t chosenPort = [self createServerSocketWithAcceptCallBack:ListeningSocketCallback];
+		
+		NSString *playerID = [[NSUserDefaults standardUserDefaults] stringForKey:myUniqueID];
+		if (playerID == nil) {  // Generate a new player ID
+			NSLog(@"Generating new unique ID for myself");
+			
+			CFUUIDRef uuidObj = CFUUIDCreate(nil);
+			playerID = (NSString*)CFUUIDCreateString(kCFAllocatorDefault, uuidObj); // [(NSString*)CFUUIDCreateString(kCFAllocatorDefault, uuidObj) substringToIndex:8];
+			[[NSUserDefaults standardUserDefaults] setObject:playerID forKey:myUniqueID];
+			CFRelease(uuidObj);
+			
+			NSString *nm = NSFullUserName();
+			NSString *str;
+			if (nm == nil)
+				str = @"Unknown's Player";
+			else
+				str = [NSString stringWithFormat:@"%@'s Player", nm];
+			[[NSUserDefaults standardUserDefaults] setObject:str forKey:[NSString stringWithFormat:@"%@-Name", myUniqueID]];
+		}
+		
+			// Register ourselves in Bonjour
+		netService = [[NSNetService alloc] initWithDomain:BONJOUR_DOMAIN type:PLAYER name:playerID port:chosenPort];
+		if (netService != nil) {
+				// Deprecated in 10.8
+				// SInt32 major, minor, bugfix;
+				// Gestalt(gestaltSystemVersion, &OSversion);
+				// Gestalt(gestaltSystemVersionMajor, &major);
+				// Gestalt(gestaltSystemVersionMinor, &minor);
+				// Gestalt(gestaltSystemVersionBugFix, &bugfix);
+				// NSString *systemVersion = [NSString stringWithFormat:@"OSX %d.%d.%d", major, minor, bugfix];
+			NSString *systemVersion = [NSString stringWithFormat:@"OSX %@", [[NSProcessInfo processInfo] operatingSystemVersionString]];
+			
+				// The screen size of the primary display.
+			CGRect screenBounds = CGDisplayBounds(CGMainDisplayID());
+			
+			NSString *ver = [[NSString alloc] initWithFormat:@"%f", VERSION];
+			
+			NSString *bluetoothID = @"NotSupported";
+			/*
+			 myKeys = [NSMutableDictionary dictionaryWithObjectsAndKeys:self.serviceName, @"name", [ NSString stringWithFormat:@"0x0x%.0fx%.0f", screenBounds.size.width, screenBounds.size.height], @"screen0", systemVersion, @"osVersion", @"NOTIMPL", @"locationID", [[NSHost currentHost] localizedName], @"machineName", nil];
+			 */
+			myKeys = [[NSMutableDictionary alloc] initWithObjectsAndKeys:self.serviceName, @"name", [ NSString stringWithFormat:@"0x0x%.0fx%.0f", screenBounds.size.width, screenBounds.size.height], @"screen0", systemVersion, @"osVersion", @"NOTIMPL", @"locationID", [[NSHost currentHost] localizedName], @"machineName", ver, @"version", NSUserName(), @"userid", bluetoothID, @"bluetooth", nil];
+			[netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:myKeys]];
+			[netService setDelegate:self];
+			[netService publishWithOptions:NSNetServiceNoAutoRename /* 0 */];
+			
 #ifdef USE_BLUETOOTH
-			// This code used to work synchronously and then it was deprecated in 10.6 and now it just hangs when I compile in Lion+. Apple developer forum has no answer on why this fails!!
-		[self performSelectorInBackground:@selector(getBluetoothDeviceAddress) withObject:nil];
+				// This code used to work synchronously and then it was deprecated in 10.6 and now it just hangs when I compile in Lion+. Apple developer forum has no answer on why this fails!!
+			[self performSelectorInBackground:@selector(getBluetoothDeviceAddress) withObject:nil];
 #endif /* USE_BLUETOOTH */
+		}
+		
+			// Create the taskbar UI
+		NSString *path = [[NSBundle mainBundle] pathForResource:@"icon" ofType:@"tiff"];
+		NSImage *image = [[NSImage alloc] initWithContentsOfFile: path ];
+		
+		trayItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
+		[trayItem setMenu:statusMenu];
+		[trayItem setHighlightMode:YES];
+		[trayItem setImage: image];
     }
-    close(fdForListening);
-    
-    // Create the taskbar UI
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"icon" ofType:@"tiff"];
-    NSImage *image = [[NSImage alloc] initWithContentsOfFile: path ];
-    
-    trayItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
-    [trayItem setMenu:statusMenu];
-    [trayItem setHighlightMode:YES];
-    [trayItem setImage: image];
-    
-    [pool drain];
 }
 
 #ifdef USE_BLUETOOTH
@@ -685,10 +698,7 @@ static NSMutableDictionary *myKeys = NULL;         // Advertise myself using the
     NSMenuItem *clickedEntry = sender;
     MenuEntry *entry = nil;
     
-    unsigned long count = [streamer count];
-    for (unsigned int i=0; i < count; i++) {
-        entry = [streamer objectAtIndex:i];
-        
+	for (entry in streamer) {
         if ([[entry menuItem] isEqual:clickedEntry])
             break;
     }
@@ -933,7 +943,7 @@ static NSMutableDictionary *myKeys = NULL;         // Advertise myself using the
 
 #pragma mark -
 #pragma mark Graphics Stuff
-void drawWin(UInt32 *winData, int width, int height, int x, int y, int w, int h, UInt32 *buf) {
+void drawWin(UInt32 *windowData, int width, int height, int x, int y, int w, int h, UInt32 *buf) {
 #pragma unused(height)
     
     if (buf != NULL)
@@ -942,16 +952,22 @@ void drawWin(UInt32 *winData, int width, int height, int x, int y, int w, int h,
                 if (*buf != 0x00FFFFFF) {
                     int indx = ((int) width * (y + iy)) + (x + ix);
                     
-                    *(winData + indx) = *buf;
+                    *(windowData + indx) = *buf;
                 }
                 buf++;
             }
         }
 }
 
+void releaseProvider(void *info, const void *data, size_t size) {
+#pragma unused(info)
+	NSLog(@"Should I free something here of size %zd", size);
+	free((void *)data);
+}
+
 void displayWin(NSImageView *player, int width, int height, int maskX, int maskY, int maskWidth, int maskHeight, UInt32 *buf) {
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    CGDataProviderRef bitmapData = CGDataProviderCreateWithData(NULL, buf, width * height * sizeof(UInt32), NULL /*releaseProvider*/);
+    CGDataProviderRef bitmapData = CGDataProviderCreateWithData(NULL, buf, width * height * sizeof(UInt32), NULL /* releaseProvider */);
     CGImageRef myImage = CGImageCreate(width, 
                                        height,
                                        sizeof(UInt8) * 8,
@@ -964,22 +980,23 @@ void displayWin(NSImageView *player, int width, int height, int maskX, int maskY
                                        false,
                                        kCGRenderingIntentDefault);
     NSBitmapImageRep *bitmapRep = [[NSBitmapImageRep alloc] initWithCGImage:myImage];
-    NSImage *image = [[[NSImage alloc] init] autorelease];
+    NSImage *image = [[NSImage alloc] init];
     
     [image addRepresentation:bitmapRep];
-    // [[player image] release];
-    
+	[image setCacheMode:NSImageCacheNever];
     /*
      NSRect srcRect, destRect;
      srcRect = NSMakeRect((CGFloat) maskX, (CGFloat) maskY, (CGFloat) maskWidth, (CGFloat) maskHeight);
      destRect = NSMakeRect(0.0, 0.0, (CGFloat) width, (CGFloat) height);
      [image drawInRect:destRect fromRect:srcRect operation:NSCompositeSourceOver fraction:1.0];
      */
-    
+
+		// [[player image] release];
     if ((maskX == 0) && (maskY == 0) && (maskWidth == width) && (maskHeight == height)) 
         [player setImage:image];
     else 
         [player setImage:image];
+
 #if 0
     {
         NSImage *result = [[[NSImage alloc] initWithSize:NSMakeSize(maskWidth, maskHeight)] autorelease];
@@ -994,7 +1011,8 @@ void displayWin(NSImageView *player, int width, int height, int maskX, int maskY
         [image release];
     }
 #endif /* 0 */
-    
+
+  	[image release];
     [bitmapRep release];
     
     CGImageRelease(myImage);
@@ -1022,334 +1040,332 @@ void displayWin(NSImageView *player, int width, int height, int maskX, int maskY
 #pragma mark * The main displaycast functionality. Watch the streamer
 - (void)receiveFromService:(NSNetService *)ns {
     assert(ns != nil);
-    
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-    
-    UInt8 *receiveBuf = NULL;        // Buffer for receiving network datagrams
-    UInt32 *winData = NULL;          // Backing store for the window. 
-    int pWidth = -1, pHeight = -1;   // Previous width and height to detect and perhaps 
-    unsigned int pmaskX = -1, pmaskY = -1, pmaskWidth = -1, pmaskHeight = -1;
-    UInt8 *updateData = NULL, *tmpUpdateData = NULL;       // Buffer for receiving updates
-    
-    // Figure out what window I am supposed to operate on
-    int sessionIndex;
-    for (sessionIndex = 0; sessionIndex < NUM_SESSIONS; sessionIndex++ ) {
-        if (activeNSSessions[sessionIndex] == ns)
-            break;
-    }
-    if (sessionIndex == NUM_SESSIONS) {
-        NSLog(@"FATAL: Something is wrong");
-        [pool drain];
-        
-        return;
-    }
-    stopSession[sessionIndex] = false;
-    int receiveSocket = socket(AF_INET, SOCK_STREAM, 0);
-    
-    // Try to find the Streamer's network address that is accessible by me
-    boolean_t connected = false;
-    NSArray *addresses = [ns addresses];
-    NSUInteger arrayCount = [addresses count];
-    for (unsigned long i = 0; i < arrayCount; i++) {
-        NSData *address = [addresses objectAtIndex:i];
-        struct sockaddr_in *address_sin = (struct sockaddr_in *)[address bytes];
-        
-        char buffer[1024];
-        NSLog(@"DEBUG: Trying... %s:%d", inet_ntop(AF_INET, &(address_sin->sin_addr), buffer, sizeof(buffer)), ntohs(address_sin->sin_port));
-        
-        if (address_sin->sin_family == AF_INET) {
-            if (connect(receiveSocket, (struct sockaddr *)address_sin, (socklen_t)sizeof(struct sockaddr_in)) == 0) {
-                struct timeval tv;
-                
-                tv.tv_sec  = 60*60;		// Wait for a hour to give up
-                tv.tv_usec = 0;
-                setsockopt(receiveSocket, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv));
-                
-                connected = true;
-                break;
-            }
-        }
-    }
-    
-    if (connected) {
-        NSWindow *window = nil;
-        NSImageView *player = nil;
-        
-        while (stopSession[sessionIndex] != true) {
-            ssize_t len;
-            UInt32 pktSize;
-            
-            // First receive the packet size
-            if (recv(receiveSocket, &pktSize, sizeof(pktSize), 0) <= 0) 
-                break;
-            
-            // Now receive this much data - freeing memory from prior loops
-            if (receiveBuf)
-                free(receiveBuf);
-            receiveBuf = malloc(pktSize);
-            
-            len = 0;
-            while ((UInt32) len < pktSize) {
-                ssize_t recvLen = recv(receiveSocket, receiveBuf + len, pktSize - len, 0);
-                if (recvLen <= 0) 
-                    break;
-                len += recvLen;
-            }
-            if (len != pktSize)
-                break;
-            
-            z_stream strm;
-            UInt32 out[5];  // space for the first five integers
-            unsigned int width, height, x, y, w, h;
-            unsigned int maskX, maskY, maskWidth, maskHeight;
-            
-            // First, uncompress the first five integers which repreent the width, height, maskX, maskY, maskW, maskH, x, y, w and h
-            /* allocate inflate state */
-            strm.zalloc = Z_NULL;
-            strm.zfree = Z_NULL;
-            strm.opaque = Z_NULL;
-            strm.avail_in = 0;
-            strm.next_in = Z_NULL;
-            if (inflateInit(&strm) != Z_OK)
-                exit(1);
-            
-            strm.avail_in = (uInt) pktSize;
-            strm.next_in = receiveBuf;
-            int flush = Z_NO_FLUSH; // Z_BLOCK;
-            
-            strm.avail_out = sizeof(out);
-            strm.next_out = (unsigned char *)out;
-            switch (inflate(&strm, flush)) {
-                case Z_STREAM_ERROR:
-                    NSLog(@"HEADER Z_STREAM_ERROR %d", strm.avail_out);
-                    (void)inflateEnd(&strm);
-                    continue;
-                    
-                case Z_NEED_DICT:
-                    NSLog(@"HEADER Z_NEED_DICT");
-                    (void)inflateEnd(&strm);
-                    continue;
-                    
-                case Z_DATA_ERROR:
-                    NSLog(@"HEADER Z_DATA_ERROR %d", pktSize);
-                    (void)inflateEnd(&strm);
-                    continue;
-                    
-                case Z_MEM_ERROR:
-                    NSLog(@"HEADER Z_MEM_ERROR");
-                    (void)inflateEnd(&strm);
-                    continue;
-            }
-            
-            width = ntohl(out[0])>>16;
-            height = ntohl(out[0])&0xffff;
-            maskX = ntohl(out[1])>>16;
-            maskY = ntohl(out[1])&0xffff;
-            maskWidth = ntohl(out[2])>>16;
-            maskHeight = ntohl(out[2])&0xffff;
-            x = ntohl(out[3])>>16;
-            y = ntohl(out[3])&0xffff;
-            w = ntohl(out[4])>>16;
-            h = ntohl(out[4])&0xffff;
-            
-            assert(w<=width);
-            assert(h<=height);
-            
-            // If this is the first time, then create a new window to show 
-            if (((int) width !=  pWidth) || ((int) height != pHeight)) {
-                if (pWidth != -1) {
-                    NSLog(@"Dynamically changing window size not support yet %dx%d from %dx%d", width, height, pWidth, pHeight);
-                    break;
-                } else
-                    NSLog(@"Setting window of size %dx%d", width, height);
-                pWidth = width;
-                pHeight = height;
-                // winData = calloc(width * height, sizeof(UInt32));
-                updateData = malloc(width * height * sizeof(UInt32));   // Allocate once and reuse
-                tmpUpdateData = malloc(width * height * sizeof(UInt32));    // Needed for bitmap encoding
-                
+	
+    @autoreleasepool {
+		UInt8 *receiveBuf = NULL;        // Buffer for receiving network datagrams
+		UInt32 *winData = NULL;          // Backing store for the window. 
+		int pWidth = -1, pHeight = -1;   // Previous width and height to detect and perhaps 
+		unsigned int pmaskX = -1, pmaskY = -1, pmaskWidth = -1, pmaskHeight = -1;
+		UInt8 *updateData = NULL, *tmpUpdateData = NULL;       // Buffer for receiving updates
+		
+			// Figure out what window I am supposed to operate on
+		int sessionIndex;
+		for (sessionIndex = 0; sessionIndex < NUM_SESSIONS; sessionIndex++ ) {
+			if (activeNSSessions[sessionIndex] == ns)
+				break;
+		}
+		if (sessionIndex == NUM_SESSIONS) {
+			NSLog(@"FATAL: Something is wrong");
+			
+			return;
+		}
+		stopSession[sessionIndex] = false;
+		int receiveSocket = socket(AF_INET, SOCK_STREAM, 0);
+		
+			// Try to find the Streamer's network address that is accessible by me
+		boolean_t connected = false;
+		for (NSData *address in [ns addresses]) {
+			struct sockaddr_in *address_sin = (struct sockaddr_in *)[address bytes];
+			
+			char buffer[1024];
+			NSLog(@"DEBUG: Trying... %s:%d", inet_ntop(AF_INET, &(address_sin->sin_addr), buffer, sizeof(buffer)), ntohs(address_sin->sin_port));
+			
+			if (address_sin->sin_family == AF_INET) {
+				if (connect(receiveSocket, (struct sockaddr *)address_sin, (socklen_t)sizeof(struct sockaddr_in)) == 0) {
+					struct timeval tv;
+					
+					tv.tv_sec  = 60*60;		// Wait for a hour to give up
+					tv.tv_usec = 0;
+					setsockopt(receiveSocket, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv));
+					
+					connected = true;
+					break;
+				}
+			}
+		}
+		
+		if (connected) {
+			NSWindow *window = nil;
+			NSImageView *player = nil;
+			
+			while (stopSession[sessionIndex] != true) {
+				ssize_t len;
+				UInt32 pktSize;
+				
+					// First receive the packet size
+				if (recv(receiveSocket, &pktSize, sizeof(pktSize), 0) <= 0) 
+					break;
+				
+					// Now receive this much data - freeing memory from prior loops
+				if (receiveBuf)
+					free(receiveBuf);
+				receiveBuf = malloc(pktSize);
+				
+				len = 0;
+				while ((UInt32) len < pktSize) {
+					ssize_t recvLen = recv(receiveSocket, receiveBuf + len, pktSize - len, 0);
+					if (recvLen <= 0) 
+						break;
+					len += recvLen;
+				}
+				if (len != pktSize)
+					break;
+				
+				z_stream strm;
+				UInt32 out[5];  // space for the first five integers
+				unsigned int width, height, x, y, w, h;
+				unsigned int maskX, maskY, maskWidth, maskHeight;
+				
+					// First, uncompress the first five integers which repreent the width, height, maskX, maskY, maskW, maskH, x, y, w and h
+				/* allocate inflate state */
+				strm.zalloc = Z_NULL;
+				strm.zfree = Z_NULL;
+				strm.opaque = Z_NULL;
+				strm.avail_in = 0;
+				strm.next_in = Z_NULL;
+				if (inflateInit(&strm) != Z_OK)
+					exit(1);
+				
+				strm.avail_in = (uInt) pktSize;
+				strm.next_in = receiveBuf;
+				int flush = Z_NO_FLUSH; // Z_BLOCK;
+				
+				strm.avail_out = sizeof(out);
+				strm.next_out = (unsigned char *)out;
+				switch (inflate(&strm, flush)) {
+					case Z_STREAM_ERROR:
+						NSLog(@"HEADER Z_STREAM_ERROR %d", strm.avail_out);
+						(void)inflateEnd(&strm);
+						continue;
+						
+					case Z_NEED_DICT:
+						NSLog(@"HEADER Z_NEED_DICT");
+						(void)inflateEnd(&strm);
+						continue;
+						
+					case Z_DATA_ERROR:
+						NSLog(@"HEADER Z_DATA_ERROR %d", pktSize);
+						(void)inflateEnd(&strm);
+						continue;
+						
+					case Z_MEM_ERROR:
+						NSLog(@"HEADER Z_MEM_ERROR");
+						(void)inflateEnd(&strm);
+						continue;
+				}
+				
+				width = ntohl(out[0])>>16;
+				height = ntohl(out[0])&0xffff;
+				maskX = ntohl(out[1])>>16;
+				maskY = ntohl(out[1])&0xffff;
+				maskWidth = ntohl(out[2])>>16;
+				maskHeight = ntohl(out[2])&0xffff;
+				x = ntohl(out[3])>>16;
+				y = ntohl(out[3])&0xffff;
+				w = ntohl(out[4])>>16;
+				h = ntohl(out[4])&0xffff;
+				
+				assert(w<=width);
+				assert(h<=height);
+				
+					// If this is the first time, then create a new window to show 
+				if (((int) width !=  pWidth) || ((int) height != pHeight)) {
+					if (pWidth != -1) {
+						NSLog(@"Dynamically changing window size not support yet %dx%d from %dx%d", width, height, pWidth, pHeight);
+						break;
+					} else
+						NSLog(@"Setting window of size %dx%d", width, height);
+					pWidth = width;
+					pHeight = height;
+						// winData = calloc(width * height, sizeof(UInt32));
+					updateData = malloc(width * height * sizeof(UInt32));   // Allocate once and reuse
+					tmpUpdateData = malloc(width * height * sizeof(UInt32));    // Needed for bitmap encoding
+					assert(updateData != NULL);
+					assert(tmpUpdateData != NULL);
+					
 #ifdef PLAYER_USE_XIB
-                window = windows[sessionIndex]; // [windows objectAtIndex:indx];
-                [window setContentSize:NSMakeSize(width, height)];
-				player = imageviewers[sessionIndex]; // [imageviewers objectAtIndex:indx];
-				[player setFrame:NSMakeRect(0.0, 0.0, width, height)];
-				[window setDelegate:self];
-
+					window = windows[sessionIndex]; // [windows objectAtIndex:indx];
+					[window setContentSize:NSMakeSize(width, height)];
+					player = imageviewers[sessionIndex]; // [imageviewers objectAtIndex:indx];
+					[player setFrame:NSMakeRect(0.0, 0.0, width, height)];
+					[window setDelegate:self];
+					
 #if 0
-				NSScrollView *scrollView = [[NSScrollView alloc] initWithFrame:[[window contentView] frame]];
-				[scrollView setHasVerticalScroller:YES];
-				[scrollView setHasHorizontalScroller:YES];
-				[scrollView setBorderType:NSNoBorder];
-				[scrollView setAutoresizingMask:NSViewWidthSizable|NSViewHeightSizable];
-				[scrollView setMaxMagnification:4.0];
-				[scrollView setMinMagnification:0.25];
-
-				[scrollView setDocumentView:player];
-				[window setContentView:scrollView];
-				[scrollView release];
+					NSScrollView *scrollView = [[NSScrollView alloc] initWithFrame:[[window contentView] frame]];
+					[scrollView setHasVerticalScroller:YES];
+					[scrollView setHasHorizontalScroller:YES];
+					[scrollView setBorderType:NSNoBorder];
+					[scrollView setAutoresizingMask:NSViewWidthSizable|NSViewHeightSizable];
+					[scrollView setMaxMagnification:4.0];
+					[scrollView setMinMagnification:0.25];
+					
+					[scrollView setDocumentView:player];
+					[window setContentView:scrollView];
+					[scrollView release];
 #endif /* 0 */
 #else	/* PLAYER_USE_XIB */
-                window = [[NSWindow alloc] initWithContentRect: NSMakeRect (0, 0, width, height) 
-                                                     styleMask:(NSResizableWindowMask | NSTexturedBackgroundWindowMask | NSTitledWindowMask | NSClosableWindowMask |NSMiniaturizableWindowMask)
-                                                       backing:NSBackingStoreBuffered 
-                                                         defer:NO];
-                [window setDelegate:self];
-                [window setHasShadow:YES];
-                
-                player = [[NSImageView alloc] initWithFrame:NSMakeRect(0.0, 0.0, (float) width, (float) height)];
-                // [player setInterfaceStyle:NSWindows95InterfaceStyle];
-                [player setEditable:NO];
-                
-                [[window contentView] addSubview: player];
-                // [[rw1 contentView] addSubview: rootImageViewer];
-                
-                // [window makeKeyAndOrderFront: self];
-                // [window makeMainWindow];
-                
+					window = [[NSWindow alloc] initWithContentRect: NSMakeRect (0, 0, width, height) 
+														 styleMask:(NSResizableWindowMask | NSTexturedBackgroundWindowMask | NSTitledWindowMask | NSClosableWindowMask |NSMiniaturizableWindowMask)
+														   backing:NSBackingStoreBuffered 
+															 defer:NO];
+					[window setDelegate:self];
+					[window setHasShadow:YES];
+					
+					player = [[NSImageView alloc] initWithFrame:NSMakeRect(0.0, 0.0, (float) width, (float) height)];
+						// [player setInterfaceStyle:NSWindows95InterfaceStyle];
+					[player setEditable:NO];
+					
+					[[window contentView] addSubview: player];
+						// [[rw1 contentView] addSubview: rootImageViewer];
+					
+						// [window makeKeyAndOrderFront: self];
+						// [window makeMainWindow];
+					
 #endif /* PLAYER_USE_XIB */
-                
-                // Now, set the window title to the Streamer name
-                NSDictionary *keys = [NSNetService dictionaryFromTXTRecordData:[ns TXTRecordData]];
-                NSData *data = [keys objectForKey:@"name"];
-                NSString *name = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
-                // [[window title] release];
-                [window setTitle:name];
-                
-                // [window setExcludedFromWindowsMenu:NO];
-                [window setContentAspectRatio:NSMakeSize((float) width, (float)height)];
-                [window orderFront:self];
-                [window setIsZoomed:YES];
-                
-                [netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:myKeys]];
-                
-                [self updateKey:window andNSNetService:ns];
-                
+					
+						// Now, set the window title to the Streamer name
+					NSDictionary *keys = [NSNetService dictionaryFromTXTRecordData:[ns TXTRecordData]];
+					NSData *data = [keys objectForKey:@"name"];
+					NSString *name = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+						// [[window title] release];
+					[window setTitle:name];
+					
+						// [window setExcludedFromWindowsMenu:NO];
+					[window setContentAspectRatio:NSMakeSize((float) width, (float)height)];
+					[window orderFront:self];
+					[window setIsZoomed:YES];
+					
+					[netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:myKeys]];
+					
+					[self updateKey:window andNSNetService:ns];
+					
 #ifdef PLAYER_LION_FS
-                if (OSversion >= 0x1070)
-                    if (([window styleMask] & NSFullScreenWindowMask) != NSFullScreenWindowMask)
-                        [window toggleFullScreen:nil];
+					if (OSversion >= 0x1070)
+						if (([window styleMask] & NSFullScreenWindowMask) != NSFullScreenWindowMask)
+							[window toggleFullScreen:nil];
 #endif /* PLAYER_LION_FS */
-            }
-            
-            if (! ((pmaskX == maskX) && (pmaskY == maskY) && (pmaskWidth == maskWidth) && (pmaskHeight == maskHeight)) ) {
-                if (winData == NULL)
-                    winData = malloc(width * height * sizeof(UInt32));
-                else
-                    bzero(winData, width * height * sizeof(UInt32));
-                displayWin(player, width, height, maskX, maskY, maskWidth, maskHeight, winData);
-                
-                pmaskX = maskX;
-                pmaskY = maskY;
-                pmaskWidth = maskWidth;
-                pmaskHeight = maskHeight;
-            }
-            
-            /* run inflate() on input until output buffer not full */
-            // UInt8 *updateData = malloc(w * h * sizeof(UInt32));
-            unsigned long uncompressed = 0;
-            // UInt8 *updPtr = updateData;
-            int sz;
-            do {
-                sz = (int) ((w * h * sizeof(UInt32)) - uncompressed);
-                strm.avail_out = sz;
-                strm.next_out = tmpUpdateData + uncompressed;
-                
-                int ret_value = inflate(&strm, flush);
-                switch (ret_value) {
-                    case Z_STREAM_ERROR:
-                        if (sz != (int) strm.avail_out)
-                            NSLog(@"DATA Z_STREAM_ERROR %d", (int) ((w * h * sizeof(UInt32)) - uncompressed));
-                        break;
-                        
-                    case Z_NEED_DICT:
-                        NSLog(@"DATA Z_NEED_DICT");
-                        break;
-                        
-                    case Z_DATA_ERROR:
-                        if (sz != (int) strm.avail_out)
-                            NSLog(@"DATA Z_DATA_ERROR %d", (int) ((w * h * sizeof(UInt32)) - uncompressed));
-                        break;
-                        
-                    case Z_MEM_ERROR:
-                        NSLog(@"DATA Z_MEM_ERROR");
-                        break;
-                }
-                uncompressed += strm.avail_out;
-                // } while (uncompressed < (w * h * sizeof(UInt32)));
-            } while (sz != (int) strm.avail_out);
-            
-            /* clean up and return */
-            (void)inflateEnd(&strm);
-            
-            // Now perform bitmap encoding's decoding
-            int bmStart = 0;
-            int srcStart = w*h;
-            
-            if (tmpUpdateData != NULL) {        // Shouldn't need this test - Xcode complains!!
-                for (unsigned int j = 0; j < h; j++) {
-                    for (unsigned int i = 0; i < w; i++) {
-                        if (tmpUpdateData[bmStart] == 0xFF) {
-                            updateData[bmStart * sizeof(UInt32)] = tmpUpdateData[srcStart++];
-                            updateData[bmStart * sizeof(UInt32) + 1] = tmpUpdateData[srcStart++];
-                            updateData[bmStart * sizeof(UInt32) + 2] = tmpUpdateData[srcStart++];
-                            updateData[bmStart * sizeof(UInt32) + 3] = 0xFF;
-                        } else {
-                            updateData[bmStart * sizeof(UInt32)] = 0xFF;
-                            updateData[bmStart * sizeof(UInt32) + 1] = 0xFF;
-                            updateData[bmStart * sizeof(UInt32) + 2] = 0xFF;
-                            updateData[bmStart * sizeof(UInt32) + 3] = 0x00;
-                        }
-                        bmStart++;
-                    }
-                }
-            }
-            
-            if (winData == NULL) {
-                assert((w == width) && (h == height));
-                
-                winData = malloc(width * height * sizeof(UInt32));
-                assert(updateData != NULL);
-                memcpy(winData, updateData, width * height * sizeof(UInt32));
-            } else {
-                // Overlay the update onto my view of the frame
-                drawWin(winData, width, height, x, y, w, h, (UInt32 *) updateData);
-            }
-            
-            // Now, display my view of the frame
-            displayWin(player, width, height, maskX, maskY, maskWidth, maskHeight, winData);
-        }
-    } 
-    
-    NSWindow *win = windows[sessionIndex];
-    [win orderOut:self];
-    
+				}
+				
+				if (! ((pmaskX == maskX) && (pmaskY == maskY) && (pmaskWidth == maskWidth) && (pmaskHeight == maskHeight)) ) {
+					if (winData == NULL)
+						winData = malloc(width * height * sizeof(UInt32));
+					else
+						bzero(winData, width * height * sizeof(UInt32));
+					assert(winData != NULL);
+					
+					displayWin(player, width, height, maskX, maskY, maskWidth, maskHeight, winData);
+					
+					pmaskX = maskX;
+					pmaskY = maskY;
+					pmaskWidth = maskWidth;
+					pmaskHeight = maskHeight;
+				}
+				
+				/* run inflate() on input until output buffer not full */
+					// UInt8 *updateData = malloc(w * h * sizeof(UInt32));
+				unsigned long uncompressed = 0;
+					// UInt8 *updPtr = updateData;
+				int sz;
+				do {
+					sz = (int) ((w * h * sizeof(UInt32)) - uncompressed);
+					strm.avail_out = sz;
+					strm.next_out = tmpUpdateData + uncompressed;
+					
+					int ret_value = inflate(&strm, flush);
+					switch (ret_value) {
+						case Z_STREAM_ERROR:
+							if (sz != (int) strm.avail_out)
+								NSLog(@"DATA Z_STREAM_ERROR %d", (int) ((w * h * sizeof(UInt32)) - uncompressed));
+							break;
+							
+						case Z_NEED_DICT:
+							NSLog(@"DATA Z_NEED_DICT");
+							break;
+							
+						case Z_DATA_ERROR:
+							if (sz != (int) strm.avail_out)
+								NSLog(@"DATA Z_DATA_ERROR %d", (int) ((w * h * sizeof(UInt32)) - uncompressed));
+							break;
+							
+						case Z_MEM_ERROR:
+							NSLog(@"DATA Z_MEM_ERROR");
+							break;
+					}
+					uncompressed += strm.avail_out;
+						// } while (uncompressed < (w * h * sizeof(UInt32)));
+				} while (sz != (int) strm.avail_out);
+				
+				/* clean up and return */
+				(void)inflateEnd(&strm);
+				
+					// Now perform bitmap encoding's decoding
+				int bmStart = 0;
+				int srcStart = w*h;
+				
+				if (tmpUpdateData != NULL) {        // Shouldn't need this test - Xcode complains!!
+					for (unsigned int j = 0; j < h; j++) {
+						for (unsigned int i = 0; i < w; i++) {
+							if (tmpUpdateData[bmStart] == 0xFF) {
+								updateData[bmStart * sizeof(UInt32)] = tmpUpdateData[srcStart++];
+								updateData[bmStart * sizeof(UInt32) + 1] = tmpUpdateData[srcStart++];
+								updateData[bmStart * sizeof(UInt32) + 2] = tmpUpdateData[srcStart++];
+								updateData[bmStart * sizeof(UInt32) + 3] = 0xFF;
+							} else {
+								updateData[bmStart * sizeof(UInt32)] = 0xFF;
+								updateData[bmStart * sizeof(UInt32) + 1] = 0xFF;
+								updateData[bmStart * sizeof(UInt32) + 2] = 0xFF;
+								updateData[bmStart * sizeof(UInt32) + 3] = 0x00;
+							}
+							bmStart++;
+						}
+					}
+				}
+				
+				if (winData == NULL) {
+					assert((w == width) && (h == height));
+					
+					winData = malloc(width * height * sizeof(UInt32));
+					assert(winData != NULL);
+					memcpy(winData, updateData, width * height * sizeof(UInt32));
+				} else {
+						// Overlay the update onto my view of the frame
+					drawWin(winData, width, height, x, y, w, h, (UInt32 *) updateData);
+				}
+				
+					// Now, display my view of the frame
+				displayWin(player, width, height, maskX, maskY, maskWidth, maskHeight, winData);
+			}
+		} 
+		
+		NSWindow *win = windows[sessionIndex];
+		[win orderOut:self];
+		
 #ifdef PLAYER_TASKBAR
-    MenuEntry *entry = nil;
-    
-    unsigned long count = [streamer count];
-    for (unsigned int i=0; i < count; i++) {
-        entry = [streamer objectAtIndex:i];
-        
-        if ([[[entry ns] name] isEqual:[ns name]]) {
-            [[entry menuItem] setState:NSOffState];
-            break;
-        }
-    }
+		MenuEntry *entry = nil;
+		
+		unsigned long count = [streamer count];
+		for (unsigned int i=0; i < count; i++) {
+			entry = [streamer objectAtIndex:i];
+			
+			if ([[[entry ns] name] isEqual:[ns name]]) {
+				[[entry menuItem] setState:NSOffState];
+				break;
+			}
+		}
 #endif /* PLAYER_TASKBAR */	
-    [ns stop];
-    activeNSSessions[sessionIndex] = nil;
-    
-    close(receiveSocket);
-    if (receiveBuf)
-        free(receiveBuf);
-    if (winData)
-        free(winData);
-    if (updateData)
-        free(updateData);
-    if (tmpUpdateData)
-        free(tmpUpdateData);
-    
-    [pool drain];
+		[ns stop];
+		activeNSSessions[sessionIndex] = nil;
+		
+		close(receiveSocket);
+		if (receiveBuf)
+			free(receiveBuf);
+		if (winData)
+			free(winData);
+		if (updateData)
+			free(updateData);
+		if (tmpUpdateData)
+			free(tmpUpdateData);
+	}
 }
 @end
 
@@ -1424,9 +1440,9 @@ void displayWin(NSImageView *player, int width, int height, int maskX, int maskY
 #pragma unused(sender, errorDict)
     // assert(sender == self.netService);
     // NSLog(@"DEBUG: Did not publish - %@, %@", [sender name], errorDict);
-	NSLog(@"FATAL: Failed to publish ourselves. Duplicate?");
+    NSLog(@"FATAL: Failed to publish ourselves. Duplicate?");
 
-	exit(1);
+    exit(0);
 }
 @end
 
@@ -1495,7 +1511,16 @@ void displayWin(NSImageView *player, int width, int height, int maskX, int maskY
 }
 
 - (void)netService:(NSNetService *)ns didNotResolve:(NSDictionary *)errorDict {
-    NSLog(@"Did not resolve %@ because of %@", [ns name], errorDict);
+	switch ((NSInteger)[errorDict objectForKey:NSNetServicesErrorCode]) {
+		case NSNetServicesTimeoutError: {
+			NSLog(@"Timeout resolving %@", [ns name]);
+			break;
+		}
+		default: {
+			NSLog(@"Did not resolve %@ because of %@", [ns name], errorDict);
+			break;
+		}
+	}
     
     [ns stop];
 }

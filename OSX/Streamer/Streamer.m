@@ -90,15 +90,26 @@ int compressSend(unsigned char *src, unsigned int sz) {
 			ssize_t sent = 0, curSent;
 			while (sent < outsz[cnt]) {
 				if ((curSent = send([nsock intValue], (out[cnt] + sent), (outsz[cnt]-sent), 0)) == -1) {
-					if (errno == EMSGSIZE) 
-						printf("Packet size error: %d\n", outsz[cnt]);
-					else
-						perror("tcpSend");
-					[toRemove addObject:nsock];
-					
-					break;
-				}
-				sent += curSent;
+					switch(errno) {
+						case EMSGSIZE:
+							printf("Packet size error: %d\n", outsz[cnt]);
+							break;
+
+						case ENOBUFS:
+							printf("tcp send: No buffers available\n");
+							break;
+
+						default:
+							NSLog(@"tcp send: Error is; %d", errno);
+							
+							perror("tcpSend");
+							[toRemove removeObject:nsock];		// We search through the entire array.
+																// Maybe search and delete the first entry should be enough
+							[toRemove addObject:nsock];
+							break;
+					}
+				} else
+					sent += curSent;
 			}
 		}
 		if ([toRemove count] != 0)
@@ -169,11 +180,11 @@ void sendInitialIframe() {
 	// Each rectangle is sent as follows: <width:16><height:16><maskX:16><maskY:16><maskWidth:16><maskHeight:16><x:16><y:16><width:16><height:16>
 void MyScreenRefreshCallback (CGRectCount count, const CGRect *rectArray, void *userParameter) {
 #pragma unused(userParameter)
+
+	if ([activePlayers count] == 0)
+		return;
+
 	@autoreleasepool {
-		if ([activePlayers count] == 0)
-			return;
-		
-			// NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 		boolean_t done = FALSE;
         
 			// One could use CGDisplayCreateImageForRect to capture just the screen regions that were changed
@@ -248,7 +259,6 @@ void MyScreenRefreshCallback (CGRectCount count, const CGRect *rectArray, void *
 		
 		CFRelease(cColorData);
 		CGImageRelease(myImageRef);
-			// [pool drain];
 	}
 }
 
@@ -304,12 +314,12 @@ void GetPrimaryIp(char* buffer, socklen_t buflen) {
         in_port_t myPort, maskPort;
         width = CGDisplayPixelsWide(CGMainDisplayID());
         height = CGDisplayPixelsHigh(CGMainDisplayID());
-		
+
+		activePlayers = [[NSMutableArray alloc] init];
+
         maskRect = CGRectMake(0.0, 0.0, width, height);
         maskValid = false;
 		maskPort = [self createServerSocketWithAcceptCallBack:maskListeningSocketCallback];
-        
-		activePlayers = [[NSMutableArray alloc] init];
 		myPort = [self createServerSocketWithAcceptCallBack:streamListeningSocketCallback];
 		
 			// HTTP server to respond to SNAPSHOT requests
@@ -317,9 +327,9 @@ void GetPrimaryIp(char* buffer, socklen_t buflen) {
 		[server setPort:9765];
 		
 		NSError *startError = nil;
-		if ([server start:&startError]) {
+		if ([server start:&startError])
 			[server setDelegate:self];
-		} else {
+		else {
 			NSLog(@"Error starting HTTP server for SNAPSHOT service: %@", startError);
 			[server dealloc];
 			server = nil;
@@ -327,6 +337,7 @@ void GetPrimaryIp(char* buffer, socklen_t buflen) {
 		
 		if (myUniqueID == nil) {
 			GetUniqueID *uniqid = [[GetUniqueID alloc] init];
+
 			myUniqueID = [[NSString stringWithFormat:@"streamer-%@", [uniqid GetHWAddress]] retain];
 			[uniqid release];
 		}
@@ -334,10 +345,14 @@ void GetPrimaryIp(char* buffer, socklen_t buflen) {
         self.streamerID = [[NSUserDefaults standardUserDefaults] objectForKey:myUniqueID];
         if (self.streamerID == nil) {
             CFUUIDRef	uuidObj = CFUUIDCreate(nil);
-            self.streamerID = (NSString *)CFUUIDCreateString(nil, uuidObj);
-            [[NSUserDefaults standardUserDefaults] setObject:self.streamerID forKey:myUniqueID];
+            CFStringRef uidStr = CFUUIDCreateString(nil, uuidObj);
+            [[NSUserDefaults standardUserDefaults] setObject:(id)uidStr forKey:myUniqueID];
+			CFRelease(uidStr);
+			CFRelease(uuidObj);
 			
-            CFRelease(uuidObj);
+			self.streamerID = [[NSUserDefaults standardUserDefaults] objectForKey:myUniqueID];
+			assert(self.streamerID != nil);
+
             NSLog(@"Generating unique ID for Player");
 			
 			NSString *nm = NSFullUserName();
@@ -345,13 +360,13 @@ void GetPrimaryIp(char* buffer, socklen_t buflen) {
 			if (nm == nil)
 				str = @" Streamer";
 			else 
-				str = [[NSString stringWithFormat:@"%@'s Streamer", nm] retain];
+				str = [NSString stringWithFormat:@"%@'s Streamer", nm];
 			[[NSUserDefaults standardUserDefaults] setObject:str forKey:[NSString stringWithFormat:@"%@-Name", myUniqueID]];
         }
         
 			// NSString *myAddr = [[[NSString alloc] initWithCString:ma encoding:NSASCIIStringEncoding] autorelease];
 			// NSLog(@"Address: %@:%d. MaxPacketSize: %d Name: %@\n", myAddr, myPort, maxPacketSize, self.serviceName);
-        self.netService = [[[NSNetService alloc] initWithDomain:BONJOUR_DOMAIN type:STREAMER name:self.streamerID port:myPort] retain];
+        self.netService = [[[NSNetService alloc] initWithDomain:BONJOUR_DOMAIN type:STREAMER name:self.streamerID port:myPort] autorelease];
         if (self.netService != nil) {
             NSString *ver = [[[NSString alloc] initWithFormat:@"%f", VERSION] autorelease];
 			
@@ -533,6 +548,7 @@ static void streamListeningSocketCallback(CFSocketRef s, CFSocketCallBackType ty
 		
 		CFRunLoopAddSource(CFRunLoopGetCurrent(), rls, kCFRunLoopDefaultMode);
 		CFRelease(rls);
+		CFRelease(listeningSocket);
 	} 
 	
 	socklen_t namelen = sizeof(serverAddress6);
@@ -561,10 +577,19 @@ static void streamListeningSocketCallback(CFSocketRef s, CFSocketCallBackType ty
     assert(sender == self.netService);
 #pragma unused(sender)
 #pragma unused(errorDict)
-	NSLog(@"Duplicate instance. Quietly exitting");
+	switch ((NSInteger)[errorDict objectForKey:NSNetServicesErrorCode]) {
+		case NSNetServicesCollisionError: {
+			NSLog(@"Duplicate instance. Quietly exitting: %@", errorDict);
+			exit(0);
+		}
+
+		default: {
+			NSLog(@"Could not publish: error: %@ service: %@", errorDict, sender);
+		}
+	}
 }
 
-	// An NSNetService delegate callback that's called when the service spontaneously 
+	// An NSNetService delegate callback that's called when the service spontaneously
 	// stops.  This rarely happens on Mac OS X but, regardless, we respond by shutting 
 	// down our entire network service.
 - (void)netServiceDidStop:(NSNetService *)sender {

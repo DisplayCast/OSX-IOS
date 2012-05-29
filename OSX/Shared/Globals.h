@@ -15,7 +15,7 @@
 
 #define     VERSION	1.0
 
-#undef  USE_BLUETOOTH        // Used to work and then it stopped working (in more recent SDK). Will hang in [IOBluetoothHostController defaultController]. WTF 
+#define  USE_BLUETOOTH        // Used to work and then it stopped working (in more recent SDK). Will hang in [IOBluetoothHostController defaultController]. WTF 
 #undef  USE_MULTICAST
 #undef  USE_XMPP
 

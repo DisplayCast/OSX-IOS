@@ -85,7 +85,7 @@ Streamer *stm = nil;
 	NSDictionary *myKeys = [NSNetService dictionaryFromTXTRecordData:[ns TXTRecordData]];
 	NSString	 *fullName = [[[NSString alloc] initWithData:[myKeys objectForKey:@"name"] encoding:NSUTF8StringEncoding] autorelease];
 	NSMenuItem *item = [[[NSMenuItem allocWithZone:[NSMenu menuZone]] initWithTitle:fullName action:@selector(projectAction:) keyEquivalent:@""] autorelease];
-	
+
 		// Use MenuEntry to keep track of the NSNetService. On user click, we need the NSNetService to know where the Player is
 	MenuEntry *me = [[[MenuEntry alloc] initWithNS:ns andMenuItem:item] autorelease];
 	
@@ -96,19 +96,20 @@ Streamer *stm = nil;
 }
 
 - (void) delEntry:(NSNetService *)ns andArray:(NSMutableArray *)array andMenu:(NSMenu*) menu {
-	unsigned long count = [array count];
-	for (unsigned int i=0; i < count; i++) {
-		MenuEntry *object = [array objectAtIndex:i];
-		
+	MenuEntry *toDelete = nil;
+
+	for (MenuEntry *object in array) {
 		if ([[ns name] isEqualToString:[object name]]) {
 			[object removeEntry:menu];
-			[array removeObject:object];
-			
-			return;
+
+			toDelete = object;
+			break;
 		}
 	}
-
-	NSLog(@"DEBUG: Trying to delete non-existent entry");
+	if (toDelete == nil)
+		NSLog(@"DEBUG: Trying to delete non-existent entry: %@", [ns name]);
+	else
+		[array removeObject:toDelete];
 }
 
 #pragma mark -
@@ -121,13 +122,17 @@ NSMutableArray *player = nil, *archiver = nil;
 
     [aNetService retain];
     [aNetService setDelegate:self];
-	
-	[aNetService scheduleInRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
-    [aNetService resolveWithTimeout:5.0];
+
+	[aNetService performSelectorInBackground:@selector(resolve) withObject:nil];
+
+		// [aNetService scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+		// [aNetService resolveWithTimeout:5.0];
 }
 
 - (void)netServiceDidResolveAddress:(NSNetService *)ns {
-    [ns startMonitoring];   // For txt record updates
+		// [ns stop];
+	
+	[ns startMonitoring];   // For txt record updates
 }
 
 - (void)netService:(NSNetService *)ns didNotResolve:(NSDictionary *)errorDict {
@@ -157,6 +162,7 @@ NSMutableArray *player = nil, *archiver = nil;
 }
 
 - (void) awakeFromNib {
+	NSLog(@"Awake from NIB");
 	/*
 	statusMenu = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength] retain];
 	
@@ -417,7 +423,7 @@ IOBluetoothDeviceInquiry *btd = nil;
 
 - (void) bluetoothScan {
 	if ([btd start] != kIOReturnSuccess) 
-		NSLog(@"Start failed");
+		NSLog(@"Bluetooth scan start failed");
 	
 	/* dispatch_queue_t q_background = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
     double delayInSeconds = 120.0;
@@ -442,19 +448,19 @@ void catchallExceptionHandler(NSException *exception) {
 #pragma mark *Main function
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 #pragma unused(aNotification)
-	
+		// Actually, we need to set LSUIElement in the plist file!!
+	[NSApp setActivationPolicy:NSApplicationActivationPolicyAccessory];
 	NSSetUncaughtExceptionHandler(&catchallExceptionHandler);
+	
 	@autoreleasepool {
-			// NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-		
 		stm = [[Streamer alloc] init];
-		
 		CGRegisterScreenRefreshCallback(MyScreenRefreshCallback, stm);
 		
 			// Works in 10.7+ to remove from the Dock
-		ProcessSerialNumber psn = {0, kCurrentProcess};
-		TransformProcessType(&psn, kProcessTransformToUIElementApplication);
-			// TransformProcessType(&psn, kProcessTransformToForegroundApplication);
+			// but doesnt work in 10.8.
+			// ProcessSerialNumber psn = {0, kCurrentProcess};
+			// TransformProcessType(&psn, kProcessTransformToUIElementApplication);
+			//// TransformProcessType(&psn, kProcessTransformToForegroundApplication);
 		
 		player = [[NSMutableArray arrayWithCapacity:10] retain];
 		archiver = [[NSMutableArray arrayWithCapacity:10] retain];
@@ -515,26 +521,18 @@ void catchallExceptionHandler(NSException *exception) {
 		item = [menu addItemWithTitle:@"Quit Streamer" action:@selector(quitAction:) keyEquivalent:@""];
 		[item setTarget:self];
 #endif /* MANUAL */
-		
-		NSString *path = [[NSBundle mainBundle] pathForResource:@"icon" ofType:@"tiff"];
-		NSImage *image = [[[NSImage alloc] initWithContentsOfFile: path] autorelease];
-		
-		trayItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
-		[trayItem setMenu:statusMenu];
-		[trayItem setHighlightMode:YES];
-		[trayItem setImage: image];
-		
+
 			// Start the Bonjour browser.
 		_playerBrowser = [[NSNetServiceBrowser alloc] init];
 		[_playerBrowser setDelegate:self];
-		[_playerBrowser scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+			// [_playerBrowser scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
 		[_playerBrowser searchForServicesOfType:PLAYER inDomain:BONJOUR_DOMAIN];
-		
+
 		_archiveBrowser = [[NSNetServiceBrowser alloc] init];
 		[_archiveBrowser setDelegate:self];
-		[_archiveBrowser scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+			// [_archiveBrowser scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
 		[_archiveBrowser searchForServicesOfType:ARCHIVER inDomain:BONJOUR_DOMAIN];
-		
+
 #ifdef USE_BLUETOOTH
 		btd = [[IOBluetoothDeviceInquiry alloc] initWithDelegate:self];
 		[btd setSearchCriteria:kBluetoothServiceClassMajorAny majorDeviceClass:kBluetoothDeviceClassMajorComputer minorDeviceClass:kBluetoothDeviceClassMinorAny];
@@ -549,8 +547,14 @@ void catchallExceptionHandler(NSException *exception) {
 			// [self bluetoothScan];
 			// });
 #endif /* BLUETOOTH */
+
+		NSString *path = [[NSBundle mainBundle] pathForResource:@"icon" ofType:@"tiff"];
+		NSImage *image = [[[NSImage alloc] initWithContentsOfFile: path] autorelease];
 		
-			// [pool drain];
+		trayItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
+		[trayItem setMenu:statusMenu];
+		[trayItem setHighlightMode:YES];
+		[trayItem setImage: image];
 	}
 }
 

@@ -36,6 +36,8 @@
 	<string>Copyright © 2012, Fuji Xerox Co., Ltd., All rights reserved.</string>
 	<key>NSMainNibFile</key>
 	<string>PlayerMenu</string>
+	<key>LSUIElement</key>
+	<true/>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>

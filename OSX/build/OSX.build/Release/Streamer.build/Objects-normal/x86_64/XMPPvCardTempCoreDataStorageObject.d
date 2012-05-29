@@ -1,23 +1,23 @@
 dependencies: \
-  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Extensions/XEP-0054/CoreDataStorage/XMPPvCardTempCoreDataStorageObject.m \
-  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Extensions/XEP-0054/CoreDataStorage/XMPPvCardTempCoreDataStorageObject.h \
-  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Extensions/XEP-0054/XMPPvCardTemp.h \
-  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Core/XMPPIQ.h \
-  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Core/XMPPElement.h \
-  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Core/XMPPJID.h \
-  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Extensions/Roster/XMPPUser.h \
-  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Core/XMPP.h \
-  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Core/XMPPStream.h \
-  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Vendor/CocoaAsyncSocket/GCDAsyncSocket.h \
-  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Utilities/GCDMulticastDelegate.h \
-  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Core/XMPPMessage.h \
-  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Core/XMPPPresence.h \
-  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Core/XMPPModule.h \
-  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Categories/NSXMLElement+XMPP.h \
-  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Extensions/XEP-0054/XMPPvCardTempAdr.h \
-  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Extensions/XEP-0054/XMPPvCardTempAdrTypes.h \
-  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Extensions/XEP-0054/XMPPvCardTempBase.h \
-  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Extensions/XEP-0054/XMPPvCardTempEmail.h \
-  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Extensions/XEP-0054/XMPPvCardTempLabel.h \
-  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Extensions/XEP-0054/XMPPvCardTempTel.h \
-  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Extensions/XEP-0054/CoreDataStorage/XMPPvCardCoreDataStorageObject.h
+  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Extensions/XEP-0054/CoreDataStorage/XMPPvCardTempCoreDataStorageObject.m \
+  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Extensions/XEP-0054/CoreDataStorage/XMPPvCardTempCoreDataStorageObject.h \
+  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Extensions/XEP-0054/XMPPvCardTemp.h \
+  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Core/XMPPIQ.h \
+  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Core/XMPPElement.h \
+  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Core/XMPPJID.h \
+  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Extensions/Roster/XMPPUser.h \
+  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Core/XMPP.h \
+  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Core/XMPPStream.h \
+  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Vendor/CocoaAsyncSocket/GCDAsyncSocket.h \
+  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Utilities/GCDMulticastDelegate.h \
+  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Core/XMPPMessage.h \
+  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Core/XMPPPresence.h \
+  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Core/XMPPModule.h \
+  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Categories/NSXMLElement+XMPP.h \
+  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Extensions/XEP-0054/XMPPvCardTempAdr.h \
+  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Extensions/XEP-0054/XMPPvCardTempAdrTypes.h \
+  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Extensions/XEP-0054/XMPPvCardTempBase.h \
+  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Extensions/XEP-0054/XMPPvCardTempEmail.h \
+  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Extensions/XEP-0054/XMPPvCardTempLabel.h \
+  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Extensions/XEP-0054/XMPPvCardTempTel.h \
+  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Extensions/XEP-0054/CoreDataStorage/XMPPvCardCoreDataStorageObject.h

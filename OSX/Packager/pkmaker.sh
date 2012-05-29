@@ -13,13 +13,21 @@ tmpdest=/tmp/Pkg; export tmpdest
 mkdir -p ${tmpdest}
 cp -pr EnableAutoLogin.app ${tmpdest}
 
-[ -x /Developer/usr/bin/packagemaker ] && PKGMAKER="/Developer/usr/bin/packagemaker"
-[ -x "/Applications/Developer/Auxillary Tools/PackageMaker.app/Contents/MacOS/PackageMaker" ] && PKGMAKER="/Applications/Developer/Auxillary Tools/PackageMaker.app/Contents/MacOS/PackageMaker"
+############Apple's Package maker is broken
+if [ ${USE_APPLE_PACKAGER} ] 
+then
+	Using "Apple's packager"
+	[ -x /Developer/usr/bin/packagemaker ] && PKGMAKER="/Developer/usr/bin/packagemaker"
+	[ -x "/Applications/Developer/Auxillary Tools/PackageMaker.app/Contents/MacOS/PackageMaker" ] && PKGMAKER="/Applications/Developer/Auxillary Tools/PackageMaker.app/Contents/MacOS/PackageMaker"
+	
+	[ ! -x "${PKGMAKER}" ] && echo "$0: Package maker not installed" && exit 1
 
-[ ! -x "${PKGMAKER}" ] && echo "$0: Package maker not installed" && exit 1
-
-(cd ..; "${PKGMAKER}" --doc PackageMaker.pmdoc -v -o DisplayCast.pkg)
-mv ../DisplayCast.pkg ${tmpdest}
+	(cd ..; "${PKGMAKER}" --doc PackageMaker.pmdoc -v -o DisplayCast.pkg)
+	mv ../DisplayCast.pkg ${tmpdest}
+else
+	echo "Using Packages tool"
+	[ -x /usr/local/bin/packagesbuild ] && packagesbuild DisplayCast.pkgproj && mv DisplayCast.pkg ${tmpdest}
+fi
 
 title="DisplayCast"; export title
 size=20000; export size

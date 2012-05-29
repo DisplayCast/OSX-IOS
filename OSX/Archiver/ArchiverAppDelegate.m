@@ -1079,6 +1079,8 @@ void drawWin(UInt32 *winData, int width, int height, int x, int y, int w, int h,
 #pragma unused(sender, errorDict)
     // assert(sender == self.netService);
     // NSLog(@"DEBUG: Did not publish - %@, %@", [sender name], errorDict);
+    NSLog(@"Duplicate instance. Quietly exitting");
+    exit(0);
 }
 @end
 
