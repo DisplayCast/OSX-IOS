@@ -1,3 +1,3 @@
-dependencies: /Users/chandra/Src/DisplayCast/OSX/Streamer/HTTPServer.m \
-  /Users/chandra/Src/DisplayCast/OSX/Streamer/HTTPServer.h \
-  /Users/chandra/Src/DisplayCast/OSX/Streamer/TCPServer.h
+dependencies: /Volumes/chandra/Src/DisplayCast/OSX/Streamer/HTTPServer.m \
+  /Volumes/chandra/Src/DisplayCast/OSX/Streamer/HTTPServer.h \
+  /Volumes/chandra/Src/DisplayCast/OSX/Streamer/TCPServer.h

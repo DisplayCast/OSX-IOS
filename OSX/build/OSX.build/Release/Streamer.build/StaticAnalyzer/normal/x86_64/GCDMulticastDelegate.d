@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Utilities/GCDMulticastDelegate.m \
-  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Utilities/GCDMulticastDelegate.h
+  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Utilities/GCDMulticastDelegate.m \
+  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Utilities/GCDMulticastDelegate.h

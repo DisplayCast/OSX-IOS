@@ -4,7 +4,7 @@
 <dict>
  <key>files</key>
  <array>
-  <string>/Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Vendor/CocoaAsyncSocket/GCDAsyncSocket.m</string>
+  <string>/Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Vendor/CocoaAsyncSocket/GCDAsyncSocket.m</string>
  </array>
  <key>diagnostics</key>
  <array>
@@ -34,7 +34,6 @@
         </dict>
        </array>
      </array>
-     <key>depth</key><integer>0</integer>
      <key>extended_message</key>
      <string>Value stored to &apos;aConnectIndex&apos; is never read</string>
      <key>message</key>
@@ -44,8 +43,6 @@
    <key>description</key><string>Value stored to &apos;aConnectIndex&apos; is never read</string>
    <key>category</key><string>Dead store</string>
    <key>type</key><string>Dead assignment</string>
-  <key>issue_context_kind</key><string>Objective-C method</string>
-  <key>issue_context</key><string>didConnect:</string>
   <key>location</key>
   <dict>
    <key>line</key><integer>2286</integer>

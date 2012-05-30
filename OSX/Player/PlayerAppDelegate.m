@@ -796,14 +796,16 @@ static NSMutableDictionary *myKeys = NULL;         // Advertise myself using the
 						NSMenuItem *mi = [me menuItem];
 						
 						dispatch_async(queue, ^{
-							NSURL *url = [[[NSURL alloc] initWithString:imageURL] autorelease];
-							NSImage *image = [[[NSImage alloc] initWithContentsOfURL:url] autorelease];
+							NSURL *url = [[NSURL alloc] initWithString:imageURL];
+							NSImage *image = [[NSImage alloc] initWithContentsOfURL:url];
 							if (image != NULL) {
 								if ([mi respondsToSelector:@selector(setImage:)])
 									[mi setImage:image];
+								[image release];
 							}
-							dispatch_release(queue);
+							[url release];
 						});
+						dispatch_release(queue);
 						
 						break;
 					}
@@ -1442,7 +1444,8 @@ void displayWin(NSImageView *player, int width, int height, int maskX, int maskY
     // NSLog(@"DEBUG: Did not publish - %@, %@", [sender name], errorDict);
     NSLog(@"FATAL: Failed to publish ourselves. Duplicate?");
 
-    exit(0);
+		// Turns out that 
+		// exit(0);
 }
 @end
 

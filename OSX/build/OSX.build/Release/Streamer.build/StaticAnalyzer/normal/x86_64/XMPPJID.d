@@ -1,4 +1,4 @@
 dependencies: \
-  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Core/XMPPJID.m \
-  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Core/XMPPJID.h \
-  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Utilities/LibIDN.h
+  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Core/XMPPJID.m \
+  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Core/XMPPJID.h \
+  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Utilities/LibIDN.h

@@ -1,1 +1,1 @@
-dependencies: /Users/chandra/Src/DisplayCast/OSX/Player/main.m
+dependencies: /Volumes/chandra/Src/DisplayCast/OSX/Player/main.m

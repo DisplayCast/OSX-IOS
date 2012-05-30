@@ -2,29 +2,54 @@ TPreferences
 v5
 r1
 cCheck dependencies
-cProcessInfoPlistFile /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Info.plist Preferences/Preferences-Info.plist
-cProcessPCH /var/folders/gn/hp8dntz94gzbdlxzysf1n9q40000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-abhhqinvaojxqkbngffchzwrqgcq/Preferences-Prefix.pch.pth Preferences/Preferences-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cProcessPCH /var/folders/gn/hp8dntz94gzbdlxzysf1n9q40000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-fxmgqqkruuwnkbfnpztptnzglpqj/Preferences-Prefix.pch.pth Preferences/Preferences-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.analyzer
-cCompileC build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/GetUniqueID.o /Users/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/Preferences.o /Users/chandra/Src/DisplayCast/OSX/Preferences/Preferences.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cAnalyze /Users/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m
-cAnalyze /Users/chandra/Src/DisplayCast/OSX/Preferences/Preferences.m
-cLd /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/MacOS/DisplayCast normal x86_64
-cCompileXIB /Users/chandra/Src/DisplayCast/OSX/Preferences/en.lproj/Preferences.xib
-cCopyStringsFile /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/en.lproj/InfoPlist.strings Preferences/en.lproj/InfoPlist.strings
-cCopyTiffFile /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/Preferences.tiff Preferences/Preferences.tiff
+cProcessInfoPlistFile /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Info.plist Preferences/Preferences-Info.plist
+cProcessPCH /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-ctikgorfhsvxlkfivobdunavfdqv/Preferences-Prefix.pch.pth Preferences/Preferences-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-azildvmnbgjdzxdoakzrktyarkrq/Preferences-Prefix.pch.pth Preferences/Preferences-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.analyzer
+cAnalyze /Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences.m
+cAnalyze /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m
+cCompileC build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/Preferences.o /Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/GetUniqueID.o /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/MacOS/DisplayCast normal x86_64
+cCompileXIB /Volumes/chandra/Src/DisplayCast/OSX/Preferences/en.lproj/Preferences.xib
+cCopyStringsFile /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/en.lproj/InfoPlist.strings Preferences/en.lproj/InfoPlist.strings
+cCopyTiffFile /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/Preferences.tiff Preferences/Preferences.tiff
 cCpResource Preferences/FxpalLogo.ico build/Release/DisplayCast.prefPane/Contents/Resources/FxpalLogo.ico
 cCpResource Images/Archiver.icns build/Release/DisplayCast.prefPane/Contents/Resources/Archiver.icns
 cCpResource Images/Player.icns build/Release/DisplayCast.prefPane/Contents/Resources/Player.icns
-cCpResource ../README.txt build/Release/DisplayCast.prefPane/Contents/Resources/README.txt
 cCpResource Images/Streamer.icns build/Release/DisplayCast.prefPane/Contents/Resources/Streamer.icns
+cCpResource ../README.txt build/Release/DisplayCast.prefPane/Contents/Resources/README.txt
 cCpResource ../License.rtf build/Release/DisplayCast.prefPane/Contents/Resources/License.rtf
 cCpResource ../Credits.rtf build/Release/DisplayCast.prefPane/Contents/Resources/Credits.rtf
-cProcessProductPackaging "/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile" /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/embedded.provisionprofile
-cProcessProductPackaging "/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile" /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/embedded.provisionprofile
-cTouch /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane
-cProcessProductPackaging /Applications/Xcode44-DP5.app/Contents/Developer/Platforms/MacOSX.platform/Entitlements.plist /Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast.xcent
-cCodeSign /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane
+cProcessProductPackaging "/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile" /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/embedded.provisionprofile
+cProcessProductPackaging "/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile" /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/embedded.provisionprofile
+cTouch /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane
+cProcessProductPackaging /Applications/Xcode-4.3.2.app/Contents/Developer/Platforms/MacOSX.platform/Entitlements.plist /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast.xcent
+cCodeSign /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane
+
+N/Applications/Xcode-4.3.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
+c000000004F7B817900000000000000EE
+t1333494137
+s238
+
+N/Applications/Xcode-4.3.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000004F57E6620000000000002470
+t1331160674
+s9328
+
+N/Applications/Xcode-4.3.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c000000004F57E66200000000000001E5
+t1331160674
+s485
+
+N/Applications/Xcode-4.3.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/PreferencePanes.framework/PreferencePanes
+c000000004F57E664000000000000F8A4
+t1331160676
+s63652
+
+N/Applications/Xcode-4.3.2.app/Contents/Developer/Platforms/MacOSX.platform/Entitlements.plist
+c000000004F57E66A0000000000000127
+t1331160682
+s295
 
 N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.6.sdk
 c000000004F7B816200000000000000EE
@@ -72,8 +97,8 @@ t1337129597
 s295
 
 N/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile
-c000000004F99D96B0000000000001CC7
-t1335482731
+c000000004F6B6B6E0000000000001CC7
+t1332439918
 s7367
 
 N/Users/chandra/Src/DisplayCast/OSX/../Credits.rtf
@@ -118,14 +143,14 @@ s150
 i<Cocoa/Cocoa.h>
 
 N/Users/chandra/Src/DisplayCast/OSX/Preferences/Preferences.h
-c000000004FA232A40000000000000265
-t1336029860
-s613
+c00000000000000000000000000000000
+t2
+s0
 
 N/Users/chandra/Src/DisplayCast/OSX/Preferences/Preferences.m
-c000000004FB2DD4B0000000000001BB2
-t1337122123
-s7090
+c00000000000000000000000000000000
+t2
+s0
 
 N/Users/chandra/Src/DisplayCast/OSX/Preferences/Preferences.tiff
 c000000004E77A24700000000000864C5
@@ -143,14 +168,14 @@ t1337119196
 s31984
 
 N/Users/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.h
-c000000004FA232A400000000000000C4
-t1336029860
-s196
+c00000000000000000000000000000000
+t2
+s0
 
 N/Users/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m
-c000000004FB1A34B0000000000000590
-t1337041739
-s1424
+c00000000000000000000000000000000
+t2
+s0
 
 N/Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast.xcent
 t2
@@ -275,14 +300,14 @@ s150
 i<Cocoa/Cocoa.h>
 
 N/Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences.h
-c00000000000000000000000000000000
-t2
-s0
+c000000004FA232A40000000000000265
+t1336029860
+s613
 
 N/Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences.m
-c00000000000000000000000000000000
-t2
-s0
+c000000004FB2DD4B0000000000001BB2
+t1337122123
+s7090
 
 N/Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences.tiff
 c000000004E77A24700000000000864C5
@@ -295,27 +320,27 @@ t1316118144
 s45
 
 N/Volumes/chandra/Src/DisplayCast/OSX/Preferences/en.lproj/Preferences.xib
-c000000004FB2D1DC0000000000007CF0
-t1337119196
-s31984
+c000000004FC65F340000000000007BBA
+t1338400564
+s31674
 
 N/Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.h
-c00000000000000000000000000000000
-t2
-s0
+c000000004FA232A400000000000000C4
+t1336029860
+s196
 
 N/Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m
-c00000000000000000000000000000000
-t2
-s0
+c000000004FB1A34B0000000000000590
+t1337041739
+s1424
 
 N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast.xcent
 t2
 s0
 
 N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/DisplayCast.LinkFileList
-c000000004FB577A700000000000000E6
-t1337292711
+c000000004FC65F4700000000000000E6
+t1338400583
 s230
 
 N/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/GetUniqueID.o
@@ -390,7 +415,15 @@ N/Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Content
 t2
 s0
 
+N/var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-azildvmnbgjdzxdoakzrktyarkrq/Preferences-Prefix.pch.pth
+t2
+s0
+
 N/var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-chzuzmrapsjawwaupwcsydkzvfwh/Preferences-Prefix.pch.pth
+t2
+s0
+
+N/var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-ctikgorfhsvxlkfivobdunavfdqv/Preferences-Prefix.pch.pth
 t2
 s0
 
@@ -436,24 +469,24 @@ x/Users/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection63"Analyze /Users/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m501b299f136bb541^cceecd9f136bb541^---0#0#0#-19%DVTDocumentLocation2@71"file://localhost/Users/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m0000000000000000^2867"Analyze Shared/GetUniqueID.m    cd /Users/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode44-DP5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-gc -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode44-DP5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -Xclang -analyzer-output=plist-multi-file -Xclang -analyzer-disable-checker -Xclang deadcode.IdempotentOperations -iquote /Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-generated-files.hmap -I/Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-own-target-headers.hmap -I/Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-all-target-headers.hmap -iquote /Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-project-headers.hmap -I/Users/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode44-DP5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/libxml2 -I/Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources/x86_64 -I/Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Users/chandra/Src/DisplayCast/OSX/build/Release -include /var/folders/gn/hp8dntz94gzbdlxzysf1n9q40000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-fxmgqqkruuwnkbfnpztptnzglpqj/Preferences-Prefix.pch -MMD -MT dependencies -MF /Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/StaticAnalyzer/normal/x86_64/GetUniqueID.d --analyze /Users/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m -o /Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/StaticAnalyzer/normal/x86_64/GetUniqueID.plist36"1EAD2D90-0FAB-42FB-815F-82D8AB98927B-
 
 CAnalyze /Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences.m
-s358985516.689358
-e358985517.809219
+s360093382.181543
+e360093382.764279
 r1
 xAnalyze
 x/Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences.m
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Analyze /Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences.m7593b02caf65b541^2427cf2daf65b541^---0#0#0#-19%DVTDocumentLocation2@78"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences.m0000000000000000^2901"Analyze Preferences/Preferences.m    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode44-DP5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-gc -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode44-DP5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -Xclang -analyzer-output=plist-multi-file -Xclang -analyzer-disable-checker -Xclang deadcode.IdempotentOperations -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-generated-files.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-own-target-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-all-target-headers.hmap -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-project-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode44-DP5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-gisuvcevircfeidwqasepccsmziv/Preferences-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/StaticAnalyzer/normal/x86_64/Preferences.d --analyze /Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/StaticAnalyzer/normal/x86_64/Preferences.plist36"8CE08B61-AE29-498F-9762-CAAC390F99D1-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Analyze /Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences.m6b9b2ec69676b541^eba7c3c69676b541^---0#0#0#-19%DVTDocumentLocation2@78"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences.m0000000000000000^2903"Analyze Preferences/Preferences.m    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode-4.3.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-gc -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode-4.3.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -fvisibility=hidden -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -Xclang -analyzer-disable-checker -Xclang deadcode.IdempotentOperations -Xclang -analyzer-checker -Xclang osx.cocoa.experimental.SelfInit -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-generated-files.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-own-target-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-all-target-headers.hmap -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-project-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode-4.3.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-azildvmnbgjdzxdoakzrktyarkrq/Preferences-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/StaticAnalyzer/normal/x86_64/Preferences.d --analyze /Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/StaticAnalyzer/normal/x86_64/Preferences.plist36"F3324E4C-FCFD-4D25-A0A9-7F8119C5044D-
 
 CAnalyze /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m
-s358985516.689362
-e358985517.908095
+s360093382.181761
+e360093382.677066
 r1
 xAnalyze
 x/Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Analyze /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m9693b02caf65b541^3677e82daf65b541^---0#0#0#-19%DVTDocumentLocation2@73"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m0000000000000000^2891"Analyze Shared/GetUniqueID.m    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode44-DP5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-gc -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode44-DP5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -Xclang -analyzer-output=plist-multi-file -Xclang -analyzer-disable-checker -Xclang deadcode.IdempotentOperations -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-generated-files.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-own-target-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-all-target-headers.hmap -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-project-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode44-DP5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-gisuvcevircfeidwqasepccsmziv/Preferences-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/StaticAnalyzer/normal/x86_64/GetUniqueID.d --analyze /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/StaticAnalyzer/normal/x86_64/GetUniqueID.plist36"FABCF2DA-C9C9-4ADF-B255-4A5124ED6516-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Analyze /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.mada32ec69676b541^da54adc69676b541^---0#0#0#-19%DVTDocumentLocation2@73"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m0000000000000000^2893"Analyze Shared/GetUniqueID.m    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode-4.3.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-gc -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode-4.3.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -fvisibility=hidden -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -Xclang -analyzer-disable-checker -Xclang deadcode.IdempotentOperations -Xclang -analyzer-checker -Xclang osx.cocoa.experimental.SelfInit -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-generated-files.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-own-target-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-all-target-headers.hmap -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-project-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode-4.3.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-azildvmnbgjdzxdoakzrktyarkrq/Preferences-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/StaticAnalyzer/normal/x86_64/GetUniqueID.d --analyze /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/StaticAnalyzer/normal/x86_64/GetUniqueID.plist36"40520E41-D886-46C9-8848-A346068EA07C-
 
 CCheck dependencies
 r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies68eaad91136bb541^a88acd91136bb541^---0#1#0#--18"Check dependencies36"B02D5806-6CE5-4423-8AD7-B29D7EF4B99D-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciese2b05cc39676b541^494a1ac59676b541^---0#1#0#--18"Check dependencies36"CD9D8E4C-B272-4B49-98CB-E51A6C9ED57D-
 
 CCodeSign /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane
 s359338940.248862
@@ -464,12 +497,12 @@ x/Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"CodeSign build/Release/DisplayCast.prefPane7de73fbc136bb541^e50d50c1136bb541^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/0000000000000000^484"CodeSign build/Release/DisplayCast.prefPane    cd /Users/chandra/Src/DisplayCast/OSX    setenv CODESIGN_ALLOCATE /Applications/Xcode44-DP5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate    /usr/bin/codesign --force --sign 828e24b9d147f915d6fb1378e4ccbc8a3ed1c2bf --entitlements /Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast.xcent /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane36"D98D57AD-6ADA-4488-BE19-5D744FB80317-
 
 CCodeSign /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane
-s358985519.950688
-e358985524.490523
+s360093383.344167
+e360093385.005853
 r1
 xCodeSign
 x/Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"CodeSign build/Release/DisplayCast.prefPane6970f32faf65b541^de917d34af65b541^---0#0#0#-19%DVTDocumentLocation2@88"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/0000000000000000^490"CodeSign build/Release/DisplayCast.prefPane    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv CODESIGN_ALLOCATE /Applications/Xcode44-DP5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate    /usr/bin/codesign --force --sign 828e24b9d147f915d6fb1378e4ccbc8a3ed1c2bf --entitlements /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast.xcent /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane36"51856812-38B8-4BCB-8D0C-44DA3D025637-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"CodeSign build/Release/DisplayCast.prefPane282958c79676b541^e88701c99676b541^---0#0#0#-19%DVTDocumentLocation2@88"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/0000000000000000^490"CodeSign build/Release/DisplayCast.prefPane    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv CODESIGN_ALLOCATE /Applications/Xcode-4.3.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate    /usr/bin/codesign --force --sign 828e24b9d147f915d6fb1378e4ccbc8a3ed1c2bf --entitlements /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast.xcent /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane36"40BEC582-5438-4343-BC1D-180343176817-
 
 CCompileC build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/GetUniqueID.o /Users/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s359338910.215074
@@ -485,8 +518,8 @@ xcom.apple.compilers.llvm.clang.1_0.compiler
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection63"Compile /Users/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m2b31379e136bb541^ea20f79f136bb541^---0#0#0#-19%DVTDocumentLocation2@71"file://localhost/Users/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m0000000000000000^3016"CompileC build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/GetUniqueID.o Shared/GetUniqueID.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode44-DP5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-gc -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode44-DP5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-generated-files.hmap -I/Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-own-target-headers.hmap -I/Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-all-target-headers.hmap -iquote /Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-project-headers.hmap -I/Users/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode44-DP5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/libxml2 -I/Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources/x86_64 -I/Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Users/chandra/Src/DisplayCast/OSX/build/Release -include /var/folders/gn/hp8dntz94gzbdlxzysf1n9q40000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-abhhqinvaojxqkbngffchzwrqgcq/Preferences-Prefix.pch -MMD -MT dependencies -MF /Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/GetUniqueID.d --serialize-diagnostics /Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/GetUniqueID.dia -c /Users/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m -o /Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/GetUniqueID.o36"7CE7AB3E-9CF6-4928-8A81-4E9D1A3788AC-
 
 CCompileC build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/GetUniqueID.o /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s358985516.987329
-e358985518.094861
+s360093382.316642
+e360093382.630126
 r1
 xCompileC
 xbuild/OSX.build/Release/Preferences.build/Objects-normal/x86_64/GetUniqueID.o
@@ -495,7 +528,7 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Compile /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m82e5fc2caf65b541^9546182eaf65b541^---0#0#0#-19%DVTDocumentLocation2@73"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m0000000000000000^3042"CompileC build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/GetUniqueID.o Shared/GetUniqueID.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode44-DP5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-gc -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode44-DP5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-generated-files.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-own-target-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-all-target-headers.hmap -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-project-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode44-DP5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-dhkhdpsehcvsdahikewchzkydowt/Preferences-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/GetUniqueID.d --serialize-diagnostics /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/GetUniqueID.dia -c /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/GetUniqueID.o36"81A4933B-7928-4DC5-AE7D-9A8082CEBC08-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Compile /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.mdf3451c69676b541^7f4ea1c69676b541^---0#0#0#-19%DVTDocumentLocation2@73"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m0000000000000000^3020"CompileC build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/GetUniqueID.o Shared/GetUniqueID.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode-4.3.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-gc -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode-4.3.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -fvisibility=hidden -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-generated-files.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-own-target-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-all-target-headers.hmap -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-project-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode-4.3.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-ctikgorfhsvxlkfivobdunavfdqv/Preferences-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/GetUniqueID.d --serialize-diagnostics /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/GetUniqueID.dia -c /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/GetUniqueID.o36"DB35AB26-50AE-498F-82B1-BDC0AA20BC8E-
 
 CCompileC build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/Preferences.o /Users/chandra/Src/DisplayCast/OSX/Preferences/Preferences.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s359338910.215078
@@ -511,8 +544,8 @@ xcom.apple.compilers.llvm.clang.1_0.compiler
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection68"Compile /Users/chandra/Src/DisplayCast/OSX/Preferences/Preferences.m7f31379e136bb541^198ef79f136bb541^---0#0#0#-19%DVTDocumentLocation2@76"file://localhost/Users/chandra/Src/DisplayCast/OSX/Preferences/Preferences.m0000000000000000^3026"CompileC build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/Preferences.o Preferences/Preferences.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode44-DP5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-gc -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode44-DP5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-generated-files.hmap -I/Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-own-target-headers.hmap -I/Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-all-target-headers.hmap -iquote /Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-project-headers.hmap -I/Users/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode44-DP5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/libxml2 -I/Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources/x86_64 -I/Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Users/chandra/Src/DisplayCast/OSX/build/Release -include /var/folders/gn/hp8dntz94gzbdlxzysf1n9q40000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-abhhqinvaojxqkbngffchzwrqgcq/Preferences-Prefix.pch -MMD -MT dependencies -MF /Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/Preferences.d --serialize-diagnostics /Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/Preferences.dia -c /Users/chandra/Src/DisplayCast/OSX/Preferences/Preferences.m -o /Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/Preferences.o36"5CED2A33-3CB3-442B-BB54-304D6504BBF4-
 
 CCompileC build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/Preferences.o /Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s358985516.987118
-e358985518.117078
+s360093382.316033
+e360093382.654928
 r1
 xCompileC
 xbuild/OSX.build/Release/Preferences.build/Objects-normal/x86_64/Preferences.o
@@ -521,7 +554,7 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Compile /Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences.m77dcfc2caf65b541^77f61d2eaf65b541^---0#0#0#-19%DVTDocumentLocation2@78"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences.m0000000000000000^3052"CompileC build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/Preferences.o Preferences/Preferences.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode44-DP5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-gc -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode44-DP5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-generated-files.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-own-target-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-all-target-headers.hmap -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-project-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode44-DP5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-dhkhdpsehcvsdahikewchzkydowt/Preferences-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/Preferences.d --serialize-diagnostics /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/Preferences.dia -c /Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/Preferences.o36"001E31FB-1527-43C0-B089-E44747B6A9AE-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Compile /Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences.mc00951c69676b541^04aaa7c69676b541^---0#0#0#-19%DVTDocumentLocation2@78"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences.m0000000000000000^3030"CompileC build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/Preferences.o Preferences/Preferences.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode-4.3.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-gc -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode-4.3.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -fvisibility=hidden -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-generated-files.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-own-target-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-all-target-headers.hmap -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-project-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode-4.3.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -include /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-ctikgorfhsvxlkfivobdunavfdqv/Preferences-Prefix.pch -MMD -MT dependencies -MF /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/Preferences.d --serialize-diagnostics /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/Preferences.dia -c /Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences.m -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/Preferences.o36"E5928AFC-7CCA-44CA-A781-223576871FD3-
 
 CCompileXIB /Users/chandra/Src/DisplayCast/OSX/Preferences/en.lproj/Preferences.xib
 s359338912.873876
@@ -532,12 +565,12 @@ x/Users/chandra/Src/DisplayCast/OSX/Preferences/en.lproj/Preferences.xib
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compiling /Users/chandra/Src/DisplayCast/OSX/Preferences/en.lproj/Preferences.xibe9f1dfa0136bb541^38102abb136bb541^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/chandra/Src/DisplayCast/OSX/Preferences/en.lproj/Preferences.xib0000000000000000^627"CompileXIB Preferences/en.lproj/Preferences.xib    cd /Users/chandra/Src/DisplayCast/OSX    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode44-DP5.app/Contents/Developer/usr/bin/..    /Applications/Xcode44-DP5.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/en.lproj/Preferences.nib /Users/chandra/Src/DisplayCast/OSX/Preferences/en.lproj/Preferences.xib --sdk /Applications/Xcode44-DP5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk36"7409B152-555D-4035-A89B-9289938AB551-
 
 CCompileXIB /Volumes/chandra/Src/DisplayCast/OSX/Preferences/en.lproj/Preferences.xib
-s358985519.206384
-e358985519.455783
+s360093382.804740
+e360093383.215918
 r1
 xCompileXIB
 x/Volumes/chandra/Src/DisplayCast/OSX/Preferences/en.lproj/Preferences.xib
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compiling /Volumes/chandra/Src/DisplayCast/OSX/Preferences/en.lproj/Preferences.xib30f4342faf65b541^47ad742faf65b541^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Preferences/en.lproj/Preferences.xib0000000000000000^633"CompileXIB Preferences/en.lproj/Preferences.xib    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode44-DP5.app/Contents/Developer/usr/bin/..    /Applications/Xcode44-DP5.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/en.lproj/Preferences.nib /Volumes/chandra/Src/DisplayCast/OSX/Preferences/en.lproj/Preferences.xib --sdk /Applications/Xcode44-DP5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk36"F1F722B1-16BE-491E-831F-024FFD2170D3-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compiling /Volumes/chandra/Src/DisplayCast/OSX/Preferences/en.lproj/Preferences.xib9c14cec69676b541^bb4637c79676b541^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Preferences/en.lproj/Preferences.xib0000000000000000^633"CompileXIB Preferences/en.lproj/Preferences.xib    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode-4.3.2.app/Contents/Developer/usr/bin/..    /Applications/Xcode-4.3.2.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/en.lproj/Preferences.nib /Volumes/chandra/Src/DisplayCast/OSX/Preferences/en.lproj/Preferences.xib --sdk /Applications/Xcode-4.3.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk36"2F4F7E6B-EA7D-497B-9A1E-FFE47CE5A147-
 
 CCopyStringsFile /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/en.lproj/InfoPlist.strings Preferences/en.lproj/InfoPlist.strings
 s359338912.873933
@@ -549,13 +582,13 @@ xPreferences/en.lproj/InfoPlist.strings
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Copy Preferences/en.lproj/InfoPlist.strings4eeedfa0136bb541^1bbe19a1136bb541^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Users/chandra/Src/DisplayCast/OSX/Preferences/en.lproj/InfoPlist.strings0000000000000000^408"CopyStringsFile build/Release/DisplayCast.prefPane/Contents/Resources/en.lproj/InfoPlist.strings Preferences/en.lproj/InfoPlist.strings    cd /Users/chandra/Src/DisplayCast/OSX    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding UTF-16 --outdir /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/en.lproj -- Preferences/en.lproj/InfoPlist.strings36"2E3084D3-2636-42FE-9DC0-0F3C896A2A2D-
 
 CCopyStringsFile /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/en.lproj/InfoPlist.strings Preferences/en.lproj/InfoPlist.strings
-s358985519.206377
-e358985519.381023
+s360093382.804859
+e360093382.863470
 r1
 xCopyStringsFile
 x/Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/en.lproj/InfoPlist.strings
 xPreferences/en.lproj/InfoPlist.strings
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Copy Preferences/en.lproj/InfoPlist.strings7ff5342faf65b541^4b94612faf65b541^---0#0#0#-19%DVTDocumentLocation2@91"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Preferences/en.lproj/InfoPlist.strings0000000000000000^412"CopyStringsFile build/Release/DisplayCast.prefPane/Contents/Resources/en.lproj/InfoPlist.strings Preferences/en.lproj/InfoPlist.strings    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding UTF-16 --outdir /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/en.lproj -- Preferences/en.lproj/InfoPlist.strings36"B09B6680-9800-4A83-B6F0-D223CD551EAA-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Copy Preferences/en.lproj/InfoPlist.strings431dcec69676b541^e318ddc69676b541^---0#0#0#-19%DVTDocumentLocation2@91"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Preferences/en.lproj/InfoPlist.strings0000000000000000^412"CopyStringsFile build/Release/DisplayCast.prefPane/Contents/Resources/en.lproj/InfoPlist.strings Preferences/en.lproj/InfoPlist.strings    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding UTF-16 --outdir /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/en.lproj -- Preferences/en.lproj/InfoPlist.strings36"07BB6B76-3C37-4683-A33B-1A283FFCD4C7-
 
 CCopyTiffFile /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/Preferences.tiff Preferences/Preferences.tiff
 s359338912.873944
@@ -567,76 +600,76 @@ xPreferences/Preferences.tiff
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection33"Copy Preferences/Preferences.tiff0feddfa0136bb541^34bffea1136bb541^---0#0#0#-19%DVTDocumentLocation2@79"file://localhost/Users/chandra/Src/DisplayCast/OSX/Preferences/Preferences.tiff0000000000000000^306"CopyTiffFile build/Release/DisplayCast.prefPane/Contents/Resources/Preferences.tiff Preferences/Preferences.tiff    cd /Users/chandra/Src/DisplayCast/OSX    builtin-copyTiff --outdir /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources -- Preferences/Preferences.tiff36"237D437D-9293-47B2-A753-737803AB794B-
 
 CCopyTiffFile /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/Preferences.tiff Preferences/Preferences.tiff
-s358985519.206387
-e358985519.375602
+s360093382.805318
+e360093382.868512
 r1
 xCopyTiffFile
 x/Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/Preferences.tiff
 xPreferences/Preferences.tiff
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection33"Copy Preferences/Preferences.tiff95f4342faf65b541^3127602faf65b541^---0#0#0#-19%DVTDocumentLocation2@81"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences.tiff0000000000000000^310"CopyTiffFile build/Release/DisplayCast.prefPane/Contents/Resources/Preferences.tiff Preferences/Preferences.tiff    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-copyTiff --outdir /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources -- Preferences/Preferences.tiff36"7AF8958C-35C8-4179-9FF2-FBF9806BE7E8-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection33"Copy Preferences/Preferences.tiff3334cec69676b541^bd56dec69676b541^---0#0#0#-19%DVTDocumentLocation2@81"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences.tiff0000000000000000^310"CopyTiffFile build/Release/DisplayCast.prefPane/Contents/Resources/Preferences.tiff Preferences/Preferences.tiff    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-copyTiff --outdir /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources -- Preferences/Preferences.tiff36"37E507A8-EACA-4513-9D98-5B49B0AE0891-
 
 CCpResource ../Credits.rtf build/Release/DisplayCast.prefPane/Contents/Resources/Credits.rtf
-s359338913.502378
-e359338913.792873
+s360093382.922046
+e360093382.966003
 r1
 xCpResource
 x../Credits.rtf
 xbuild/Release/DisplayCast.prefPane/Contents/Resources/Credits.rtf
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Copy build/Release/DisplayCast.prefPane/Contents/Resources/Credits.rtfb4af80a1136bb541^48f8caa1136bb541^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/Credits.rtf000000000080d041^517"CpResource ../Credits.rtf build/Release/DisplayCast.prefPane/Contents/Resources/Credits.rtf    cd /Users/chandra/Src/DisplayCast/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode44-DP5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/chandra/Src/DisplayCast/OSX/../Credits.rtf /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources36"FEDCA5C8-92E4-4A6E-B744-7BBD0024C64F-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Copy build/Release/DisplayCast.prefPane/Contents/Resources/Credits.rtfca1becc69676b541^904cf7c69676b541^---0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/Credits.rtf000000000080d041^523"CpResource ../Credits.rtf build/Release/DisplayCast.prefPane/Contents/Resources/Credits.rtf    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks -strip-tool /Applications/Xcode-4.3.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip /Volumes/chandra/Src/DisplayCast/OSX/../Credits.rtf /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources36"E4FC0600-6249-4288-A912-80269A1CC1B4-
 
 CCpResource ../License.rtf build/Release/DisplayCast.prefPane/Contents/Resources/License.rtf
-s359338913.364364
-e359338913.501112
+s360093382.902671
+e360093382.946151
 r1
 xCpResource
 x../License.rtf
 xbuild/Release/DisplayCast.prefPane/Contents/Resources/License.rtf
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Copy build/Release/DisplayCast.prefPane/Contents/Resources/License.rtfe6745da1136bb541^dc4980a1136bb541^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/License.rtf000000000080d041^517"CpResource ../License.rtf build/Release/DisplayCast.prefPane/Contents/Resources/License.rtf    cd /Users/chandra/Src/DisplayCast/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode44-DP5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/chandra/Src/DisplayCast/OSX/../License.rtf /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources36"92E32FE8-6EA7-4FBD-8A84-50855527719A-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Copy build/Release/DisplayCast.prefPane/Contents/Resources/License.rtfc920e7c69676b541^b938f2c69676b541^---0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/License.rtf000000000080d041^523"CpResource ../License.rtf build/Release/DisplayCast.prefPane/Contents/Resources/License.rtf    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks -strip-tool /Applications/Xcode-4.3.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip /Volumes/chandra/Src/DisplayCast/OSX/../License.rtf /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources36"75E70205-C341-41A4-847F-305790B1CC8C-
 
 CCpResource ../README.txt build/Release/DisplayCast.prefPane/Contents/Resources/README.txt
-s359338913.101487
-e359338913.362839
+s360093382.897464
+e360093382.944141
 r1
 xCpResource
 x../README.txt
 xbuild/Release/DisplayCast.prefPane/Contents/Resources/README.txt
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Copy build/Release/DisplayCast.prefPane/Contents/Resources/README.txt06101aa1136bb541^15e35ca1136bb541^---0#0#0#-19%DVTDocumentLocation2@115"file://localhost/Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/README.txt000000000080d041^514"CpResource ../README.txt build/Release/DisplayCast.prefPane/Contents/Resources/README.txt    cd /Users/chandra/Src/DisplayCast/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode44-DP5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/chandra/Src/DisplayCast/OSX/../README.txt /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources36"F4FE58DF-5506-416F-A9F4-63E60B192CBE-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Copy build/Release/DisplayCast.prefPane/Contents/Resources/README.txtffcfe5c69676b541^24b4f1c69676b541^---0#0#0#-19%DVTDocumentLocation2@117"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/README.txt000000000080d041^520"CpResource ../README.txt build/Release/DisplayCast.prefPane/Contents/Resources/README.txt    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks -strip-tool /Applications/Xcode-4.3.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip /Volumes/chandra/Src/DisplayCast/OSX/../README.txt /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources36"3FD51FB8-3AE0-4102-A20C-83168C4A4753-
 
 CCpResource Images/Archiver.icns build/Release/DisplayCast.prefPane/Contents/Resources/Archiver.icns
-s359338912.874031
-e359338913.101268
+s360093382.864651
+e360093382.896224
 r1
 xCpResource
 xImages/Archiver.icns
 xbuild/Release/DisplayCast.prefPane/Contents/Resources/Archiver.icns
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Copy build/Release/DisplayCast.prefPane/Contents/Resources/Archiver.icns8cf3dfa0136bb541^3eec19a1136bb541^---0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/Archiver.icns000000000080d041^531"CpResource Images/Archiver.icns build/Release/DisplayCast.prefPane/Contents/Resources/Archiver.icns    cd /Users/chandra/Src/DisplayCast/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode44-DP5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/chandra/Src/DisplayCast/OSX/Images/Archiver.icns /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources36"63966AC9-F591-4CAC-B2DE-8AD8CAB18649-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Copy build/Release/DisplayCast.prefPane/Contents/Resources/Archiver.icns386addc69676b541^336fe5c69676b541^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/Archiver.icns000000000080d041^537"CpResource Images/Archiver.icns build/Release/DisplayCast.prefPane/Contents/Resources/Archiver.icns    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks -strip-tool /Applications/Xcode-4.3.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip /Volumes/chandra/Src/DisplayCast/OSX/Images/Archiver.icns /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources36"7A1460E4-30AA-4795-A486-094F2C0551BF-
 
 CCpResource Images/Player.icns build/Release/DisplayCast.prefPane/Contents/Resources/Player.icns
-s359338913.101480
-e359338913.534236
+s360093382.868679
+e360093382.920814
 r1
 xCpResource
 xImages/Player.icns
 xbuild/Release/DisplayCast.prefPane/Contents/Resources/Player.icns
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Copy build/Release/DisplayCast.prefPane/Contents/Resources/Player.icnsc30f1aa1136bb541^8ecb88a1136bb541^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/Player.icns000000000080d041^525"CpResource Images/Player.icns build/Release/DisplayCast.prefPane/Contents/Resources/Player.icns    cd /Users/chandra/Src/DisplayCast/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode44-DP5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/chandra/Src/DisplayCast/OSX/Images/Player.icns /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources36"BC29AF7C-5E48-4137-B1F0-6EE76DABCE72-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Copy build/Release/DisplayCast.prefPane/Contents/Resources/Player.icns9772dec69676b541^51bbebc69676b541^---0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/Player.icns000000000080d041^531"CpResource Images/Player.icns build/Release/DisplayCast.prefPane/Contents/Resources/Player.icns    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks -strip-tool /Applications/Xcode-4.3.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip /Volumes/chandra/Src/DisplayCast/OSX/Images/Player.icns /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources36"5A556CA9-AF5A-44C7-A939-FD5EEBED4C36-
 
 CCpResource Images/Streamer.icns build/Release/DisplayCast.prefPane/Contents/Resources/Streamer.icns
-s359338913.101495
-e359338913.502906
+s360093382.868693
+e360093382.901430
 r1
 xCpResource
 xImages/Streamer.icns
 xbuild/Release/DisplayCast.prefPane/Contents/Resources/Streamer.icns
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Copy build/Release/DisplayCast.prefPane/Contents/Resources/Streamer.icnsf50f1aa1136bb541^dcbd80a1136bb541^---0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/Streamer.icns000000000080d041^531"CpResource Images/Streamer.icns build/Release/DisplayCast.prefPane/Contents/Resources/Streamer.icns    cd /Users/chandra/Src/DisplayCast/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode44-DP5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/chandra/Src/DisplayCast/OSX/Images/Streamer.icns /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources36"B9B14AB0-0B55-4AFC-B3FA-479B42AAE271-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Copy build/Release/DisplayCast.prefPane/Contents/Resources/Streamer.icns6971dec69676b541^72c4e6c69676b541^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/Streamer.icns000000000080d041^537"CpResource Images/Streamer.icns build/Release/DisplayCast.prefPane/Contents/Resources/Streamer.icns    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks -strip-tool /Applications/Xcode-4.3.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip /Volumes/chandra/Src/DisplayCast/OSX/Images/Streamer.icns /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources36"D3468CE2-08A8-4AAA-BA4C-C87C09F2CF51-
 
 CCpResource Preferences/FxpalLogo.ico build/Release/DisplayCast.prefPane/Contents/Resources/FxpalLogo.ico
-s359338912.873974
-e359338913.100335
+s360093382.806152
+e360093382.867561
 r1
 xCpResource
 xPreferences/FxpalLogo.ico
 xbuild/Release/DisplayCast.prefPane/Contents/Resources/FxpalLogo.ico
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Copy build/Release/DisplayCast.prefPane/Contents/Resources/FxpalLogo.ico2deedfa0136bb541^e6ae19a1136bb541^---0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/FxpalLogo.ico000000000080d041^541"CpResource Preferences/FxpalLogo.ico build/Release/DisplayCast.prefPane/Contents/Resources/FxpalLogo.ico    cd /Users/chandra/Src/DisplayCast/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode44-DP5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/chandra/Src/DisplayCast/OSX/Preferences/FxpalLogo.ico /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources36"57387749-A130-41AA-B3B9-48942DD537FC-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Copy build/Release/DisplayCast.prefPane/Contents/Resources/FxpalLogo.ico6a6dcec69676b541^8719dec69676b541^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources/FxpalLogo.ico000000000080d041^547"CpResource Preferences/FxpalLogo.ico build/Release/DisplayCast.prefPane/Contents/Resources/FxpalLogo.ico    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks -strip-tool /Applications/Xcode-4.3.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip /Volumes/chandra/Src/DisplayCast/OSX/Preferences/FxpalLogo.ico /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Resources36"93AA09F0-487B-4412-B562-81EE20690EC9-
 
 CLd /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/MacOS/DisplayCast normal x86_64
 s359338911.973461
@@ -649,14 +682,14 @@ xx86_64
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Link /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/MacOS/DisplayCasta950f99f136bb541^2239dda0136bb541^---0#0#0#--810"Ld build/Release/DisplayCast.prefPane/Contents/MacOS/DisplayCast normal x86_64    cd /Users/chandra/Src/DisplayCast/OSX    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Applications/Xcode44-DP5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -bundle -isysroot /Applications/Xcode44-DP5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/chandra/Src/DisplayCast/OSX/build/Release -F/Users/chandra/Src/DisplayCast/OSX/build/Release -filelist /Users/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/DisplayCast.LinkFileList -mmacosx-version-min=10.6 -fobjc-link-runtime -framework PreferencePanes -o /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/MacOS/DisplayCast36"C71288CA-B5AA-4791-82A8-94706821A084-
 
 CLd /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/MacOS/DisplayCast normal x86_64
-s358985518.125420
-e358985519.197896
+s360093382.661710
+e360093382.796428
 r1
 xLd
 x/Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/MacOS/DisplayCast
 xnormal
 xx86_64
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Link /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/MacOS/DisplayCast1d94202eaf65b541^36ab322faf65b541^---0#0#0#--820"Ld build/Release/DisplayCast.prefPane/Contents/MacOS/DisplayCast normal x86_64    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Applications/Xcode44-DP5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -bundle -isysroot /Applications/Xcode44-DP5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Volumes/chandra/Src/DisplayCast/OSX/build/Release -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -filelist /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/DisplayCast.LinkFileList -mmacosx-version-min=10.6 -fobjc-link-runtime -framework PreferencePanes -o /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/MacOS/DisplayCast36"61875488-646B-4FC2-8810-F881CD6D4C41-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Link /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/MacOS/DisplayCast5c75a9c69676b541^08e3cbc69676b541^---0#0#0#--817"Ld build/Release/DisplayCast.prefPane/Contents/MacOS/DisplayCast normal x86_64    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Applications/Xcode-4.3.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -bundle -isysroot /Applications/Xcode-4.3.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -L/Volumes/chandra/Src/DisplayCast/OSX/build/Release -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -filelist /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/Objects-normal/x86_64/DisplayCast.LinkFileList -mmacosx-version-min=10.6 -framework Cocoa -framework PreferencePanes -o /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/MacOS/DisplayCast36"70A69916-C61A-4DB2-8E72-AD2A5FA5E59E-
 
 CProcessInfoPlistFile /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Info.plist Preferences/Preferences-Info.plist
 s359338897.811515
@@ -668,13 +701,26 @@ xPreferences/Preferences-Info.plist
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection42"Process Preferences/Preferences-Info.plist82e2cf91136bb541^90a0d091136bb541^---0#0#0#-19%DVTDocumentLocation2@85"file://localhost/Users/chandra/Src/DisplayCast/OSX/Preferences/Preferences-Info.plist0000000000000000^348"ProcessInfoPlistFile build/Release/DisplayCast.prefPane/Contents/Info.plist Preferences/Preferences-Info.plist    cd /Users/chandra/Src/DisplayCast/OSX    builtin-infoPlistUtility Preferences/Preferences-Info.plist -expandbuildsettings -platform macosx -o /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Info.plist36"A43C06CA-1A78-46C4-9254-894B50173D97-
 
 CProcessInfoPlistFile /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Info.plist Preferences/Preferences-Info.plist
-s358985511.909920
-e358985512.036063
+s360093381.111929
+e360093381.133013
 r1
 xProcessInfoPlistFile
 x/Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Info.plist
 xPreferences/Preferences-Info.plist
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection42"Process Preferences/Preferences-Info.plist7d05e927af65b541^fc390928af65b541^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences-Info.plist0000000000000000^352"ProcessInfoPlistFile build/Release/DisplayCast.prefPane/Contents/Info.plist Preferences/Preferences-Info.plist    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-infoPlistUtility Preferences/Preferences-Info.plist -expandbuildsettings -platform macosx -o /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Info.plist36"576A3022-72C3-43CC-9F1E-4C19C24AF3C0-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection42"Process Preferences/Preferences-Info.plist63b61cc59676b541^f20c22c59676b541^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences-Info.plist0000000000000000^352"ProcessInfoPlistFile build/Release/DisplayCast.prefPane/Contents/Info.plist Preferences/Preferences-Info.plist    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-infoPlistUtility Preferences/Preferences-Info.plist -expandbuildsettings -platform macosx -o /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/Info.plist36"E2BF1240-57D6-4C58-88D3-F2D21757A2A7-
+
+CProcessPCH /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-azildvmnbgjdzxdoakzrktyarkrq/Preferences-Prefix.pch.pth Preferences/Preferences-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.analyzer
+s360093381.141284
+e360093382.173719
+r1
+xProcessPCH
+x/var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-azildvmnbgjdzxdoakzrktyarkrq/Preferences-Prefix.pch.pth
+xPreferences/Preferences-Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.analyzer
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection45"Precompile Preferences/Preferences-Prefix.pch005524c59676b541^31782cc69676b541^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences-Prefix.pch0000000000000000^3077"ProcessPCH /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-azildvmnbgjdzxdoakzrktyarkrq/Preferences-Prefix.pch.pth Preferences/Preferences-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.analyzer    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode-4.3.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-gc -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode-4.3.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -fvisibility=hidden -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -Xclang -analyzer-disable-checker -Xclang deadcode.IdempotentOperations -Xclang -analyzer-checker -Xclang osx.cocoa.experimental.SelfInit -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-generated-files.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-own-target-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-all-target-headers.hmap -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-project-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode-4.3.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release -c /Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences-Prefix.pch -o /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-azildvmnbgjdzxdoakzrktyarkrq/Preferences-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-azildvmnbgjdzxdoakzrktyarkrq/Preferences-Prefix.pch.d36"370EBCB4-FD17-4CA5-9023-44B327F26182-
 
 CProcessPCH /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-chzuzmrapsjawwaupwcsydkzvfwh/Preferences-Prefix.pch.pth Preferences/Preferences-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s358893548.214136
@@ -688,6 +734,19 @@ xx86_64
 xobjective-c
 xcom.apple.compilers.llvm.clang.1_0.compiler
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection45"Precompile Preferences/Preferences-Prefix.pch621537ec4764b541^77d92fed4764b541^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences-Prefix.pch0000000000000000^3114"ProcessPCH /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-chzuzmrapsjawwaupwcsydkzvfwh/Preferences-Prefix.pch.pth Preferences/Preferences-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-gc -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -fvisibility=hidden -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-generated-files.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-own-target-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-all-target-headers.hmap -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-project-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.6.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release --serialize-diagnostics /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-chzuzmrapsjawwaupwcsydkzvfwh/Preferences-Prefix.pch.dia -c /Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences-Prefix.pch -o /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-chzuzmrapsjawwaupwcsydkzvfwh/Preferences-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-chzuzmrapsjawwaupwcsydkzvfwh/Preferences-Prefix.pch.d36"8EF946D9-A91C-4E1D-9B59-463D1E63EAA7-
+
+CProcessPCH /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-ctikgorfhsvxlkfivobdunavfdqv/Preferences-Prefix.pch.pth Preferences/Preferences-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s360093381.141280
+e360093382.309118
+r1
+xProcessPCH
+x/var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-ctikgorfhsvxlkfivobdunavfdqv/Preferences-Prefix.pch.pth
+xPreferences/Preferences-Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection45"Precompile Preferences/Preferences-Prefix.pch115524c59676b541^ab234fc69676b541^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences-Prefix.pch0000000000000000^3132"ProcessPCH /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-ctikgorfhsvxlkfivobdunavfdqv/Preferences-Prefix.pch.pth Preferences/Preferences-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/chandra/Src/DisplayCast/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode-4.3.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-gc -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DNDEBUG -isysroot /Applications/Xcode-4.3.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -fvisibility=hidden -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-generated-files.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-own-target-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-all-target-headers.hmap -iquote /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast-project-headers.hmap -I/Volumes/chandra/Src/DisplayCast/OSX/build/Release/include -I/Applications/Xcode-4.3.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/include/libxml2 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources/x86_64 -I/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DerivedSources -Wall -Wextra -Wfloat-equal -Wpointer-arith -Wstrict-prototypes -Wold-style-definition -F/Volumes/chandra/Src/DisplayCast/OSX/build/Release --serialize-diagnostics /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-ctikgorfhsvxlkfivobdunavfdqv/Preferences-Prefix.pch.dia -c /Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences-Prefix.pch -o /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-ctikgorfhsvxlkfivobdunavfdqv/Preferences-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-ctikgorfhsvxlkfivobdunavfdqv/Preferences-Prefix.pch.d36"2DBD7240-C801-4CAC-91C4-29551D7922C7-
 
 CProcessPCH /var/folders/12/lrkyrg5n3r1g18cpjt9f98mm0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/Preferences-Prefix-dhkhdpsehcvsdahikewchzkydowt/Preferences-Prefix.pch.pth Preferences/Preferences-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s358985512.045433
@@ -764,13 +823,22 @@ x/Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection207"ProcessProductPackaging "/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile" build/Release/DisplayCast.prefPane/Contents/embedded.provisionprofile080482bb136bb541^8f3686bb136bb541^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/embedded.provisionprofile0000000000000000^508"ProcessProductPackaging "/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile" build/Release/DisplayCast.prefPane/Contents/embedded.provisionprofile    cd /Users/chandra/Src/DisplayCast/OSX    builtin-productPackagingUtility "/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile" -o /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/embedded.provisionprofile36"E6557B9B-BA65-4713-AE50-20298AF3C43B-
 
 CProcessProductPackaging "/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile" /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/embedded.provisionprofile
-s358985519.720939
-e358985519.777975
+s360093383.243925
+e360093383.286347
 r1
 xProcessProductPackaging
 x/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile
 x/Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/embedded.provisionprofile
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection207"ProcessProductPackaging "/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile" build/Release/DisplayCast.prefPane/Contents/embedded.provisionprofiledc9eb82faf65b541^ee27c72faf65b541^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/embedded.provisionprofile0000000000000000^512"ProcessProductPackaging "/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile" build/Release/DisplayCast.prefPane/Contents/embedded.provisionprofile    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-productPackagingUtility "/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile" -o /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/embedded.provisionprofile36"EEE2D7B8-F353-4643-81F4-5D0926C18CE4-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection207"ProcessProductPackaging "/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile" build/Release/DisplayCast.prefPane/Contents/embedded.provisionprofile12853ec79676b541^8b4f49c79676b541^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/embedded.provisionprofile0000000000000000^512"ProcessProductPackaging "/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile" build/Release/DisplayCast.prefPane/Contents/embedded.provisionprofile    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-productPackagingUtility "/Users/chandra/Library/MobileDevice/Provisioning Profiles/133AEC64-5801-412C-84ED-B6B88DA0145D.provisionprofile" -o /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane/Contents/embedded.provisionprofile36"441F6462-C77D-4105-8257-8E7F578CC5AF-
+
+CProcessProductPackaging /Applications/Xcode-4.3.2.app/Contents/Developer/Platforms/MacOSX.platform/Entitlements.plist /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast.xcent
+s360093383.310588
+e360093383.336557
+r1
+xProcessProductPackaging
+x/Applications/Xcode-4.3.2.app/Contents/Developer/Platforms/MacOSX.platform/Entitlements.plist
+x/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast.xcent
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection177"ProcessProductPackaging /Applications/Xcode-4.3.2.app/Contents/Developer/Platforms/MacOSX.platform/Entitlements.plist build/OSX.build/Release/Preferences.build/DisplayCast.xcent00904fc79676b541^892856c79676b541^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast.xcent000000000080d041^478"ProcessProductPackaging /Applications/Xcode-4.3.2.app/Contents/Developer/Platforms/MacOSX.platform/Entitlements.plist build/OSX.build/Release/Preferences.build/DisplayCast.xcent    cd /Volumes/chandra/Src/DisplayCast/OSX    builtin-productPackagingUtility /Applications/Xcode-4.3.2.app/Contents/Developer/Platforms/MacOSX.platform/Entitlements.plist -entitlements -format xml -o /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast.xcent36"3DADCE6A-8DFB-4881-9603-C224DE07D73C-
 
 CProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Entitlements.plist /Volumes/chandra/Src/DisplayCast/OSX/build/OSX.build/Release/Preferences.build/DisplayCast.xcent
 s358893549.610323
@@ -808,10 +876,10 @@ x/Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Touch /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane2e7188bb136bb541^56b70ebc136bb541^---0#0#0#--175"Touch build/Release/DisplayCast.prefPane    cd /Users/chandra/Src/DisplayCast/OSX    /usr/bin/touch -c /Users/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane36"7A355FF5-0FAA-452F-929D-1BAEBE5CF37D-
 
 CTouch /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane
-s358985519.785728
-e358985519.799323
+s360093383.294300
+e360093383.301982
 r1
 xTouch
 x/Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Touch /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane6a34c92faf65b541^419fcc2faf65b541^---0#0#0#--179"Touch build/Release/DisplayCast.prefPane    cd /Volumes/chandra/Src/DisplayCast/OSX    /usr/bin/touch -c /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane36"137DAE1C-27B6-4DE6-872B-CCE267915416-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Touch /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPanef5634bc79676b541^87504dc79676b541^---0#0#0#--179"Touch build/Release/DisplayCast.prefPane    cd /Volumes/chandra/Src/DisplayCast/OSX    /usr/bin/touch -c /Volumes/chandra/Src/DisplayCast/OSX/build/Release/DisplayCast.prefPane36"BC6911D1-24F8-4C08-9DCA-A7454AB2558E-
 

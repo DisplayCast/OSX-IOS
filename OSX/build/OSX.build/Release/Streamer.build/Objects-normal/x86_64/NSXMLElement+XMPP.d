@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Categories/NSXMLElement+XMPP.m \
-  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Categories/NSXMLElement+XMPP.h
+  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Categories/NSXMLElement+XMPP.m \
+  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Categories/NSXMLElement+XMPP.h

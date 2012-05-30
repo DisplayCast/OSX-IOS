@@ -1,4 +1,4 @@
 dependencies: \
-  /Users/chandra/Src/DisplayCast/OSX/Preferences/Preferences.m \
-  /Users/chandra/Src/DisplayCast/OSX/Preferences/Preferences.h \
-  /Users/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.h
+  /Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences.m \
+  /Volumes/chandra/Src/DisplayCast/OSX/Preferences/Preferences.h \
+  /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.h

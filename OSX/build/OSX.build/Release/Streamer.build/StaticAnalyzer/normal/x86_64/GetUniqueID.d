@@ -1,2 +1,2 @@
-dependencies: /Users/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m \
-  /Users/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.h
+dependencies: /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.m \
+  /Volumes/chandra/Src/DisplayCast/OSX/Shared/GetUniqueID.h

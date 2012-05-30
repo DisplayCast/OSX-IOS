@@ -4,7 +4,7 @@
 <dict>
  <key>files</key>
  <array>
-  <string>/Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Extensions/XEP-0054/XMPPvCardTemp.m</string>
+  <string>/Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Extensions/XEP-0054/XMPPvCardTemp.m</string>
  </array>
  <key>diagnostics</key>
  <array>
@@ -32,13 +32,47 @@
         <key>end</key>
          <array>
           <dict>
-           <key>line</key><integer>730</integer>
+           <key>line</key><integer>732</integer>
            <key>col</key><integer>2</integer>
            <key>file</key><integer>0</integer>
           </dict>
           <dict>
-           <key>line</key><integer>730</integer>
-           <key>col</key><integer>19</integer>
+           <key>line</key><integer>732</integer>
+           <key>col</key><integer>2</integer>
+           <key>file</key><integer>0</integer>
+          </dict>
+         </array>
+       </dict>
+      </array>
+    </dict>
+    <dict>
+     <key>kind</key><string>control</string>
+     <key>edges</key>
+      <array>
+       <dict>
+        <key>start</key>
+         <array>
+          <dict>
+           <key>line</key><integer>732</integer>
+           <key>col</key><integer>2</integer>
+           <key>file</key><integer>0</integer>
+          </dict>
+          <dict>
+           <key>line</key><integer>732</integer>
+           <key>col</key><integer>2</integer>
+           <key>file</key><integer>0</integer>
+          </dict>
+         </array>
+        <key>end</key>
+         <array>
+          <dict>
+           <key>line</key><integer>732</integer>
+           <key>col</key><integer>6</integer>
+           <key>file</key><integer>0</integer>
+          </dict>
+          <dict>
+           <key>line</key><integer>732</integer>
+           <key>col</key><integer>6</integer>
            <key>file</key><integer>0</integer>
           </dict>
          </array>
@@ -49,98 +83,29 @@
      <key>kind</key><string>event</string>
      <key>location</key>
      <dict>
-      <key>line</key><integer>730</integer>
-      <key>col</key><integer>2</integer>
+      <key>line</key><integer>732</integer>
+      <key>col</key><integer>6</integer>
       <key>file</key><integer>0</integer>
      </dict>
      <key>ranges</key>
      <array>
        <array>
         <dict>
-         <key>line</key><integer>730</integer>
-         <key>col</key><integer>2</integer>
+         <key>line</key><integer>732</integer>
+         <key>col</key><integer>6</integer>
          <key>file</key><integer>0</integer>
         </dict>
         <dict>
-         <key>line</key><integer>730</integer>
-         <key>col</key><integer>19</integer>
+         <key>line</key><integer>732</integer>
+         <key>col</key><integer>17</integer>
          <key>file</key><integer>0</integer>
         </dict>
        </array>
      </array>
-     <key>depth</key><integer>0</integer>
      <key>extended_message</key>
-     <string>Variable &apos;elem&apos; declared without an initial value</string>
+     <string>Assuming &apos;sound&apos; is equal to nil</string>
      <key>message</key>
-<string>Variable &apos;elem&apos; declared without an initial value</string>
-    </dict>
-    <dict>
-     <key>kind</key><string>control</string>
-     <key>edges</key>
-      <array>
-       <dict>
-        <key>start</key>
-         <array>
-          <dict>
-           <key>line</key><integer>730</integer>
-           <key>col</key><integer>2</integer>
-           <key>file</key><integer>0</integer>
-          </dict>
-          <dict>
-           <key>line</key><integer>730</integer>
-           <key>col</key><integer>19</integer>
-           <key>file</key><integer>0</integer>
-          </dict>
-         </array>
-        <key>end</key>
-         <array>
-          <dict>
-           <key>line</key><integer>732</integer>
-           <key>col</key><integer>2</integer>
-           <key>file</key><integer>0</integer>
-          </dict>
-          <dict>
-           <key>line</key><integer>732</integer>
-           <key>col</key><integer>2</integer>
-           <key>file</key><integer>0</integer>
-          </dict>
-         </array>
-       </dict>
-      </array>
-    </dict>
-    <dict>
-     <key>kind</key><string>control</string>
-     <key>edges</key>
-      <array>
-       <dict>
-        <key>start</key>
-         <array>
-          <dict>
-           <key>line</key><integer>732</integer>
-           <key>col</key><integer>2</integer>
-           <key>file</key><integer>0</integer>
-          </dict>
-          <dict>
-           <key>line</key><integer>732</integer>
-           <key>col</key><integer>2</integer>
-           <key>file</key><integer>0</integer>
-          </dict>
-         </array>
-        <key>end</key>
-         <array>
-          <dict>
-           <key>line</key><integer>732</integer>
-           <key>col</key><integer>6</integer>
-           <key>file</key><integer>0</integer>
-          </dict>
-          <dict>
-           <key>line</key><integer>732</integer>
-           <key>col</key><integer>6</integer>
-           <key>file</key><integer>0</integer>
-          </dict>
-         </array>
-       </dict>
-      </array>
+<string>Assuming &apos;sound&apos; is equal to nil</string>
     </dict>
     <dict>
      <key>kind</key><string>control</string>
@@ -175,6 +140,34 @@
          </array>
        </dict>
       </array>
+    </dict>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>732</integer>
+      <key>col</key><integer>22</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>732</integer>
+         <key>col</key><integer>22</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>732</integer>
+         <key>col</key><integer>36</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>extended_message</key>
+     <string>Assuming &apos;phonetic&apos; is not equal to nil</string>
+     <key>message</key>
+<string>Assuming &apos;phonetic&apos; is not equal to nil</string>
     </dict>
     <dict>
      <key>kind</key><string>control</string>
@@ -277,6 +270,34 @@
          </array>
        </dict>
       </array>
+    </dict>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>737</integer>
+      <key>col</key><integer>6</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>737</integer>
+         <key>col</key><integer>6</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>737</integer>
+         <key>col</key><integer>17</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>extended_message</key>
+     <string>Assuming &apos;sound&apos; is equal to nil</string>
+     <key>message</key>
+<string>Assuming &apos;sound&apos; is equal to nil</string>
     </dict>
     <dict>
      <key>kind</key><string>control</string>
@@ -369,7 +390,6 @@
         </dict>
        </array>
      </array>
-     <key>depth</key><integer>0</integer>
      <key>extended_message</key>
      <string>Receiver in message expression is an uninitialized value</string>
      <key>message</key>
@@ -379,8 +399,6 @@
    <key>description</key><string>Receiver in message expression is an uninitialized value</string>
    <key>category</key><string>Logic error</string>
    <key>type</key><string>Receiver in message expression is an uninitialized value</string>
-  <key>issue_context_kind</key><string>Objective-C method</string>
-  <key>issue_context</key><string>setPhoneticSound:</string>
   <key>location</key>
   <dict>
    <key>line</key><integer>747</integer>
@@ -412,13 +430,47 @@
         <key>end</key>
          <array>
           <dict>
-           <key>line</key><integer>908</integer>
+           <key>line</key><integer>910</integer>
            <key>col</key><integer>2</integer>
            <key>file</key><integer>0</integer>
           </dict>
           <dict>
-           <key>line</key><integer>908</integer>
-           <key>col</key><integer>19</integer>
+           <key>line</key><integer>910</integer>
+           <key>col</key><integer>2</integer>
+           <key>file</key><integer>0</integer>
+          </dict>
+         </array>
+       </dict>
+      </array>
+    </dict>
+    <dict>
+     <key>kind</key><string>control</string>
+     <key>edges</key>
+      <array>
+       <dict>
+        <key>start</key>
+         <array>
+          <dict>
+           <key>line</key><integer>910</integer>
+           <key>col</key><integer>2</integer>
+           <key>file</key><integer>0</integer>
+          </dict>
+          <dict>
+           <key>line</key><integer>910</integer>
+           <key>col</key><integer>2</integer>
+           <key>file</key><integer>0</integer>
+          </dict>
+         </array>
+        <key>end</key>
+         <array>
+          <dict>
+           <key>line</key><integer>910</integer>
+           <key>col</key><integer>6</integer>
+           <key>file</key><integer>0</integer>
+          </dict>
+          <dict>
+           <key>line</key><integer>910</integer>
+           <key>col</key><integer>6</integer>
            <key>file</key><integer>0</integer>
           </dict>
          </array>
@@ -429,98 +481,29 @@
      <key>kind</key><string>event</string>
      <key>location</key>
      <dict>
-      <key>line</key><integer>908</integer>
-      <key>col</key><integer>2</integer>
+      <key>line</key><integer>910</integer>
+      <key>col</key><integer>6</integer>
       <key>file</key><integer>0</integer>
      </dict>
      <key>ranges</key>
      <array>
        <array>
         <dict>
-         <key>line</key><integer>908</integer>
-         <key>col</key><integer>2</integer>
+         <key>line</key><integer>910</integer>
+         <key>col</key><integer>6</integer>
          <key>file</key><integer>0</integer>
         </dict>
         <dict>
-         <key>line</key><integer>908</integer>
-         <key>col</key><integer>19</integer>
+         <key>line</key><integer>910</integer>
+         <key>col</key><integer>15</integer>
          <key>file</key><integer>0</integer>
         </dict>
        </array>
      </array>
-     <key>depth</key><integer>0</integer>
      <key>extended_message</key>
-     <string>Variable &apos;elem&apos; declared without an initial value</string>
+     <string>Assuming &apos;key&apos; is equal to nil</string>
      <key>message</key>
-<string>Variable &apos;elem&apos; declared without an initial value</string>
-    </dict>
-    <dict>
-     <key>kind</key><string>control</string>
-     <key>edges</key>
-      <array>
-       <dict>
-        <key>start</key>
-         <array>
-          <dict>
-           <key>line</key><integer>908</integer>
-           <key>col</key><integer>2</integer>
-           <key>file</key><integer>0</integer>
-          </dict>
-          <dict>
-           <key>line</key><integer>908</integer>
-           <key>col</key><integer>19</integer>
-           <key>file</key><integer>0</integer>
-          </dict>
-         </array>
-        <key>end</key>
-         <array>
-          <dict>
-           <key>line</key><integer>910</integer>
-           <key>col</key><integer>2</integer>
-           <key>file</key><integer>0</integer>
-          </dict>
-          <dict>
-           <key>line</key><integer>910</integer>
-           <key>col</key><integer>2</integer>
-           <key>file</key><integer>0</integer>
-          </dict>
-         </array>
-       </dict>
-      </array>
-    </dict>
-    <dict>
-     <key>kind</key><string>control</string>
-     <key>edges</key>
-      <array>
-       <dict>
-        <key>start</key>
-         <array>
-          <dict>
-           <key>line</key><integer>910</integer>
-           <key>col</key><integer>2</integer>
-           <key>file</key><integer>0</integer>
-          </dict>
-          <dict>
-           <key>line</key><integer>910</integer>
-           <key>col</key><integer>2</integer>
-           <key>file</key><integer>0</integer>
-          </dict>
-         </array>
-        <key>end</key>
-         <array>
-          <dict>
-           <key>line</key><integer>910</integer>
-           <key>col</key><integer>6</integer>
-           <key>file</key><integer>0</integer>
-          </dict>
-          <dict>
-           <key>line</key><integer>910</integer>
-           <key>col</key><integer>6</integer>
-           <key>file</key><integer>0</integer>
-          </dict>
-         </array>
-       </dict>
-      </array>
+<string>Assuming &apos;key&apos; is equal to nil</string>
     </dict>
     <dict>
      <key>kind</key><string>control</string>
@@ -555,6 +538,34 @@
          </array>
        </dict>
       </array>
+    </dict>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>910</integer>
+      <key>col</key><integer>20</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>910</integer>
+         <key>col</key><integer>20</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>910</integer>
+         <key>col</key><integer>30</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>extended_message</key>
+     <string>Assuming &apos;type&apos; is not equal to nil</string>
+     <key>message</key>
+<string>Assuming &apos;type&apos; is not equal to nil</string>
     </dict>
     <dict>
      <key>kind</key><string>control</string>
@@ -657,6 +668,34 @@
          </array>
        </dict>
       </array>
+    </dict>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>915</integer>
+      <key>col</key><integer>6</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>915</integer>
+         <key>col</key><integer>6</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>915</integer>
+         <key>col</key><integer>15</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>extended_message</key>
+     <string>Assuming &apos;key&apos; is equal to nil</string>
+     <key>message</key>
+<string>Assuming &apos;key&apos; is equal to nil</string>
     </dict>
     <dict>
      <key>kind</key><string>control</string>
@@ -749,7 +788,6 @@
         </dict>
        </array>
      </array>
-     <key>depth</key><integer>0</integer>
      <key>extended_message</key>
      <string>Receiver in message expression is an uninitialized value</string>
      <key>message</key>
@@ -759,8 +797,6 @@
    <key>description</key><string>Receiver in message expression is an uninitialized value</string>
    <key>category</key><string>Logic error</string>
    <key>type</key><string>Receiver in message expression is an uninitialized value</string>
-  <key>issue_context_kind</key><string>Objective-C method</string>
-  <key>issue_context</key><string>setKeyType:</string>
   <key>location</key>
   <dict>
    <key>line</key><integer>925</integer>

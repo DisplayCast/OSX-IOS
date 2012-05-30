@@ -118,17 +118,14 @@
 		766BF66A15642BAC0088E361 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 766BF66815642BAC0088E361 /* Credits.rtf */; };
 		766BF66B15642BAC0088E361 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 766BF66815642BAC0088E361 /* Credits.rtf */; };
 		766BF66C15642BAC0088E361 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 766BF66815642BAC0088E361 /* Credits.rtf */; };
+		768DF55615769425004BEDB7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A61B1A15656C0D00564A86 /* Cocoa.framework */; };
 		76A61AED15656B3300564A86 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FF750113CA5F4600633C80 /* libz.dylib */; };
 		76A61B1B15656C0D00564A86 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A61B1A15656C0D00564A86 /* Cocoa.framework */; };
-		76A61B1D15656F0000564A86 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A61B1C15656F0000564A86 /* CFNetwork.framework */; };
-		76A61B1F15656F2600564A86 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A61B1E15656F2600564A86 /* CoreGraphics.framework */; };
 		76A61B2015656F3F00564A86 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A61B1A15656C0D00564A86 /* Cocoa.framework */; };
 		76A61B2115656F6D00564A86 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F74D2C142BD2DF00F2A647 /* CoreMedia.framework */; };
 		76A61B231565703E00564A86 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A61B221565703E00564A86 /* SystemConfiguration.framework */; };
 		76A61B241565710100564A86 /* libidn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7602C8BD14D0C10B00BB0686 /* libidn.a */; };
-		76A61B261565714600564A86 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A61B251565714600564A86 /* ImageIO.framework */; };
 		76A61B281565743300564A86 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A61B271565743300564A86 /* CoreServices.framework */; };
-		76A61B2B15657C1500564A86 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A61B1C15656F0000564A86 /* CFNetwork.framework */; };
 		76A61B2C15657C3C00564A86 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A61B1A15656C0D00564A86 /* Cocoa.framework */; };
 		76A61B2D15657C4A00564A86 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FF750113CA5F4600633C80 /* libz.dylib */; };
 		76A807E515511D0400EAB544 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 76A807E415511D0400EAB544 /* main.c */; };
@@ -420,6 +417,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				768DF55615769425004BEDB7 /* Cocoa.framework in Frameworks */,
 				76514C021422960000FEA92B /* PreferencePanes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,7 +446,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				76A61B2C15657C3C00564A86 /* Cocoa.framework in Frameworks */,
-				76A61B2B15657C1500564A86 /* CFNetwork.framework in Frameworks */,
 				76B2374E14A3B99000A0B3FF /* IOBluetooth.framework in Frameworks */,
 				76A61B2D15657C4A00564A86 /* libz.dylib in Frameworks */,
 			);
@@ -459,13 +456,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				76A61B281565743300564A86 /* CoreServices.framework in Frameworks */,
-				76A61B261565714600564A86 /* ImageIO.framework in Frameworks */,
-				76A61B1F15656F2600564A86 /* CoreGraphics.framework in Frameworks */,
 				76A61B231565703E00564A86 /* SystemConfiguration.framework in Frameworks */,
 				76A61B2115656F6D00564A86 /* CoreMedia.framework in Frameworks */,
 				76A61B2015656F3F00564A86 /* Cocoa.framework in Frameworks */,
 				762FD03D1539357D00BBA23A /* CoreLocation.framework in Frameworks */,
-				76A61B1D15656F0000564A86 /* CFNetwork.framework in Frameworks */,
 				76B2374C14A3B98500A0B3FF /* IOBluetooth.framework in Frameworks */,
 				762FD03E1539359100BBA23A /* Security.framework in Frameworks */,
 				76A61B241565710100564A86 /* libidn.a in Frameworks */,

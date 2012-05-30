@@ -1,2 +1,2 @@
-dependencies: /Users/chandra/Src/DisplayCast/OSX/Player/PlayerListing.m \
-  /Users/chandra/Src/DisplayCast/OSX/Player/PlayerListing.h
+dependencies: /Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.m \
+  /Volumes/chandra/Src/DisplayCast/OSX/Player/PlayerListing.h
