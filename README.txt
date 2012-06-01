@@ -127,8 +127,8 @@ Contact: displaycast@fxpal.com
 5.0 Usage Instructions:
     5.1 Windows 7:
     The Streamer and Player applications are installed in the
-    Applications/FXPAL folder. These applications are automatically
-    started on a system reboot.
+    FXPAL/DisplayCast application folder. These applications are
+    automatically started on a system reboot.
 
     5.2 OSX:
     The Streamer, Player and Archiver applications are installed in
