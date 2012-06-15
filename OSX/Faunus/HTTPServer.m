@@ -305,26 +305,9 @@
     }
 
     if ([method isEqual:@"GET"] || [method isEqual:@"HEAD"]) {
-        NSURL *uri = [(NSURL *)CFHTTPMessageCopyRequestURL(request) autorelease];
-        // NSLog(@"URL: %@ and query: %@", uri, [uri query]);
+			// NSURL *uri = [(NSURL *)CFHTTPMessageCopyRequestURL(request) autorelease];
+			// NSLog(@"URL: %@ and query: %@", uri, [uri query]);
         
-		if ( ([[uri path] compare:@"/snapshot" options:NSCaseInsensitiveSearch] == NSOrderedSame) || ([[uri path] isEqualToString:@"/"])) {
-			NSArray *tokens = [[uri query] componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"&="]];
-
-			CFHTTPMessageRef response = CFHTTPMessageCreateResponse(kCFAllocatorDefault, 200, NULL, kCFHTTPVersion1_1); // OK
-			CFHTTPMessageSetHeaderFieldValue(response, (CFStringRef)@"Content-Type", (CFStringRef) @"image/png");
-			CFDataRef data;
-			if ([method isEqual:@"GET"])
-				CFHTTPMessageSetBody(response, (CFDataRef)data);
-			
-			[mess setResponse:response];
-
-            CFRelease(data);
-			CFRelease(response);
-
-			return;
-		}
-
 		CFHTTPMessageRef response = CFHTTPMessageCreateResponse(kCFAllocatorDefault, 400, NULL, kCFHTTPVersion1_1); // Bad Request
         [mess setResponse:response];
         CFRelease(response);

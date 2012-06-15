@@ -6,3 +6,6 @@
 	#import <Foundation/Foundation.h>
 	#import <CoreData/CoreData.h>
 #endif
+
+#undef USE_COREDATA
+#define USE_REDIS

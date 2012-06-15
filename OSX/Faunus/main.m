@@ -1,69 +1,53 @@
-//
-//  main.m
-//  Faunus
-//
-//  Created by Surendar Chandra on 6/10/12.
-//  Copyright (c) 2012 FX Palo Alto Lab. Inc. All rights reserved.
-//
+	// Copyright (c) 2012, Fuji Xerox Co., Ltd.
+	// All rights reserved.
+	// Author: Surendar Chandra, FX Palo Alto Laboratory, Inc.
 
-static NSManagedObjectModel *managedObjectModel()
-{
-    static NSManagedObjectModel *model = nil;
-    if (model != nil) {
-        return model;
-    }
-    
-    NSString *path = @"Faunus";
-    path = [path stringByDeletingPathExtension];
-    NSURL *modelURL = [NSURL fileURLWithPath:[path stringByAppendingPathExtension:@"momd"]];
-    model = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
-    
-    return model;
-}
+#import "NameServer.h"
 
-static NSManagedObjectContext *managedObjectContext()
-{
-    static NSManagedObjectContext *context = nil;
-    if (context != nil) {
-        return context;
-    }
+#include <unistd.h>
 
-    @autoreleasepool {
-        context = [[NSManagedObjectContext alloc] init];
-        
-        NSPersistentStoreCoordinator *coordinator = [[[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel()] autorelease];
-        [context setPersistentStoreCoordinator:coordinator];
-        
-        NSString *STORE_TYPE = NSSQLiteStoreType;
-        
-        NSString *path = [[NSProcessInfo processInfo] arguments][0];
-        path = [path stringByDeletingPathExtension];
-        NSURL *url = [NSURL fileURLWithPath:[path stringByAppendingPathExtension:@"sqlite"]];
-        
-        NSError *error;
-        NSPersistentStore *newStore = [coordinator addPersistentStoreWithType:STORE_TYPE configuration:nil URL:url options:nil error:&error];
-        
-        if (newStore == nil) {
-            NSLog(@"Store Configuration Failure %@", ([error localizedDescription] != nil) ? [error localizedDescription] : @"Unknown Error");
-        }
-    }
-    return context;
-}
+#define REDIS_SERVER "127.0.0.1"
+#define REDIS_PORT 6379
+#define REDIS_DB   0
 
-int main(int argc, const char * argv[])
-{
-
+int main(int argc, char * const argv[]) {
+	int ch;
+	char *server = REDIS_SERVER;
+	int port = REDIS_PORT;
+	int db = REDIS_DB;
+	
 	@autoreleasepool {
-	    // Create the managed object context
-	    NSManagedObjectContext *context = managedObjectContext();
-	    
-	    // Custom code here...
-	    // Save the managed object context
-	    NSError *error = nil;
-	    if (![context save:&error]) {
-	        NSLog(@"Error while saving %@", ([error localizedDescription] != nil) ? [error localizedDescription] : @"Unknown Error");
-	        exit(1);
-	    }
+		
+		while ((ch = getopt(argc, argv, "s:p:d:")) != -1) {
+			switch (ch) {
+				case 's':
+					server = optarg;
+					break;
+				case 'p':
+					port = atoi(optarg);
+					if (port <= 0)
+						port = REDIS_PORT;
+					break;
+				case 'd':
+					db = atoi(optarg);
+					if (db <= 0)
+						db = REDIS_DB;
+					break;
+					
+				case '?':
+				default:
+					fprintf(stderr, "USAGE: %s [-s <redis server>] [-p <redis port>] [-d <redis db>]", argv[0]);
+					exit(0);
+			}
+		}
+		
+		NameServer *nameServer = [[NameServer alloc] initWithRedisServer:server andPort:port andDB:db];
+
+		[nameServer start];
+		
+		[[NSRunLoop currentRunLoop] run];
+		
+		[nameServer release];
 	}
     return 0;
 }

@@ -62,13 +62,19 @@ Contact: displaycast@fxpal.com
     available at https://developer.apple.com/opensource/ will work.
     	b) Demoforge mirror driver, available at
     http://www.demoforge.com/dfmirage.htm.
+        c) 32feet.net, available at http://32feet.codeplex.com.
+
+    In OSX, it uses the Packages application available at
+    http://s.sudre.free.fr/Software/Packages/about.html.
 
 3.0 Getting DisplayCast:
-    3.1 Prebuilt binaries are available from the project web page at
-    http://www.fxpal.com/?p=DisplayCast/.
+    3.1 Prebuilt binaries are available at
+    https://github.com/DisplayCast/Win7/downloads (Windows 7) and
+    https://github.com/DisplayCast/OSX-IOS/downloads (OSX).
 
     3.2 Source code is available in github at
-    https://github.com/DisplayCast
+    https://github.com/DisplayCast/Win7 (Windows 7) and 
+    https://github.com/DisplayCast/OSX-IOS (OSX)
 
 4.0 Build Intructions:
     4.1: Windows 7:
@@ -90,13 +96,15 @@ Contact: displaycast@fxpal.com
     precompiled DLL from that link though I experienced some trouble
     in using the precompiled binaries.
 
+    Building the solution builds the Streamer and Player applications.
     Installers can be built using the projects inside the Installers
-    director. The projects "ControllerServiceInstaller" and
+    directory. The projects "ControllerServiceInstaller" and
     "DisplayCastInstaller" create installers for the Controller
-    Service and the DisplayCast system respectively.
+    Service and the DisplayCast system respectively. The installers
+    are availble in the Installers directory.
 
     4.2: Mac OSX and iOS:
-    We use Xcode 4.x. The license agreement, this README file and
+    We use Xcode 4.4. The license agreement, this README file and
     credits are available in the Documentation group. The source code
     for the OSX version of Streamer, Archiver, Players and Preferences
     are available in the Sources/OSX group. The source code for the
@@ -108,12 +116,26 @@ Contact: displaycast@fxpal.com
     https://code.google.com/p/xmppframework/. Recently, xmppframework
     is hosted at GitHub.
 
-    With the Xcode 4.x and Command Line tools addition, the system can
+    With the Xcode 4.4 and Command Line tools addition, the system can
     be compiled and a disk image containing the release packages can
-    be created by running the shell script Packager/pkmaker.sh from
-    the command line.
+    be created by running the shell script OSX/Packager/pkmaker.sh from
+    the command line. The DisplayCast.dmg is created in the OSX/Installers
+    directory. The disk image also contains an AppleScript script
+    called EnableAutoLogin.scpt that allows the DisplayCast system to be
+    automatically started on a system boot. 
 
-5.0 Known Issues:
+5.0 Usage Instructions:
+    5.1 Windows 7:
+    The Streamer and Player applications are installed in the
+    FXPAL/DisplayCast application folder. These applications are
+    automatically started on a system reboot.
+
+    5.2 OSX:
+    The Streamer, Player and Archiver applications are installed in
+    the /Applications/FXPAL directory. The Streamer and Player are
+    automatically started on a system reboot.
+    
+6.0 Known Issues:
     5.1: Windows 7
 
     5.2: Mac OSX

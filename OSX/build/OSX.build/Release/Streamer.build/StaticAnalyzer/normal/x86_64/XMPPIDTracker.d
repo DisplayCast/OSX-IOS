@@ -1,3 +1,3 @@
 dependencies: \
-  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Utilities/XMPPIDTracker.m \
-  /Volumes/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Utilities/XMPPIDTracker.h
+  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Utilities/XMPPIDTracker.m \
+  /Users/chandra/Src/DisplayCast/OSX/Utilities/xmppframework/Utilities/XMPPIDTracker.h

@@ -192,9 +192,9 @@
 				766BF638156424E50088E361 /* streamerViewer.h */,
 				766BF639156424E50088E361 /* streamerViewer.m */,
 				766BF63A156424E50088E361 /* streamerViewerViewController.h */,
+				766BF63B156424E50088E361 /* streamerViewerViewController.m */,
 				766BF63D156424E50088E361 /* TCPServer.h */,
 				766BF63E156424E50088E361 /* TCPServer.m */,
-				766BF63B156424E50088E361 /* streamerViewerViewController.m */,
 				76ED6F6615641B6400F3BC56 /* Supporting Files */,
 				76ED6F6715641B6400F3BC56 /* Resources */,
 			);

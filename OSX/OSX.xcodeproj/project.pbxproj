@@ -102,10 +102,22 @@
 		762FD040153935C100BBA23A /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7601E591145A367800A75829 /* libresolv.dylib */; };
 		763E40C4141AE67200B0FD3F /* Streamer.m in Sources */ = {isa = PBXBuildFile; fileRef = 763E40C3141AE67200B0FD3F /* Streamer.m */; };
 		7648EF6F141FF1060088F833 /* MenuEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 7648EF6E141FF1050088F833 /* MenuEntry.m */; };
+		764F18C81585C8AE00CD03C4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764F18C71585C8AE00CD03C4 /* CoreData.framework */; };
+		764F18C91585C8AE00CD03C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76341D461547856D0003D251 /* Foundation.framework */; };
+		764F18CC1585C8AE00CD03C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 764F18CB1585C8AE00CD03C4 /* main.m */; };
+		764F18D31585C8AE00CD03C4 /* Faunus.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 764F18D21585C8AE00CD03C4 /* Faunus.1 */; };
 		76514C021422960000FEA92B /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76EEDAA8142120F400A306E1 /* PreferencePanes.framework */; };
 		76514C081422960000FEA92B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76514C061422960000FEA92B /* InfoPlist.strings */; };
 		76514C0B1422960000FEA92B /* Preferences.h in Headers */ = {isa = PBXBuildFile; fileRef = 76514C0A1422960000FEA92B /* Preferences.h */; };
 		76514C0D1422960000FEA92B /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 76514C0C1422960000FEA92B /* Preferences.m */; };
+		7669C8B41585CEF900A18CFC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A61B1C15656F0000564A86 /* CFNetwork.framework */; };
+		7669C8BC1585D07900A18CFC /* libhiredis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7669C8BB1585D07900A18CFC /* libhiredis.a */; };
+		7669C8DA1585D63300A18CFC /* Faunus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 764F18CF1585C8AE00CD03C4 /* Faunus.xcdatamodeld */; };
+		7669C8DB1585D64200A18CFC /* NameServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7669C8C91585D3F800A18CFC /* NameServer.m */; };
+		7669C8DC1585D65400A18CFC /* HTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7669C8C41585D3F700A18CFC /* HTTPServer.m */; };
+		7669C8E21585D6E400A18CFC /* TCPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7669C8CB1585D3F800A18CFC /* TCPServer.m */; };
+		766B307915865E6E000758A9 /* Attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 766B307815865E6E000758A9 /* Attributes.m */; };
+		766B308015865E70000758A9 /* Children.m in Sources */ = {isa = PBXBuildFile; fileRef = 766B307F15865E70000758A9 /* Children.m */; };
 		766BF659156425DF0088E361 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 766BF657156425DF0088E361 /* README.txt */; };
 		766BF65A156425DF0088E361 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 766BF657156425DF0088E361 /* README.txt */; };
 		766BF65B156425DF0088E361 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 766BF657156425DF0088E361 /* README.txt */; };
@@ -119,6 +131,8 @@
 		766BF66B15642BAC0088E361 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 766BF66815642BAC0088E361 /* Credits.rtf */; };
 		766BF66C15642BAC0088E361 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 766BF66815642BAC0088E361 /* Credits.rtf */; };
 		768DF55615769425004BEDB7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A61B1A15656C0D00564A86 /* Cocoa.framework */; };
+		769B0E451586678100A6788F /* Name.m in Sources */ = {isa = PBXBuildFile; fileRef = 769B0E441586678100A6788F /* Name.m */; };
+		769B0E48158677AF00A6788F /* redisName.m in Sources */ = {isa = PBXBuildFile; fileRef = 769B0E47158677AF00A6788F /* redisName.m */; };
 		76A61AED15656B3300564A86 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FF750113CA5F4600633C80 /* libz.dylib */; };
 		76A61B1B15656C0D00564A86 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A61B1A15656C0D00564A86 /* Cocoa.framework */; };
 		76A61B2015656F3F00564A86 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A61B1A15656C0D00564A86 /* Cocoa.framework */; };
@@ -134,6 +148,8 @@
 		76C901A71433DDF3007C3524 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76514C101422960000FEA92B /* Preferences.xib */; };
 		76CB4E6713CAE816008519FB /* icon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 76CB4E6613CAE816008519FB /* icon.tiff */; };
 		76CD08BD14884C6300FFF8F4 /* PlayerListing.m in Sources */ = {isa = PBXBuildFile; fileRef = 7644AE6913CAC41E003E7A21 /* PlayerListing.m */; };
+		76CE513615880A6100C39B86 /* redisAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CE513515880A6100C39B86 /* redisAttribute.m */; };
+		76CE513D1589054800C39B86 /* redisCapability.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CE513C1589054800C39B86 /* redisCapability.m */; };
 		76DAF63E1433E738000D7A70 /* PlayerListing.m in Sources */ = {isa = PBXBuildFile; fileRef = 7644AE6913CAC41E003E7A21 /* PlayerListing.m */; };
 		76DAF63F1433E738000D7A70 /* PlayerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FE54E213CA769200E38144 /* PlayerAppDelegate.m */; };
 		76DAF6411433E74C000D7A70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FE54DC13CA769200E38144 /* main.m */; };
@@ -158,6 +174,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		764F18C31585C8AE00CD03C4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				764F18D31585C8AE00CD03C4 /* Faunus.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		76A807DF15511D0400EAB544 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
@@ -347,6 +373,12 @@
 		7644AE6A13CAC41E003E7A21 /* PlayerListing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerListing.h; sourceTree = "<group>"; };
 		7648EF6D141FF1050088F833 /* MenuEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuEntry.h; sourceTree = "<group>"; };
 		7648EF6E141FF1050088F833 /* MenuEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuEntry.m; sourceTree = "<group>"; };
+		764F18C51585C8AE00CD03C4 /* Faunus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Faunus; sourceTree = BUILT_PRODUCTS_DIR; };
+		764F18C71585C8AE00CD03C4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		764F18CB1585C8AE00CD03C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		764F18CE1585C8AE00CD03C4 /* Faunus-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Faunus-Prefix.pch"; sourceTree = "<group>"; };
+		764F18D01585C8AE00CD03C4 /* Faunus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Faunus.xcdatamodel; sourceTree = "<group>"; };
+		764F18D21585C8AE00CD03C4 /* Faunus.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Faunus.1; sourceTree = "<group>"; };
 		76514C001422960000FEA92B /* DisplayCast.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DisplayCast.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		76514C051422960000FEA92B /* Preferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Preferences-Info.plist"; sourceTree = "<group>"; };
 		76514C071422960000FEA92B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -354,11 +386,28 @@
 		76514C0A1422960000FEA92B /* Preferences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
 		76514C0C1422960000FEA92B /* Preferences.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
 		76514C111422960000FEA92B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Preferences.xib; sourceTree = "<group>"; };
+		7669C8BB1585D07900A18CFC /* libhiredis.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhiredis.a; path = ../../hiredis/libhiredis.a; sourceTree = "<group>"; };
+		7669C8C31585D3F700A18CFC /* HTTPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPServer.h; sourceTree = "<group>"; };
+		7669C8C41585D3F700A18CFC /* HTTPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPServer.m; sourceTree = "<group>"; };
+		7669C8C81585D3F800A18CFC /* NameServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameServer.h; sourceTree = "<group>"; };
+		7669C8C91585D3F800A18CFC /* NameServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameServer.m; sourceTree = "<group>"; };
+		7669C8CA1585D3F800A18CFC /* TCPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPServer.h; sourceTree = "<group>"; };
+		7669C8CB1585D3F800A18CFC /* TCPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPServer.m; sourceTree = "<group>"; };
+		766B307715865E6E000758A9 /* Attributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attributes.h; sourceTree = "<group>"; };
+		766B307815865E6E000758A9 /* Attributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Attributes.m; sourceTree = "<group>"; };
+		766B307B15865E70000758A9 /* Capability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Capability.h; sourceTree = "<group>"; };
+		766B307C15865E70000758A9 /* Capability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Capability.m; sourceTree = "<group>"; };
+		766B307E15865E70000758A9 /* Children.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Children.h; sourceTree = "<group>"; };
+		766B307F15865E70000758A9 /* Children.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Children.m; sourceTree = "<group>"; };
 		766BF657156425DF0088E361 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.txt; path = ../README.txt; sourceTree = "<group>"; };
 		766BF658156425DF0088E361 /* License.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = License.rtf; path = ../License.rtf; sourceTree = "<group>"; };
 		766BF66815642BAC0088E361 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = Credits.rtf; path = ../Credits.rtf; sourceTree = "<group>"; };
 		766BF66D15642CC70088E361 /* All */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = All; sourceTree = BUILT_PRODUCTS_DIR; };
 		768354BC13D40AFE0000F224 /* InstallerPlugins.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InstallerPlugins.framework; path = System/Library/Frameworks/InstallerPlugins.framework; sourceTree = SDKROOT; };
+		769B0E431586678100A6788F /* Name.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Name.h; sourceTree = "<group>"; };
+		769B0E441586678100A6788F /* Name.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Name.m; sourceTree = "<group>"; };
+		769B0E46158677AE00A6788F /* redisName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = redisName.h; sourceTree = "<group>"; };
+		769B0E47158677AF00A6788F /* redisName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = redisName.m; sourceTree = "<group>"; };
 		76A417D5142C0F3C0010C39C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ArchiverMenu.xib; sourceTree = "<group>"; };
 		76A417D8142C100F0010C39C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = Player/en.lproj/PlayerMenu.xib; sourceTree = "<group>"; };
 		76A61B1A15656C0D00564A86 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -372,6 +421,10 @@
 		76A807E615511D0400EAB544 /* All.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = All.1; sourceTree = "<group>"; };
 		76B2374B14A3B98500A0B3FF /* IOBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetooth.framework; path = System/Library/Frameworks/IOBluetooth.framework; sourceTree = SDKROOT; };
 		76CB4E6613CAE816008519FB /* icon.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = icon.tiff; sourceTree = "<group>"; };
+		76CE513415880A6100C39B86 /* redisAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = redisAttribute.h; sourceTree = "<group>"; };
+		76CE513515880A6100C39B86 /* redisAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = redisAttribute.m; sourceTree = "<group>"; };
+		76CE513B1589054700C39B86 /* redisCapability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = redisCapability.h; sourceTree = "<group>"; };
+		76CE513C1589054800C39B86 /* redisCapability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = redisCapability.m; sourceTree = "<group>"; };
 		76DD3380143A1CCC00103353 /* TCPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPServer.h; sourceTree = "<group>"; };
 		76DD3381143A1CCC00103353 /* TCPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPServer.m; sourceTree = "<group>"; };
 		76DD338E143CD7F900103353 /* OCR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCR.h; sourceTree = "<group>"; };
@@ -413,6 +466,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		764F18C21585C8AE00CD03C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7669C8BC1585D07900A18CFC /* libhiredis.a in Frameworks */,
+				7669C8B41585CEF900A18CFC /* CFNetwork.framework in Frameworks */,
+				764F18C81585C8AE00CD03C4 /* CoreData.framework in Frameworks */,
+				764F18C91585C8AE00CD03C4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		76514BFB1422960000FEA92B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -478,6 +542,7 @@
 				762DA36C15539E3600A405A6 /* Sources */,
 				76FF74CC13CA5E2E00633C80 /* Frameworks */,
 				76C48449142D40A600885B11 /* Products */,
+				764F18C51585C8AE00CD03C4 /* Faunus */,
 				766BF66D15642CC70088E361 /* All */,
 			);
 			name = PictureSharing;
@@ -892,13 +957,14 @@
 		762DA36C15539E3600A405A6 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				764F18CA1585C8AE00CD03C4 /* Faunus */,
 				76A807E315511D0400EAB544 /* All */,
-				762DA3711553A01500A405A6 /* Extras */,
 				76F74D13142BD29D00F2A647 /* Archiver */,
 				76FF74D313CA5E2E00633C80 /* Streamer */,
 				76FE54D513CA769200E38144 /* Player */,
 				76514C031422960000FEA92B /* Preferences */,
 				7602D2BD14D0C13300BB0686 /* Images */,
+				762DA3711553A01500A405A6 /* Extras */,
 				7602BCC814D0BEF000BB0686 /* Shared */,
 			);
 			name = Sources;
@@ -920,6 +986,61 @@
 				7602C7E914D0C10B00BB0686 /* xmppframework */,
 			);
 			name = Extras;
+			sourceTree = "<group>";
+		};
+		764F18BD1585C68600CD03C4 /* CoreDataEntity */ = {
+			isa = PBXGroup;
+			children = (
+				769B0E431586678100A6788F /* Name.h */,
+				769B0E441586678100A6788F /* Name.m */,
+				766B307E15865E70000758A9 /* Children.h */,
+				766B307F15865E70000758A9 /* Children.m */,
+				766B307B15865E70000758A9 /* Capability.h */,
+				766B307C15865E70000758A9 /* Capability.m */,
+				766B307715865E6E000758A9 /* Attributes.h */,
+				766B307815865E6E000758A9 /* Attributes.m */,
+			);
+			name = CoreDataEntity;
+			sourceTree = "<group>";
+		};
+		764F18BE1585C6BB00CD03C4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7669C8C31585D3F700A18CFC /* HTTPServer.h */,
+				7669C8C41585D3F700A18CFC /* HTTPServer.m */,
+				7669C8CA1585D3F800A18CFC /* TCPServer.h */,
+				7669C8CB1585D3F800A18CFC /* TCPServer.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		764F18CA1585C8AE00CD03C4 /* Faunus */ = {
+			isa = PBXGroup;
+			children = (
+				764F18CF1585C8AE00CD03C4 /* Faunus.xcdatamodeld */,
+				764F18CB1585C8AE00CD03C4 /* main.m */,
+				7669C8C81585D3F800A18CFC /* NameServer.h */,
+				7669C8C91585D3F800A18CFC /* NameServer.m */,
+				769B0E46158677AE00A6788F /* redisName.h */,
+				769B0E47158677AF00A6788F /* redisName.m */,
+				76CE513B1589054700C39B86 /* redisCapability.h */,
+				76CE513C1589054800C39B86 /* redisCapability.m */,
+				76CE513415880A6100C39B86 /* redisAttribute.h */,
+				76CE513515880A6100C39B86 /* redisAttribute.m */,
+				764F18D21585C8AE00CD03C4 /* Faunus.1 */,
+				764F18BD1585C68600CD03C4 /* CoreDataEntity */,
+				764F18BE1585C6BB00CD03C4 /* Networking */,
+				764F18CD1585C8AE00CD03C4 /* Supporting Files */,
+			);
+			path = Faunus;
+			sourceTree = "<group>";
+		};
+		764F18CD1585C8AE00CD03C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				764F18CE1585C8AE00CD03C4 /* Faunus-Prefix.pch */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		76514C031422960000FEA92B /* Preferences */ = {
@@ -1021,6 +1142,7 @@
 		76FF74CC13CA5E2E00633C80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7669C8BB1585D07900A18CFC /* libhiredis.a */,
 				76A61B2E15657C8A00564A86 /* libz.1.2.5.dylib */,
 				76A61B271565743300564A86 /* CoreServices.framework */,
 				76A61B251565714600564A86 /* ImageIO.framework */,
@@ -1043,6 +1165,7 @@
 				768354BC13D40AFE0000F224 /* InstallerPlugins.framework */,
 				76EEDAA8142120F400A306E1 /* PreferencePanes.framework */,
 				76341D461547856D0003D251 /* Foundation.framework */,
+				764F18C71585C8AE00CD03C4 /* CoreData.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1095,6 +1218,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		764F18C41585C8AE00CD03C4 /* Faunus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 764F18D41585C8AE00CD03C4 /* Build configuration list for PBXNativeTarget "Faunus" */;
+			buildPhases = (
+				764F18C11585C8AE00CD03C4 /* Sources */,
+				764F18C21585C8AE00CD03C4 /* Frameworks */,
+				764F18C31585C8AE00CD03C4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Faunus;
+			productName = Faunus;
+			productReference = 764F18C51585C8AE00CD03C4 /* Faunus */;
+			productType = "com.apple.product-type.tool";
+		};
 		76514BFF1422960000FEA92B /* Preferences */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76514C151422960000FEA92B /* Build configuration list for PBXNativeTarget "Preferences" */;
@@ -1212,6 +1352,7 @@
 				76514BFF1422960000FEA92B /* Preferences */,
 				76F74D0F142BD29D00F2A647 /* Archiver */,
 				76A807E015511D0400EAB544 /* All */,
+				764F18C41585C8AE00CD03C4 /* Faunus */,
 			);
 		};
 /* End PBXProject section */
@@ -1292,6 +1433,24 @@
 /* End PBXRezBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		764F18C11585C8AE00CD03C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7669C8E21585D6E400A18CFC /* TCPServer.m in Sources */,
+				7669C8DC1585D65400A18CFC /* HTTPServer.m in Sources */,
+				764F18CC1585C8AE00CD03C4 /* main.m in Sources */,
+				7669C8DB1585D64200A18CFC /* NameServer.m in Sources */,
+				7669C8DA1585D63300A18CFC /* Faunus.xcdatamodeld in Sources */,
+				766B307915865E6E000758A9 /* Attributes.m in Sources */,
+				766B308015865E70000758A9 /* Children.m in Sources */,
+				769B0E451586678100A6788F /* Name.m in Sources */,
+				769B0E48158677AF00A6788F /* redisName.m in Sources */,
+				76CE513615880A6100C39B86 /* redisAttribute.m in Sources */,
+				76CE513D1589054800C39B86 /* redisCapability.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		76514BFA1422960000FEA92B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1575,6 +1734,73 @@
 					"-Wstrict-prototypes",
 					"-Wold-style-definition",
 				);
+			};
+			name = Release;
+		};
+		764F18D51585C8AE00CD03C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Faunus/Faunus-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/lib/,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		764F18D61585C8AE00CD03C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Faunus/Faunus-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/lib/,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_CFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -1878,6 +2104,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		764F18D41585C8AE00CD03C4 /* Build configuration list for PBXNativeTarget "Faunus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				764F18D51585C8AE00CD03C4 /* Debug */,
+				764F18D61585C8AE00CD03C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		76514C151422960000FEA92B /* Build configuration list for PBXNativeTarget "Preferences" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1933,6 +2168,16 @@
 			);
 			currentVersion = 7602C84914D0C10B00BB0686 /* XMPPvCard.xcdatamodel */;
 			path = XMPPvCard.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		764F18CF1585C8AE00CD03C4 /* Faunus.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				764F18D01585C8AE00CD03C4 /* Faunus.xcdatamodel */,
+			);
+			currentVersion = 764F18D01585C8AE00CD03C4 /* Faunus.xcdatamodel */;
+			path = Faunus.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
