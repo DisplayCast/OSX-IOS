@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1467" systemVersion="12A206j" minimumToolsVersion="Xcode 4.4" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Attributes" representedClassName="Attributes" parentEntity="Name" syncable="YES">
+        <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="readAttrCapability" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Capability" syncable="YES"/>
+        <relationship name="writeAttrCapability" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Capability" syncable="YES"/>
+    </entity>
+    <entity name="Capability" representedClassName="Capability" syncable="YES">
+        <attribute name="capability" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Children" representedClassName="Children" parentEntity="Name" syncable="YES">
+        <attribute name="childName" optional="YES" attributeType="String" minValueString="36" maxValueString="36" syncable="YES"/>
+    </entity>
+    <entity name="Name" representedClassName="Name" syncable="YES">
+        <attribute name="id" attributeType="String" minValueString="36" maxValueString="36" indexed="YES" syncable="YES"/>
+        <relationship name="attributes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Attributes" syncable="YES"/>
+        <relationship name="children" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Children" syncable="YES"/>
+        <relationship name="readCapability" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Capability" syncable="YES"/>
+        <relationship name="writeCapability" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Capability" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Attributes" positionX="0" positionY="0" width="0" height="105"/>
+        <element name="Capability" positionX="160" positionY="192" width="128" height="60"/>
+        <element name="Children" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Name" positionX="0" positionY="0" width="0" height="120"/>
+    </elements>
+</model>
