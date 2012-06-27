@@ -1139,7 +1139,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunus/NameServer.h"
-         timestampString = "361407733.961901"
+         timestampString = "362443247.521752"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "52"
@@ -1152,12 +1152,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunus/NameServer.m"
-         timestampString = "361413187.768847"
+         timestampString = "362447661.974631"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "704"
-         endingLineNumber = "704"
-         landmarkName = "-createGUID"
+         startingLineNumber = "921"
+         endingLineNumber = "921"
+         landmarkName = "-openDB"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1165,24 +1165,24 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunus/NameServer.m"
-         timestampString = "361413187.768847"
+         timestampString = "362448815.479521"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "834"
-         endingLineNumber = "834">
+         startingLineNumber = "1054"
+         endingLineNumber = "1054"
+         landmarkName = "-getRedisName:"
+         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunus/main.m"
-         timestampString = "361314197.388585"
+         timestampString = "362433354.41256"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "11"
-         endingLineNumber = "11"
-         landmarkName = "main()"
-         landmarkType = "7">
+         startingLineNumber = "12"
+         endingLineNumber = "12">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -1194,8 +1194,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "22"
          endingLineNumber = "22"
-         landmarkName = "-initWithRedisServer:andPort:andDB:"
-         landmarkType = "5">
+         landmarkName = "@implementation NameServer"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -1254,12 +1254,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunus/NameServer.m"
-         timestampString = "361413187.768847"
+         timestampString = "362447420.71181"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "613"
-         endingLineNumber = "613"
-         landmarkName = "managedObjectContext()"
+         startingLineNumber = "817"
+         endingLineNumber = "817"
+         landmarkName = "managedObjectModel()"
          landmarkType = "7">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1267,12 +1267,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunus/NameServer.m"
-         timestampString = "361413187.768847"
+         timestampString = "362447420.71181"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "673"
-         endingLineNumber = "673"
-         landmarkName = "-openDB"
+         startingLineNumber = "877"
+         endingLineNumber = "877"
+         landmarkName = "-dumpDB"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1293,12 +1293,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunus/NameServer.m"
-         timestampString = "361413187.768847"
+         timestampString = "362447420.71181"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "661"
-         endingLineNumber = "661"
-         landmarkName = "-openDB"
+         startingLineNumber = "865"
+         endingLineNumber = "865"
+         landmarkName = "-dumpDB"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1306,11 +1306,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunus/NameServer.m"
-         timestampString = "361413187.768847"
+         timestampString = "362447661.974631"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "799"
-         endingLineNumber = "799"
+         startingLineNumber = "1019"
+         endingLineNumber = "1019"
          landmarkName = "-getRedisName:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1319,11 +1319,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunus/NameServer.m"
-         timestampString = "361413187.768847"
+         timestampString = "362448815.479521"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "804"
-         endingLineNumber = "804"
+         startingLineNumber = "1024"
+         endingLineNumber = "1024"
          landmarkName = "-getRedisName:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1358,24 +1358,13 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunus/NameServer.m"
-         timestampString = "361407733.961901"
+         timestampString = "362447420.71181"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "106"
-         endingLineNumber = "106"
-         landmarkName = "-addAttr:withKey:andValue:withWriteCapability:"
+         startingLineNumber = "111"
+         endingLineNumber = "111"
+         landmarkName = "-createName"
          landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "OSX/Faunus/NameServer.m"
-         timestampString = "361413187.768847"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "570"
-         endingLineNumber = "570">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -1408,11 +1397,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunus/NameServer.m"
-         timestampString = "361407733.961901"
+         timestampString = "362447420.71181"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "149"
-         endingLineNumber = "149"
+         startingLineNumber = "154"
+         endingLineNumber = "154"
          landmarkName = "-addAttr:withKey:andValue:withWriteCapability:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1421,12 +1410,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunus/NameServer.m"
-         timestampString = "361413187.768847"
+         timestampString = "362447661.974631"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "738"
-         endingLineNumber = "738"
-         landmarkName = "-parseDictArray:"
+         startingLineNumber = "956"
+         endingLineNumber = "956"
+         landmarkName = "@implementation NameServer(Utilities)"
+         landmarkType = "3">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "OSX/Faunus/NameServer.m"
+         timestampString = "362447420.71181"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "199"
+         endingLineNumber = "199"
+         landmarkName = "-addAttr:withKey:andValue:withWriteCapability:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1434,24 +1436,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunus/NameServer.m"
-         timestampString = "361407733.961901"
+         timestampString = "362448815.479521"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "189"
-         endingLineNumber = "189"
-         landmarkName = "-getAttr:withKey:withReadCapability:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "OSX/Faunus/NameServer.m"
-         timestampString = "361413187.768847"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "811"
-         endingLineNumber = "811"
+         startingLineNumber = "1031"
+         endingLineNumber = "1031"
          landmarkName = "-getRedisName:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1460,11 +1449,37 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunus/NameServer.m"
-         timestampString = "361413187.768847"
+         timestampString = "362447420.71181"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "372"
-         endingLineNumber = "372"
+         startingLineNumber = "454"
+         endingLineNumber = "454"
+         landmarkName = "-delChild:withChild:withWriteCapability:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "OSX/Faunus/NameServer.m"
+         timestampString = "362447420.71181"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "482"
+         endingLineNumber = "482"
+         landmarkName = "-delChild:withChild:withWriteCapability:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "OSX/Faunus/NameServer.m"
+         timestampString = "362447420.71181"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "518"
+         endingLineNumber = "518"
          landmarkName = "-listChildren:withReadCapability:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1472,26 +1487,39 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "OSX/Faunus/NameServer.m"
-         timestampString = "361413187.768847"
+         filePath = "OSX/Faunus/WhiteBoard.m"
+         timestampString = "362449457.307452"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "391"
-         endingLineNumber = "391"
-         landmarkName = "-makeCapabilityWithCapability:withKey:forOperation:withWriteCapability:"
+         startingLineNumber = "138"
+         endingLineNumber = "138"
+         landmarkName = "-HTTPConnection:didReceiveRequest:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "OSX/Faunus/NameServer.m"
-         timestampString = "361413187.768847"
+         filePath = "OSX/Faunus/WhiteBoard.m"
+         timestampString = "362449457.307452"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "416"
-         endingLineNumber = "416"
-         landmarkName = "-makeCapabilityWithCapability:withKey:forOperation:withWriteCapability:"
+         startingLineNumber = "41"
+         endingLineNumber = "41"
+         landmarkName = "-browseLocal:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "OSX/Faunus/WhiteBoard.m"
+         timestampString = "362449457.307452"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "41"
+         endingLineNumber = "41"
+         landmarkName = "-browseLocal:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
