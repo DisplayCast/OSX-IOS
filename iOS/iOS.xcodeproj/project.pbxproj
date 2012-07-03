@@ -80,11 +80,6 @@
 		76C86D3C159B9C9000D77C54 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		76C86D3D159B9C9000D77C54 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		76C86D3E159B9C9000D77C54 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		76C86D41159B9C9000D77C54 /* Faunus-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Faunus-Info.plist"; sourceTree = "<group>"; };
-		76C86D43159B9C9000D77C54 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		76C86D45159B9C9000D77C54 /* Faunus-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Faunus-Prefix.pch"; sourceTree = "<group>"; };
-		76C86D46159B9C9000D77C54 /* Faunus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Faunus.h; sourceTree = "<group>"; };
-		76C86D47159B9C9000D77C54 /* Faunus.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Faunus.m; sourceTree = "<group>"; };
 		76ED6F3A15641B2700F3BC56 /* Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Player.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76ED6F3E15641B2700F3BC56 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		76ED6F4015641B2700F3BC56 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -143,32 +138,11 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		76C86D3F159B9C9000D77C54 /* Faunus */ = {
-			isa = PBXGroup;
-			children = (
-				76C86D46159B9C9000D77C54 /* Faunus.h */,
-				76C86D47159B9C9000D77C54 /* Faunus.m */,
-				76C86D40159B9C9000D77C54 /* Supporting Files */,
-			);
-			path = Faunus;
-			sourceTree = "<group>";
-		};
-		76C86D40159B9C9000D77C54 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				76C86D41159B9C9000D77C54 /* Faunus-Info.plist */,
-				76C86D42159B9C9000D77C54 /* InfoPlist.strings */,
-				76C86D45159B9C9000D77C54 /* Faunus-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		76ED6F2F15641B2700F3BC56 = {
 			isa = PBXGroup;
 			children = (
 				766BF66115642AEE0088E361 /* Documentation */,
 				76ED6F9215641C9200F3BC56 /* Sources */,
-				76C86D3F159B9C9000D77C54 /* Faunus */,
 				76ED6F3D15641B2700F3BC56 /* Frameworks */,
 				76ED6F3B15641B2700F3BC56 /* Products */,
 			);
@@ -333,17 +307,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		76C86D42159B9C9000D77C54 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				76C86D43159B9C9000D77C54 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		76ED6F5015641B2700F3BC56 /* Debug */ = {

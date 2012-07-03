@@ -16,27 +16,56 @@
 #ifdef USE_REDIS
 char *redisServer = NULL;
 int redisPort = -1, redisDB = -1;
+static redisContext *rContext;
+
+HTTPServer *server;
 
 /*!
-	@method initWithRedisServer
-	@param redisServer
-	@param redisServerPort
-	@param redisdatabase
- 
-	initializer that is configured from the command line.
-	we don't support authentication with the redis server though that should be trivial with the AUTH command to the redis server
+ @method initWithRedisServer
+ @param redisServer
+ @param redisServerPort
+ @param redisdatabase
+
+ initializer that is configured from the command line.
+ we don't support authentication with the redis server though that should be trivial with the AUTH command to the redis server
  */
 
--(id) initWithRedisServer:(char *)server andPort:(int)port andDB:(int)db {
+-(id) initWithRedisServer:(char *)rserver andPort:(int)port andDB:(int)db {
 	self = [super init];
 
-	redisServer = server;
+	redisServer = rserver;
 	redisPort = port;
 	redisDB = db;
+
+	[self openDB];
+
+	server = [[HTTPServer alloc] init];
+	[server setPort:9999];
 
 	return self;
 }
 #endif /* USE_REDIS */
+
+- (id) init {
+	self = [super init];
+
+	[self openDB];
+
+	server = [[HTTPServer alloc] init];
+	[server setPort:9999];
+
+	return self;
+}
+
+- (void) start {
+	NSError *startError = nil;
+	if ([server start:&startError]) {
+		[server setDelegate:self];
+	} else {
+		NSLog(@"Error starting HTTP server: %@", startError);
+		server = nil;
+	}
+}
 
 /*!
  @method createName
@@ -1064,8 +1093,7 @@ Name *newName = [[Name alloc] initWithEntity:nameEntity insertIntoManagedObjectC
 		if ( wca != nil)
 			[retValue setWriteCapability:[self parseDictArray:wca]];
 	}
-	freeReplyObject(reply);
-	
+
 	return retValue;
 }
 
@@ -1090,8 +1118,6 @@ Name *newName = [[Name alloc] initWithEntity:nameEntity insertIntoManagedObjectC
 @end
 
 @implementation NameServer (HTTPRest)
-HTTPServer *server;
-
 - (void) HTTPServer:server didMakeNewConnection:connection {
 #pragma unused(server, connection)
 		// NSLog(@"DEBUG: didMakeNewConnection: %@", connection);
@@ -1117,7 +1143,9 @@ HTTPServer *server;
 			NSDictionary *query = [uri queryComponents];
 			
 			id responseObj = nil;
-			
+
+			NSLog(@"Command is: %@", command);
+
 			if ([command localizedCaseInsensitiveCompare:@"/CREATENAME"] == NSOrderedSame) {
 				responseObj = [self createName];
 			} else if ([command localizedCaseInsensitiveCompare:@"/ADDATTR"] == NSOrderedSame) {
@@ -1229,26 +1257,6 @@ HTTPServer *server;
 	}
 }
 
-- (id) init {
-	self = [super init];
-	
-	[self openDB];
-	
-	server = [[HTTPServer alloc] init];
-	[server setPort:9999];
-	
-	return self;
-}
-
-- (void) start {
-	NSError *startError = nil;
-	if ([server start:&startError]) {
-		[server setDelegate:self];
-	} else {
-		NSLog(@"Error starting HTTP server: %@", startError);
-		server = nil;
-	}
-}
 @end
 
 @implementation NSString (XQueryComponents)

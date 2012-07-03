@@ -3,17 +3,17 @@
 // Author: Surendar Chandra, FX Palo Alto Laboratory, Inc.
 
 #import <Foundation/Foundation.h>
+#define USE_REDIS
 
 #ifdef USE_REDIS
 #import "redisName.h"
 #import "redisCapability.h"
 
 #include <hiredis/hiredis.h>
+#include "faunusGlobals.h"
 
 	// By default, expire keys in 7 days - unless a child or attribute is added before this duration is up
 #define REDIS_EXPIRE (3600*24*7)
-
-static redisContext *rContext;
 #endif /* USE_REDIS */
 
 @interface NameServer: NSObject
@@ -32,13 +32,6 @@ static redisContext *rContext;
 
 - (NSDictionary *)makeCapabilityWithCapability:(NSString *)name withKey:(NSString *)key forOperation:(NSString *)operation withWriteCapability:(NSString *)capability;
 - (NSDictionary *)revokeCapability:(NSString *)name withKey:(NSString *)key forOperation:(NSString *)operation revokeCapability:(NSString *)revokeCapability withWriteCapability:(NSString *)capability;
-
-typedef enum {
-	faunusSUCCESS = 0,
-	faunusEGAIN = -1,			// Couldn't complete the command now
-	faunusFAILED = -2,
-	faunusENOACCESS = -3,
-} faunusStatus;
 @end
 
 @interface NameServer (Utilities)
