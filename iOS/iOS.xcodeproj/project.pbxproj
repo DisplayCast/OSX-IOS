@@ -33,12 +33,14 @@
 		766BF67515642E6F0088E361 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 766BF626156424E50088E361 /* Icon.png */; };
 		766BF67615642E6F0088E361 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 766BF627156424E50088E361 /* Icon@2x.png */; };
 		766BF67715642E6F0088E361 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 766BF628156424E50088E361 /* iTunesArtwork */; };
+		76BDE7A115A3B39900BDB261 /* libFaunus-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76BDE7A015A3B39900BDB261 /* libFaunus-iOS.a */; };
 		76ED6F3F15641B2700F3BC56 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76ED6F3E15641B2700F3BC56 /* UIKit.framework */; };
 		76ED6F4115641B2700F3BC56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76ED6F4015641B2700F3BC56 /* Foundation.framework */; };
 		76ED6F4315641B2700F3BC56 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76ED6F4215641B2700F3BC56 /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7617689715A3AFB200AE8553 /* Faunus-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Faunus-Prefix.pch"; sourceTree = "<group>"; };
 		7623EE4A1564436B00058FCC /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		7655C90815643ED800BEFE31 /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
 		766BF61D156424E50088E361 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = Player/AppController.h; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 		766BF66215642AFE0088E361 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.txt; path = ../README.txt; sourceTree = "<group>"; };
 		766BF66415642B0C0088E361 /* License.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = License.rtf; path = ../License.rtf; sourceTree = "<group>"; };
 		766BF66615642B980088E361 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = Credits.rtf; path = ../Credits.rtf; sourceTree = "<group>"; };
+		76BDE7A015A3B39900BDB261 /* libFaunus-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "libFaunus-iOS.a"; path = "../Faunus/build/Release-iphoneos/libFaunus-iOS.a"; sourceTree = "<group>"; };
 		76C86D39159B9C9000D77C54 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		76C86D3C159B9C9000D77C54 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		76C86D3D159B9C9000D77C54 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -91,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76BDE7A115A3B39900BDB261 /* libFaunus-iOS.a in Frameworks */,
 				7623EE4B1564436B00058FCC /* libz.dylib in Frameworks */,
 				76ED6F3F15641B2700F3BC56 /* UIKit.framework in Frameworks */,
 				76ED6F4115641B2700F3BC56 /* Foundation.framework in Frameworks */,
@@ -101,6 +105,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7617689515A3AFB200AE8553 /* Faunus */ = {
+			isa = PBXGroup;
+			children = (
+				7617689615A3AFB200AE8553 /* Supporting Files */,
+			);
+			path = Faunus;
+			sourceTree = "<group>";
+		};
+		7617689615A3AFB200AE8553 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7617689715A3AFB200AE8553 /* Faunus-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		766BF61F156424E50088E361 /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +163,7 @@
 			children = (
 				766BF66115642AEE0088E361 /* Documentation */,
 				76ED6F9215641C9200F3BC56 /* Sources */,
+				7617689515A3AFB200AE8553 /* Faunus */,
 				76ED6F3D15641B2700F3BC56 /* Frameworks */,
 				76ED6F3B15641B2700F3BC56 /* Products */,
 			);
@@ -159,6 +180,7 @@
 		76ED6F3D15641B2700F3BC56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				76BDE7A015A3B39900BDB261 /* libFaunus-iOS.a */,
 				7623EE4A1564436B00058FCC /* libz.dylib */,
 				76ED6F3E15641B2700F3BC56 /* UIKit.framework */,
 				76ED6F4015641B2700F3BC56 /* Foundation.framework */,

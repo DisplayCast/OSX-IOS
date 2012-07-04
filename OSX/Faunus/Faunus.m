@@ -6,7 +6,7 @@
 #import "Wallet.h"
 #import "Capabilities.h"
 
-#include "FaunusGlobals.h"
+#include "faunusGlobals.h"
 
 @implementation Faunus
 NSString *const kFaunusdServerandPort = @"127.0.0.1:9999";
@@ -475,7 +475,7 @@ Wallet *personalWallet;
 			if (dict == nil) {
 				NSLog(@"FAUNUSD server down?");
 
-				return nil;
+				return NO;
 			}
 
 			NSNumber *status = [dict objectForKey:@"status"];
