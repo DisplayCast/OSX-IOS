@@ -1,0 +1,289 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		761768D915A3B0F900AE8553 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 761768D815A3B0F900AE8553 /* Cocoa.framework */; };
+		761768E315A3B0F900AE8553 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 761768E115A3B0F900AE8553 /* InfoPlist.strings */; };
+		761768E715A3B0F900AE8553 /* Faunus.m in Sources */ = {isa = PBXBuildFile; fileRef = 761768E615A3B0F900AE8553 /* Faunus.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		761768D515A3B0F900AE8553 /* Faunus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Faunus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		761768D815A3B0F900AE8553 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		761768DB15A3B0F900AE8553 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		761768DC15A3B0F900AE8553 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		761768DD15A3B0F900AE8553 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		761768E015A3B0F900AE8553 /* Faunus-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Faunus-Info.plist"; sourceTree = "<group>"; };
+		761768E215A3B0F900AE8553 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		761768E415A3B0F900AE8553 /* Faunus-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Faunus-Prefix.pch"; sourceTree = "<group>"; };
+		761768E515A3B0F900AE8553 /* Faunus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Faunus.h; sourceTree = "<group>"; };
+		761768E615A3B0F900AE8553 /* Faunus.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Faunus.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		761768D115A3B0F900AE8553 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				761768D915A3B0F900AE8553 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		761768C915A3B0F900AE8553 = {
+			isa = PBXGroup;
+			children = (
+				761768DE15A3B0F900AE8553 /* Faunus */,
+				761768D715A3B0F900AE8553 /* Frameworks */,
+				761768D615A3B0F900AE8553 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		761768D615A3B0F900AE8553 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				761768D515A3B0F900AE8553 /* Faunus.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		761768D715A3B0F900AE8553 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				761768D815A3B0F900AE8553 /* Cocoa.framework */,
+				761768DA15A3B0F900AE8553 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		761768DA15A3B0F900AE8553 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				761768DB15A3B0F900AE8553 /* AppKit.framework */,
+				761768DC15A3B0F900AE8553 /* CoreData.framework */,
+				761768DD15A3B0F900AE8553 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		761768DE15A3B0F900AE8553 /* Faunus */ = {
+			isa = PBXGroup;
+			children = (
+				761768E515A3B0F900AE8553 /* Faunus.h */,
+				761768E615A3B0F900AE8553 /* Faunus.m */,
+				761768DF15A3B0F900AE8553 /* Supporting Files */,
+			);
+			path = Faunus;
+			sourceTree = "<group>";
+		};
+		761768DF15A3B0F900AE8553 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				761768E015A3B0F900AE8553 /* Faunus-Info.plist */,
+				761768E115A3B0F900AE8553 /* InfoPlist.strings */,
+				761768E415A3B0F900AE8553 /* Faunus-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		761768D215A3B0F900AE8553 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		761768D415A3B0F900AE8553 /* Faunus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 761768EA15A3B0F900AE8553 /* Build configuration list for PBXNativeTarget "Faunus" */;
+			buildPhases = (
+				761768D015A3B0F900AE8553 /* Sources */,
+				761768D115A3B0F900AE8553 /* Frameworks */,
+				761768D215A3B0F900AE8553 /* Headers */,
+				761768D315A3B0F900AE8553 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Faunus;
+			productName = Faunus;
+			productReference = 761768D515A3B0F900AE8553 /* Faunus.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		761768CB15A3B0F900AE8553 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "FX Palo Alto Laboratory Inc.";
+			};
+			buildConfigurationList = 761768CE15A3B0F900AE8553 /* Build configuration list for PBXProject "Faunus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 761768C915A3B0F900AE8553;
+			productRefGroup = 761768D615A3B0F900AE8553 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				761768D415A3B0F900AE8553 /* Faunus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		761768D315A3B0F900AE8553 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				761768E315A3B0F900AE8553 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		761768D015A3B0F900AE8553 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				761768E715A3B0F900AE8553 /* Faunus.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		761768E115A3B0F900AE8553 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				761768E215A3B0F900AE8553 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		761768E815A3B0F900AE8553 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		761768E915A3B0F900AE8553 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		761768EB15A3B0F900AE8553 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Faunus/Faunus-Prefix.pch";
+				INFOPLIST_FILE = "Faunus/Faunus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		761768EC15A3B0F900AE8553 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Faunus/Faunus-Prefix.pch";
+				INFOPLIST_FILE = "Faunus/Faunus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		761768CE15A3B0F900AE8553 /* Build configuration list for PBXProject "Faunus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				761768E815A3B0F900AE8553 /* Debug */,
+				761768E915A3B0F900AE8553 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		761768EA15A3B0F900AE8553 /* Build configuration list for PBXNativeTarget "Faunus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				761768EB15A3B0F900AE8553 /* Debug */,
+				761768EC15A3B0F900AE8553 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 761768CB15A3B0F900AE8553 /* Project object */;
+}

@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Faunus' target in the 'Faunus' project
+//
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+#endif
