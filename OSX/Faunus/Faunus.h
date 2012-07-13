@@ -17,6 +17,7 @@
 - (NSMutableArray *)listChildren:(NSString *)nm;
 - (BOOL) delChild:(NSString *)child forName:(NSString *)nm;
 
+- (BOOL) addAttrs:(NSMutableDictionary *)keys forName:(NSString *)nm;	// Utility function that interates over the dictionary and adds all key:values using addAttr:
 - (BOOL) addAttr:(NSString *)key andValue:(NSString *)value forName:(NSString *)nm;
 - (NSString *) getAttr:(NSString *)key forName:(NSString *)nm;
 - (BOOL) delAttr:(NSString *)key forName:(NSString *)nm;

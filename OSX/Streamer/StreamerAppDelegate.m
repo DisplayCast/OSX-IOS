@@ -23,7 +23,7 @@
 #endif /* USE_XMPP */
 
 @implementation StreamerAppDelegate
-NSMenu *projectMenu, *archiveMenu;
+	// NSMenu *projectMenu, *archiveMenu;
 Streamer *stm = nil;
 
 @synthesize projectMenu;
@@ -44,7 +44,6 @@ Streamer *stm = nil;
 
 - sendMessage:(id)sender;
 #endif /* USE_XMPP */
-
 
 - (IBAction)aboutAction:(id)sender {
 	[NSApp activateIgnoringOtherApps:YES];
@@ -68,13 +67,49 @@ Streamer *stm = nil;
 }
 
 #pragma mark -
+#pragma mark *Menu delegates to request faunus updates while attempting to open the menu
+- (void) projectFaunusAction:(id)sender {
+	NSMenuItem *player = sender;
+	NSString *fullName = [[stm faunus] getAttr:@"name" forName:[player representedObject]];
+
+	NSRunAlertPanel(@"Not yet implemented", @"Should project to player: %@ (%@)", nil, nil, nil, fullName, [player representedObject]);
+}
+
+- (void)menuNeedsUpdate:(NSMenu *)menu {
+	NSMutableArray *others;
+
+	if ([menu isEqual:projectMenu])
+		others = [[stm faunus] browseLocal:PLAYER];
+	else
+		others = [[stm faunus] browseLocal:ARCHIVER];
+
+	NSLog(@"Found: %ld entries", [others count]);
+
+	for (NSString *other in others) {
+		NSString *fullName = [[stm faunus] getAttr:@"name" forName:other];
+
+		if (fullName == nil)
+			continue;
+
+		if ([menu itemWithTitle:fullName] == nil) {
+			NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:[NSColor redColor], NSForegroundColorAttributeName, [NSFont systemFontOfSize: [NSFont systemFontSize]], NSFontAttributeName, nil];
+			NSAttributedString *as = [[[NSAttributedString alloc] initWithString:fullName attributes:attributes] autorelease];
+
+			NSMenuItem *item = [[[NSMenuItem alloc] initWithTitle:fullName action:@selector(projectFaunusAction:) keyEquivalent:@""] autorelease];
+			[item setAttributedTitle:as];
+			[item setToolTip:nil];
+			[item setRepresentedObject:other];
+
+			[menu addItem:item];
+		}
+	}
+}
+
+#pragma mark -
 #pragma mark *Manipulate menuentries for each player/archiver
 	// Adds a new menu item for this service.
 - (void) addEntry:(NSNetService *)ns andArray:(NSMutableArray *)array andMenu:(NSMenu*) menu {
-	unsigned long count = [array count];
-	for (unsigned int i=0; i < count; i++) {
-		MenuEntry *object = [array objectAtIndex:i];
-		
+	for (MenuEntry *object in array) {
 		if ([[ns name] isEqualToString:[object name]]) {
 			[object updateNS:ns];
 			
@@ -83,7 +118,7 @@ Streamer *stm = nil;
 	}
 
 	NSDictionary *myKeys = [NSNetService dictionaryFromTXTRecordData:[ns TXTRecordData]];
-	NSString	 *fullName = [[[NSString alloc] initWithData:[myKeys objectForKey:@"name"] encoding:NSUTF8StringEncoding] autorelease];
+	NSString *fullName = [[[NSString alloc] initWithData:[myKeys objectForKey:@"name"] encoding:NSUTF8StringEncoding] autorelease];
 	NSMenuItem *item = [[[NSMenuItem allocWithZone:[NSMenu menuZone]] initWithTitle:fullName action:@selector(projectAction:) keyEquivalent:@""] autorelease];
 
 		// Use MenuEntry to keep track of the NSNetService. On user click, we need the NSNetService to know where the Player is
@@ -162,7 +197,6 @@ NSMutableArray *player = nil, *archiver = nil;
 }
 
 - (void) awakeFromNib {
-	NSLog(@"Awake from NIB");
 	/*
 	statusMenu = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength] retain];
 	
@@ -496,12 +530,11 @@ void catchallExceptionHandler(NSException *exception) {
 		
 #if MANUAL
 			// Using the xib file is always better
-		NSZone *zone = [NSMenu menuZone];
-		NSMenu *menu = [[[NSMenu allocWithZone:zone] init] autorelease];
+		projectMenu = [[[NSMenu alloc] init] autorelease];
+		archiveMenu = [[[NSMenu alloc] init] autorelease];
+
 		NSMenuItem *item;
-		
-		projectMenu = [[[NSMenu allocWithZone:[NSMenu menuZone]] init] autorelease];
-		
+
 		item = [menu addItemWithTitle:@"ProjectMe" action:@selector(projectAction:) keyEquivalent:@""];
 		[item setTarget:self];
 		item = [menu addItemWithTitle:@"ArchiveMe" action:@selector(archiveAction:) keyEquivalent:@""];
@@ -521,6 +554,9 @@ void catchallExceptionHandler(NSException *exception) {
 		item = [menu addItemWithTitle:@"Quit Streamer" action:@selector(quitAction:) keyEquivalent:@""];
 		[item setTarget:self];
 #endif /* MANUAL */
+
+		[projectMenu setDelegate:self];
+		[archiveMenu setDelegate:self];
 
 			// Start the Bonjour browser.
 		_playerBrowser = [[NSNetServiceBrowser alloc] init];

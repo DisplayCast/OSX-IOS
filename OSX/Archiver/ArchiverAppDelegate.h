@@ -4,6 +4,9 @@
 
 #import <Cocoa/Cocoa.h>
 
+#import <Faunus/Faunus.h>
+#import <Faunus/Wallet.h>
+
 @interface ArchiverAppDelegate : NSObject <NSStreamDelegate, NSNetServiceBrowserDelegate, NSNetServiceDelegate, NSWindowDelegate, NSApplicationDelegate> {
 	NSArrayController *     _servicesArray;
     
@@ -27,6 +30,8 @@
 }
 
 @property (nonatomic, retain) NSTimer *timer;
+@property (nonatomic, retain) Faunus *faunus;
+@property (nonatomic, retain) NSString *archiverID;
 
 @property (nonatomic, retain, readwrite) IBOutlet NSArrayController *   servicesArray;
 

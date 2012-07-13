@@ -49,8 +49,9 @@ int main(int argc, char * const argv[]) {
 		[whiteboardServer start];
 		
 		[[NSRunLoop currentRunLoop] run];
-		
+
 		[nameServer release];
+		[whiteboardServer release];
 	}
     return 0;
 }

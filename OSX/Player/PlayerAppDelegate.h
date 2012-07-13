@@ -4,6 +4,9 @@
 
 #import <Cocoa/Cocoa.h>
 
+#import <Faunus/Faunus.h>
+#import <Faunus/Wallet.h>
+
 #import "PlayerListing.h"
 #import "MenuEntry.h"
 #import "Globals.h"
@@ -25,7 +28,7 @@
 
     NSOperationQueue *      _queue;
     
-	NSString * myUniqueID;
+	NSString *myUniqueID;
 
 	NSStatusItem *trayItem;
     
@@ -64,5 +67,7 @@
 @property (nonatomic, retain, readonly ) NSMutableSet *     services;
 @property (nonatomic, retain, readonly ) NSArray *          sortDescriptors;
 @property (nonatomic, copy,   readonly ) NSString *         serviceName;
+
+@property (nonatomic, retain) Faunus *faunus;
 
 @end

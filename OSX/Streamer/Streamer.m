@@ -28,6 +28,7 @@
 @implementation Streamer
 
 @synthesize streamerID = _streamerID;
+@synthesize faunus;
 
 NSMutableDictionary *myKeys = nil;  // To be broadcast via Bonjour
 
@@ -311,7 +312,8 @@ void GetPrimaryIp(char* buffer, socklen_t buflen) {
     self = [super init];
     
     if (self) {
-        in_port_t myPort, maskPort;
+		faunus = [[Faunus alloc] init];		// Create a faunus service instance
+
         width = CGDisplayPixelsWide(CGMainDisplayID());
         height = CGDisplayPixelsHigh(CGMainDisplayID());
 
@@ -319,8 +321,8 @@ void GetPrimaryIp(char* buffer, socklen_t buflen) {
 
         maskRect = CGRectMake(0.0, 0.0, width, height);
         maskValid = false;
-		maskPort = [self createServerSocketWithAcceptCallBack:maskListeningSocketCallback];
-		myPort = [self createServerSocketWithAcceptCallBack:streamListeningSocketCallback];
+		in_port_t maskPort = [self createServerSocketWithAcceptCallBack:maskListeningSocketCallback];
+		in_port_t myPort = [self createServerSocketWithAcceptCallBack:streamListeningSocketCallback];
 		
 			// HTTP server to respond to SNAPSHOT requests
 		HTTPServer *server = [[HTTPServer alloc] init];
@@ -341,35 +343,63 @@ void GetPrimaryIp(char* buffer, socklen_t buflen) {
 			myUniqueID = [[NSString stringWithFormat:@"streamer-%@", [uniqid GetHWAddress]] retain];
 			[uniqid release];
 		}
-		
-        self.streamerID = [[NSUserDefaults standardUserDefaults] objectForKey:myUniqueID];
-        if (self.streamerID == nil) {
-            CFUUIDRef	uuidObj = CFUUIDCreate(nil);
-            CFStringRef uidStr = CFUUIDCreateString(nil, uuidObj);
-            [[NSUserDefaults standardUserDefaults] setObject:(id)uidStr forKey:myUniqueID];
-			CFRelease(uidStr);
-			CFRelease(uuidObj);
-			
-			self.streamerID = [[NSUserDefaults standardUserDefaults] objectForKey:myUniqueID];
-			assert(self.streamerID != nil);
 
-            NSLog(@"Generating unique ID for Player");
-			
+		self.streamerID = [[NSUserDefaults standardUserDefaults] objectForKey:myUniqueID];
+
+		if (self.streamerID == nil) {	// First time
+			self.streamerID = [faunus createName:STREAMER publicP:YES];	// Try Faunus
+
+				// Faunus was successful
+			if (self.streamerID != nil) {
+				[[NSUserDefaults standardUserDefaults] setObject:self.streamerID forKey:myUniqueID];
+				[[NSUserDefaults standardUserDefaults] synchronize];
+			} else {	// Create a temporary ID - will be replaced the next time we contact Faunus service
+				CFUUIDRef	uuidObj = CFUUIDCreate(nil);
+				CFStringRef uidStr = CFUUIDCreateString(nil, uuidObj);
+				[[NSUserDefaults standardUserDefaults] setObject:(id)uidStr forKey:myUniqueID];
+				CFRelease(uidStr);
+				CFRelease(uuidObj);
+
+				self.streamerID = [[NSUserDefaults standardUserDefaults] objectForKey:myUniqueID];
+			}
+
 			NSString *nm = NSFullUserName();
 			NSString *str;
 			if (nm == nil)
 				str = @" Streamer";
-			else 
+			else
 				str = [NSString stringWithFormat:@"%@'s Streamer", nm];
 			[[NSUserDefaults standardUserDefaults] setObject:str forKey:[NSString stringWithFormat:@"%@-Name", myUniqueID]];
-        }
-        
+		} else {
+				// Now see if faunus knows about this name. If not, it was created locally and so try to create a faunus name
+			BOOL known = NO;
+			NSMutableArray *names = [faunus browseLocal:STREAMER];
+
+			for (NSString *name in names) {
+				if ([name isEqualToString:self.streamerID]) {
+					known = YES;
+
+					break;
+				}
+			}
+
+			if (known == NO) {
+				self.streamerID = [faunus createName:STREAMER publicP:YES];
+
+					// Faunus was successful
+				if (self.streamerID != nil) {
+					[[NSUserDefaults standardUserDefaults] setObject:self.streamerID forKey:myUniqueID];
+					[[NSUserDefaults standardUserDefaults] synchronize];
+				}
+					// The -Name component is reused
+			}
+		}
+		assert(self.streamerID != nil);
+
 			// NSString *myAddr = [[[NSString alloc] initWithCString:ma encoding:NSASCIIStringEncoding] autorelease];
 			// NSLog(@"Address: %@:%d. MaxPacketSize: %d Name: %@\n", myAddr, myPort, maxPacketSize, self.serviceName);
         self.netService = [[[NSNetService alloc] initWithDomain:BONJOUR_DOMAIN type:STREAMER name:self.streamerID port:myPort] autorelease];
         if (self.netService != nil) {
-            NSString *ver = [[[NSString alloc] initWithFormat:@"%f", VERSION] autorelease];
-			
 				// Deprecated in 10.8
 				// SInt32 major, minor, bugfix;
 				// Gestalt(gestaltSystemVersionMajor, &major);
@@ -377,9 +407,8 @@ void GetPrimaryIp(char* buffer, socklen_t buflen) {
 				// Gestalt(gestaltSystemVersionBugFix, &bugfix);
 				// NSString *systemVersion = [NSString stringWithFormat:@"OSX %d.%d.%d", major, minor, bugfix];
             NSString *systemVersion = [NSString stringWithFormat:@"OSX %@", [[NSProcessInfo processInfo] operatingSystemVersionString]];
-            
 			NSString *screenDimension = [NSString stringWithFormat:@"0x0 %.0zux%.0zu", width, height];
-			
+            NSString *ver = [[[NSString alloc] initWithFormat:@"%f", VERSION] autorelease];
             NSString *bluetoothID =	@"NotSupported";
 
 			myKeys = [[NSMutableDictionary dictionaryWithObjectsAndKeys:self.serviceName, @"name", ver, @"version", [[NSHost currentHost] localizedName], @"machineName", systemVersion, @"osVersion", @"NOTIMPL", @"locationID", [NSString stringWithFormat:@"%u", maskPort], @"maskPort", screenDimension, @"screen", NSUserName(), @"userid", bluetoothID, @"bluetooth", @"UNKNOWN", @"nearby", nil] retain];
@@ -391,10 +420,13 @@ void GetPrimaryIp(char* buffer, socklen_t buflen) {
 			GetPrimaryIp(ma, 64);
 			[myKeys setValue:[NSString stringWithCString:ma encoding:NSASCIIStringEncoding] forKey:@"externalIP"];
 #endif /* STREAMER_ADVERTISE_EXTERNAL_IP */
-			
+
             [self.netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:myKeys]];
             [self.netService setDelegate:self];
             [self.netService publishWithOptions:NSNetServiceNoAutoRename];
+
+			if ([faunus addAttrs:myKeys forName:self.streamerID] == NO)
+				NSLog(@"FATAL: Faunus registration of attributes failed");
 			
 #ifdef USE_BLUETOOTH
 				// This code used to work synchronously and then it was deprecated in 10.6 and now it just hangs when I compile in Lion+. Apple developer forum has no answer on why this fails!!
@@ -421,6 +453,8 @@ void GetPrimaryIp(char* buffer, socklen_t buflen) {
     [myKeys setValue:bta forKey:@"bluetooth"];
     
     [self.netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:myKeys]];
+
+	[faunus addAttrs:myKeys forName:self.streamerID];
 }
 #endif /* USE_BLUETOOTH */
 
@@ -435,6 +469,8 @@ void GetPrimaryIp(char* buffer, socklen_t buflen) {
         
 		[self.netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:myKeys]];
 		[self.netService publishWithOptions:NSNetServiceNoAutoRename];
+
+		[faunus addAttrs:myKeys forName:self.streamerID];
 	}
 }
 #endif /* USE_BLUETOOTH */
@@ -449,6 +485,8 @@ void GetPrimaryIp(char* buffer, socklen_t buflen) {
 	
 	[self.netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:myKeys]];
 	[self.netService publishWithOptions:NSNetServiceNoAutoRename];
+
+	[faunus addAttrs:myKeys forName:self.streamerID];
 }
 
 	// Implements the MASK HTTP server

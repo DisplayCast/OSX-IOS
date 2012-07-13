@@ -11,6 +11,7 @@
 
 #include <hiredis/hiredis.h>
 #include "faunusGlobals.h"
+#include "faunusGlobals.h"
 
 	// By default, expire keys in 7 days - unless a child or attribute is added before this duration is up
 #define REDIS_EXPIRE (3600*24*7)

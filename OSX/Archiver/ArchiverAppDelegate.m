@@ -45,6 +45,9 @@ void receiveData(CFSocketRef s, CFSocketCallBackType type, CFDataRef address, co
 
 @synthesize timer = _timer;
 
+@synthesize faunus;
+@synthesize archiverID;
+
 NSNetService *netService;
 NSMutableData *receivedData;
 
@@ -255,7 +258,8 @@ static void ListeningSocketCallback(CFSocketRef s, CFSocketCallBackType type, CF
 			[myKeys setValue:self->_serviceName forKey:@"name"];
 			
 			[netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:myKeys]];
-			
+
+			[faunus addAttrs:myKeys forName:archiverID];
         }
     }
 }
@@ -401,7 +405,7 @@ void drawWin(UInt32 *winData, int width, int height, int x, int y, int w, int h,
 #pragma mark Runs as a thread, processing data from a particular streamer
 - (void)updateKey:(AVAssetWriter *)videoWriter andNSNetService: (NSNetService *)ns {
     // NSLog(@"Window state changed");
-    NSString *archiverID = [[NSUserDefaults standardUserDefaults] stringForKey:myUniqueID];
+    archiverID = [[NSUserDefaults standardUserDefaults] stringForKey:myUniqueID];
     NSString *session = [[NSString alloc] initWithFormat:@"%@ %@", [ns name], archiverID];
     NSString *myID = [[NSString alloc] initWithFormat:@"%lu", [videoWriter hash]];
     
@@ -409,6 +413,8 @@ void drawWin(UInt32 *winData, int width, int height, int x, int y, int w, int h,
     [myKeys setValue:session forKey:myID];
     
     [netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:myKeys]];
+
+	[faunus addAttrs:myKeys forName:archiverID];
 }
 
 #ifdef OCR
@@ -748,6 +754,8 @@ void drawWin(UInt32 *winData, int width, int height, int x, int y, int w, int h,
                 [videoWriter startSessionAtSourceTime:kCMTimeZero];
 				
                 [netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:myKeys]];
+
+				[faunus addAttrs:myKeys forName:archiverID];
                 
                 [self updateKey:videoWriter andNSNetService:ns];
                 dispatchQueue = dispatch_queue_create("com.fxpal.displaycast.archiver.encoder", NULL);
@@ -903,7 +911,9 @@ void drawWin(UInt32 *winData, int width, int height, int x, int y, int w, int h,
 					NSString *myID = [NSString stringWithFormat:@"%lu", [videoWriter hash]];
 					[myKeys removeObjectForKey:myID];
 					[netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:myKeys]];
-					
+
+					[faunus addAttrs:myKeys forName:archiverID];
+
                     if ([videoWriter finishWriting] == NO)
                         NSLog(@"Video completion failed");
                 }];
@@ -917,6 +927,8 @@ void drawWin(UInt32 *winData, int width, int height, int x, int y, int w, int h,
         NSString *myID = [[NSString alloc] initWithFormat:@"%lu", [activeNSSessions[sessionIndex] hash]];
         [myKeys removeObjectForKey:myID];
         [netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:myKeys]];
+
+		[faunus addAttrs:myKeys forName:archiverID];
 		
         activeNSSessions[sessionIndex] = nil;
         [ns stop];
@@ -941,6 +953,8 @@ void drawWin(UInt32 *winData, int width, int height, int x, int y, int w, int h,
         NSString *myID = [NSString stringWithFormat:@"%lu", [videoWriter hash]];
         [myKeys removeObjectForKey:myID];
         [netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:myKeys]];
+
+		[faunus addAttrs:myKeys forName:archiverID];
 		
         // if ([videoWriter finishWriting] == NO)
         //    NSLog(@"Video completion failed");
@@ -1018,9 +1032,64 @@ void drawWin(UInt32 *winData, int width, int height, int x, int y, int w, int h,
     // Register to listen for preferencepane notifications
 	NSDistributedNotificationCenter *center = [NSDistributedNotificationCenter defaultCenter];
 	[center addObserver:self selector:@selector(prefcallbackWithNotification:) name:@"Preferences Changed" object:@"com.fxpal.displaycast.Archiver"];
-	
+
+	faunus = [[Faunus alloc] init];
+
     // Register our service with Bonjour.
     unsigned int chosenPort = ntohs(serverAddress6.sin6_port);
+
+	archiverID = [[NSUserDefaults standardUserDefaults] stringForKey:myUniqueID];
+	if (archiverID == nil) {	// First time
+		archiverID = [faunus createName:ARCHIVER publicP:YES];	// Try Faunus
+
+			// Faunus was successful
+		if (archiverID != nil) {
+			[[NSUserDefaults standardUserDefaults] setObject:archiverID forKey:myUniqueID];
+			[[NSUserDefaults standardUserDefaults] synchronize];
+		} else {	// Create a temporary ID - will be replaced the next time we contact Faunus service
+			CFUUIDRef	uuidObj = CFUUIDCreate(nil);
+			CFStringRef uidStr = CFUUIDCreateString(nil, uuidObj);
+			[[NSUserDefaults standardUserDefaults] setObject:(id)CFBridgingRelease(uidStr) forKey:myUniqueID];
+			CFRelease(uidStr);
+			CFRelease(uuidObj);
+
+			archiverID = [[NSUserDefaults standardUserDefaults] objectForKey:myUniqueID];
+		}
+
+		NSString *nm = NSFullUserName();
+		NSString *str;
+		if (nm == nil)
+			str = @" Archiver";
+		else
+			str = [NSString stringWithFormat:@"%@'s Archiver", nm];
+		[[NSUserDefaults standardUserDefaults] setObject:str forKey:[NSString stringWithFormat:@"%@-Name", myUniqueID]];
+	} else {
+			// Now see if faunus knows about this name. If not, it was created locally and so try to create a faunus name
+		BOOL known = NO;
+		NSMutableArray *names = [faunus browseLocal:ARCHIVER];
+
+		for (NSString *name in names) {
+			if ([name isEqualToString:archiverID]) {
+				known = YES;
+
+				break;
+			}
+		}
+
+		if (known == NO) {
+			archiverID = [faunus createName:ARCHIVER publicP:YES];
+
+				// Faunus was successful
+			if (archiverID != nil) {
+				[[NSUserDefaults standardUserDefaults] setObject:archiverID forKey:myUniqueID];
+				[[NSUserDefaults standardUserDefaults] synchronize];
+			}
+				// The -Name component is reused
+		}
+	}
+	assert(archiverID != nil);
+
+#ifdef OLD
     NSString *archiverID = [[NSUserDefaults standardUserDefaults] stringForKey:myUniqueID];
     if (archiverID == nil) {  // Generate a new player ID
         NSLog(@"Generating new unique ID for myself");
@@ -1038,6 +1107,7 @@ void drawWin(UInt32 *winData, int width, int height, int x, int y, int w, int h,
             str = [NSString stringWithFormat:@"%@'s Archiver", str];
         [[NSUserDefaults standardUserDefaults] setObject:str forKey:[NSString stringWithFormat:@"%@-Name", myUniqueID]];
     }
+#endif /* OLD */
     
     netService = [[NSNetService alloc] initWithDomain:BONJOUR_DOMAIN type:ARCHIVER name:archiverID port:chosenPort];
     if (netService != nil) {
@@ -1057,7 +1127,9 @@ void drawWin(UInt32 *winData, int width, int height, int x, int y, int w, int h,
         myKeys = [[NSMutableDictionary alloc] initWithObjectsAndKeys:self.serviceName, @"name", systemVersion, @"osVersion", @"NOTIMPL", @"locationID", [[NSHost currentHost] localizedName], @"machineName", ver, @"version", nil];
         [netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:myKeys]];
         [netService setDelegate:self];
-        [netService publishWithOptions:NSNetServiceNoAutoRename /* 0 */];
+        [netService publishWithOptions:NSNetServiceNoAutoRename];
+
+		[faunus addAttrs:myKeys forName:archiverID];
     }
     close(fdForListening);
 }
@@ -1387,6 +1459,9 @@ CGColorSpaceRelease(colorSpace);
             NSString *myID = [[[NSString alloc] initWithFormat:@"%lu", [window hash]] autorelease];
             [myKeys removeObjectForKey:myID];
             [netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:myKeys]];
+
+			[faunus addAttrs:myKeys forName:archiverID];
+
             break;
         }
     }

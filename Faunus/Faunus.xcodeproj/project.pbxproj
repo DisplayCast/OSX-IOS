@@ -9,14 +9,11 @@
 /* Begin PBXBuildFile section */
 		761768D915A3B0F900AE8553 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 761768D815A3B0F900AE8553 /* Cocoa.framework */; };
 		761768F915A3B13100AE8553 /* Faunus.h in Resources */ = {isa = PBXBuildFile; fileRef = 761768ED15A3B13100AE8553 /* Faunus.h */; };
-		761768FA15A3B13100AE8553 /* Faunus.m in Resources */ = {isa = PBXBuildFile; fileRef = 761768EE15A3B13100AE8553 /* Faunus.m */; };
 		761768FB15A3B13100AE8553 /* Capabilities.h in Resources */ = {isa = PBXBuildFile; fileRef = 761768EF15A3B13100AE8553 /* Capabilities.h */; };
-		761768FC15A3B13100AE8553 /* Capabilities.m in Resources */ = {isa = PBXBuildFile; fileRef = 761768F015A3B13100AE8553 /* Capabilities.m */; };
 		761768FD15A3B13100AE8553 /* Wallet.h in Resources */ = {isa = PBXBuildFile; fileRef = 761768F115A3B13100AE8553 /* Wallet.h */; };
-		761768FE15A3B13100AE8553 /* Wallet.m in Resources */ = {isa = PBXBuildFile; fileRef = 761768F215A3B13100AE8553 /* Wallet.m */; };
-		761768FF15A3B13100AE8553 /* Faunus-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 761768F315A3B13100AE8553 /* Faunus-Info.plist */; };
 		7617690015A3B13100AE8553 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 761768F515A3B13100AE8553 /* InfoPlist.strings */; };
 		7617690115A3B13100AE8553 /* Faunus-Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = 761768F615A3B13100AE8553 /* Faunus-Prefix.pch */; };
+		7663C11C15A435A60026704F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7663C11B15A435A60026704F /* libsqlite3.dylib */; };
 		767EAD9615A3B88D00B956C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7617690815A3B16A00AE8553 /* Foundation.framework */; };
 		767EADA515A3B90F00B956C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 767EADA415A3B90F00B956C0 /* main.m */; };
 		767EADAE15A3BA6E00B956C0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767EADAD15A3BA6E00B956C0 /* CoreData.framework */; };
@@ -25,7 +22,6 @@
 		767EADDA15A3BCA500B956C0 /* libhiredis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 767EADD915A3BCA500B956C0 /* libhiredis.a */; };
 		767EAE0715A3C0C500B956C0 /* Faunus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 761768D515A3B0F900AE8553 /* Faunus.framework */; };
 		767EAE0A15A3C1E700B956C0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 767EAE0915A3C1E700B956C0 /* libsqlite3.dylib */; };
-		767EAE0D15A3C39D00B956C0 /* Faunus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 767EADF815A3BEC300B956C0 /* Faunus.xcdatamodeld */; };
 		767EAE0E15A3C39D00B956C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 767EADFB15A3BEC300B956C0 /* main.m */; };
 		767EAE0F15A3C39D00B956C0 /* NameServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 767EADFD15A3BEC300B956C0 /* NameServer.m */; };
 		767EAE1015A3C39D00B956C0 /* WhiteBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 767EADFF15A3BEC300B956C0 /* WhiteBoard.m */; };
@@ -38,20 +34,16 @@
 		767EAE1715A3C39D00B956C0 /* redisName.m in Sources */ = {isa = PBXBuildFile; fileRef = 767EADEC15A3BE4500B956C0 /* redisName.m */; };
 		767EAE1815A3C39D00B956C0 /* HTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 767EADF315A3BE8700B956C0 /* HTTPServer.m */; };
 		767EAE1915A3C39D00B956C0 /* TCPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 767EADF515A3BE8700B956C0 /* TCPServer.m */; };
+		7686421415AE3844007904A3 /* Faunus.h in Headers */ = {isa = PBXBuildFile; fileRef = 761768ED15A3B13100AE8553 /* Faunus.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7686421515AE3844007904A3 /* Capabilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 761768EF15A3B13100AE8553 /* Capabilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7686421615AE3844007904A3 /* Wallet.h in Headers */ = {isa = PBXBuildFile; fileRef = 761768F115A3B13100AE8553 /* Wallet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		76BDE78E15A3B32100BDB261 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7617690815A3B16A00AE8553 /* Foundation.framework */; };
-		76BDE79915A3B34B00BDB261 /* Faunus.h in Sources */ = {isa = PBXBuildFile; fileRef = 761768ED15A3B13100AE8553 /* Faunus.h */; };
 		76BDE79A15A3B34B00BDB261 /* Faunus.m in Sources */ = {isa = PBXBuildFile; fileRef = 761768EE15A3B13100AE8553 /* Faunus.m */; };
-		76BDE79B15A3B34B00BDB261 /* Capabilities.h in Sources */ = {isa = PBXBuildFile; fileRef = 761768EF15A3B13100AE8553 /* Capabilities.h */; };
 		76BDE79C15A3B34B00BDB261 /* Capabilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 761768F015A3B13100AE8553 /* Capabilities.m */; };
-		76BDE79D15A3B34B00BDB261 /* Wallet.h in Sources */ = {isa = PBXBuildFile; fileRef = 761768F115A3B13100AE8553 /* Wallet.h */; };
 		76BDE79E15A3B34B00BDB261 /* Wallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 761768F215A3B13100AE8553 /* Wallet.m */; };
-		76BDE7E615A3B5B100BDB261 /* Faunus.h in Sources */ = {isa = PBXBuildFile; fileRef = 761768ED15A3B13100AE8553 /* Faunus.h */; };
 		76BDE7E715A3B5B100BDB261 /* Faunus.m in Sources */ = {isa = PBXBuildFile; fileRef = 761768EE15A3B13100AE8553 /* Faunus.m */; };
-		76BDE7E815A3B5B100BDB261 /* Capabilities.h in Sources */ = {isa = PBXBuildFile; fileRef = 761768EF15A3B13100AE8553 /* Capabilities.h */; };
 		76BDE7E915A3B5B100BDB261 /* Capabilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 761768F015A3B13100AE8553 /* Capabilities.m */; };
-		76BDE7EA15A3B5B100BDB261 /* Wallet.h in Sources */ = {isa = PBXBuildFile; fileRef = 761768F115A3B13100AE8553 /* Wallet.h */; };
 		76BDE7EB15A3B5B100BDB261 /* Wallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 761768F215A3B13100AE8553 /* Wallet.m */; };
-		76BDE7EC15A3B5B100BDB261 /* Faunus-Prefix.pch in Sources */ = {isa = PBXBuildFile; fileRef = 761768F615A3B13100AE8553 /* Faunus-Prefix.pch */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -100,6 +92,7 @@
 		761768F415A3B13100AE8553 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		761768F615A3B13100AE8553 /* Faunus-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Faunus-Prefix.pch"; sourceTree = "<group>"; };
 		7617690815A3B16A00AE8553 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7663C11B15A435A60026704F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/usr/lib/libsqlite3.dylib; sourceTree = DEVELOPER_DIR; };
 		767EAD9415A3B88D00B956C0 /* FaunusTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FaunusTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		767EADA215A3B90F00B956C0 /* FaunusTest-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FaunusTest-Prefix.pch"; sourceTree = "<group>"; };
 		767EADA315A3B90F00B956C0 /* FaunusTest.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = FaunusTest.1; sourceTree = "<group>"; };
@@ -174,6 +167,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7663C11C15A435A60026704F /* libsqlite3.dylib in Frameworks */,
 				76BDE78E15A3B32100BDB261 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +198,7 @@
 		761768D715A3B0F900AE8553 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7663C11B15A435A60026704F /* libsqlite3.dylib */,
 				767EAE0915A3C1E700B956C0 /* libsqlite3.dylib */,
 				767EADD915A3BCA500B956C0 /* libhiredis.a */,
 				767EADD715A3BC0A00B956C0 /* CFNetwork.framework */,
@@ -345,6 +340,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7686421415AE3844007904A3 /* Faunus.h in Headers */,
+				7686421515AE3844007904A3 /* Capabilities.h in Headers */,
+				7686421615AE3844007904A3 /* Wallet.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,12 +453,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				761768F915A3B13100AE8553 /* Faunus.h in Resources */,
-				761768FA15A3B13100AE8553 /* Faunus.m in Resources */,
 				761768FB15A3B13100AE8553 /* Capabilities.h in Resources */,
-				761768FC15A3B13100AE8553 /* Capabilities.m in Resources */,
 				761768FD15A3B13100AE8553 /* Wallet.h in Resources */,
-				761768FE15A3B13100AE8553 /* Wallet.m in Resources */,
-				761768FF15A3B13100AE8553 /* Faunus-Info.plist in Resources */,
 				7617690015A3B13100AE8553 /* InfoPlist.strings in Resources */,
 				7617690115A3B13100AE8553 /* Faunus-Prefix.pch in Resources */,
 			);
@@ -473,13 +467,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76BDE7E615A3B5B100BDB261 /* Faunus.h in Sources */,
 				76BDE7E715A3B5B100BDB261 /* Faunus.m in Sources */,
-				76BDE7E815A3B5B100BDB261 /* Capabilities.h in Sources */,
 				76BDE7E915A3B5B100BDB261 /* Capabilities.m in Sources */,
-				76BDE7EA15A3B5B100BDB261 /* Wallet.h in Sources */,
 				76BDE7EB15A3B5B100BDB261 /* Wallet.m in Sources */,
-				76BDE7EC15A3B5B100BDB261 /* Faunus-Prefix.pch in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,7 +485,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				767EAE0D15A3C39D00B956C0 /* Faunus.xcdatamodeld in Sources */,
 				767EAE0E15A3C39D00B956C0 /* main.m in Sources */,
 				767EAE0F15A3C39D00B956C0 /* NameServer.m in Sources */,
 				767EAE1015A3C39D00B956C0 /* WhiteBoard.m in Sources */,
@@ -515,11 +504,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76BDE79915A3B34B00BDB261 /* Faunus.h in Sources */,
 				76BDE79A15A3B34B00BDB261 /* Faunus.m in Sources */,
-				76BDE79B15A3B34B00BDB261 /* Capabilities.h in Sources */,
 				76BDE79C15A3B34B00BDB261 /* Capabilities.m in Sources */,
-				76BDE79D15A3B34B00BDB261 /* Wallet.h in Sources */,
 				76BDE79E15A3B34B00BDB261 /* Wallet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -653,6 +639,7 @@
 					"\"$(SRCROOT)/../../hiredis\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -670,6 +657,7 @@
 					"\"$(SRCROOT)/../../hiredis\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -685,6 +673,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = ../OSX/Faunusd;
 			};
 			name = Debug;
 		};
@@ -700,6 +689,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = ../OSX/Faunusd;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -732,6 +722,7 @@
 				767EADA015A3B88D00B956C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		767EADBA15A3BA6E00B956C0 /* Build configuration list for PBXNativeTarget "Faunusd" */ = {
 			isa = XCConfigurationList;
@@ -740,6 +731,7 @@
 				767EADBC15A3BA6E00B956C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		76BDE79615A3B32100BDB261 /* Build configuration list for PBXNativeTarget "Faunus-iOS" */ = {
 			isa = XCConfigurationList;

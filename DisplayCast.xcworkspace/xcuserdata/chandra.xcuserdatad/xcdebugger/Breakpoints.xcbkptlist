@@ -801,11 +801,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Streamer/StreamerAppDelegate.m"
-         timestampString = "359872277.29938"
+         timestampString = "363832946.908975"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "453"
-         endingLineNumber = "453"
+         startingLineNumber = "487"
+         endingLineNumber = "487"
          landmarkName = "-applicationDidFinishLaunching:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -814,11 +814,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Player/PlayerAppDelegate.m"
-         timestampString = "359405775.734705"
+         timestampString = "363833322.203363"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "404"
-         endingLineNumber = "404"
+         startingLineNumber = "410"
+         endingLineNumber = "410"
          landmarkName = "-createServerSocketWithAcceptCallBack:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -853,11 +853,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Player/PlayerAppDelegate.m"
-         timestampString = "359404570.657798"
+         timestampString = "363833322.203363"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "106"
-         endingLineNumber = "106"
+         startingLineNumber = "112"
+         endingLineNumber = "112"
          landmarkName = "receiveCmdData()"
          landmarkType = "7">
       </FileBreakpoint>
@@ -866,11 +866,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Player/PlayerAppDelegate.m"
-         timestampString = "359404575.861251"
+         timestampString = "363833322.203363"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "105"
-         endingLineNumber = "105"
+         startingLineNumber = "111"
+         endingLineNumber = "111"
          landmarkName = "receiveCmdData()"
          landmarkType = "7">
       </FileBreakpoint>
@@ -879,11 +879,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Player/PlayerAppDelegate.m"
-         timestampString = "360056318.713451"
+         timestampString = "363833322.203363"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1043"
-         endingLineNumber = "1043"
+         startingLineNumber = "1109"
+         endingLineNumber = "1109"
          landmarkName = "-receiveFromService:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -892,11 +892,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Player/PlayerAppDelegate.m"
-         timestampString = "360056318.713451"
+         timestampString = "363833322.203363"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1040"
-         endingLineNumber = "1040"
+         startingLineNumber = "1106"
+         endingLineNumber = "1106"
          landmarkName = "@implementation PlayerAppDelegate"
          landmarkType = "3">
       </FileBreakpoint>
@@ -905,11 +905,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Player/PlayerAppDelegate.m"
-         timestampString = "359405834.72118"
+         timestampString = "363833322.203363"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "321"
-         endingLineNumber = "321"
+         startingLineNumber = "327"
+         endingLineNumber = "327"
          landmarkName = "receiveCmdData()"
          landmarkType = "7">
       </FileBreakpoint>
@@ -918,11 +918,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Player/PlayerAppDelegate.m"
-         timestampString = "359411342.63109"
+         timestampString = "363833322.203363"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "705"
-         endingLineNumber = "705"
+         startingLineNumber = "769"
+         endingLineNumber = "769"
          landmarkName = "-streamAction:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -931,11 +931,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Player/PlayerAppDelegate.m"
-         timestampString = "359411704.775386"
+         timestampString = "363833322.203363"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "710"
-         endingLineNumber = "710"
+         startingLineNumber = "774"
+         endingLineNumber = "774"
          landmarkName = "-streamAction:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -944,11 +944,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Player/PlayerAppDelegate.m"
-         timestampString = "360056318.713451"
+         timestampString = "363833322.203363"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1179"
-         endingLineNumber = "1179"
+         startingLineNumber = "1245"
+         endingLineNumber = "1245"
          landmarkName = "-receiveFromService:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -957,11 +957,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Player/PlayerAppDelegate.m"
-         timestampString = "360056318.713451"
+         timestampString = "363833322.203363"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1180"
-         endingLineNumber = "1180"
+         startingLineNumber = "1246"
+         endingLineNumber = "1246"
          landmarkName = "-receiveFromService:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -970,11 +970,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Player/PlayerAppDelegate.m"
-         timestampString = "360056318.713451"
+         timestampString = "363833322.203363"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1249"
-         endingLineNumber = "1249"
+         startingLineNumber = "1317"
+         endingLineNumber = "1317"
          landmarkName = "-receiveFromService:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -983,11 +983,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Player/PlayerAppDelegate.m"
-         timestampString = "360056318.713451"
+         timestampString = "363833322.203363"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1325"
-         endingLineNumber = "1325"
+         startingLineNumber = "1393"
+         endingLineNumber = "1393"
          landmarkName = "-receiveFromService:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -996,11 +996,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Player/PlayerAppDelegate.m"
-         timestampString = "360056318.713451"
+         timestampString = "363833322.203363"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1099"
-         endingLineNumber = "1099"
+         startingLineNumber = "1165"
+         endingLineNumber = "1165"
          landmarkName = "-receiveFromService:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1009,11 +1009,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Player/PlayerAppDelegate.m"
-         timestampString = "360056318.713451"
+         timestampString = "363833322.203363"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1100"
-         endingLineNumber = "1100"
+         startingLineNumber = "1166"
+         endingLineNumber = "1166"
          landmarkName = "-receiveFromService:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1022,11 +1022,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Player/PlayerAppDelegate.m"
-         timestampString = "360056318.713451"
+         timestampString = "363833322.203363"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "962"
-         endingLineNumber = "962"
+         startingLineNumber = "1026"
+         endingLineNumber = "1026"
          landmarkName = "drawWin()"
          landmarkType = "7">
       </FileBreakpoint>
@@ -1035,11 +1035,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Streamer/Streamer.m"
-         timestampString = "359871941.349358"
+         timestampString = "363820327.52141"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "499"
-         endingLineNumber = "499"
+         startingLineNumber = "537"
+         endingLineNumber = "537"
          landmarkName = "streamListeningSocketCallback()"
          landmarkType = "7">
       </FileBreakpoint>
@@ -1048,11 +1048,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Player/PlayerAppDelegate.m"
-         timestampString = "360056318.713451"
+         timestampString = "363833322.203363"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1086"
-         endingLineNumber = "1086"
+         startingLineNumber = "1152"
+         endingLineNumber = "1152"
          landmarkName = "-receiveFromService:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1061,11 +1061,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Player/PlayerAppDelegate.m"
-         timestampString = "360056318.713451"
+         timestampString = "363833322.203363"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1085"
-         endingLineNumber = "1085"
+         startingLineNumber = "1151"
+         endingLineNumber = "1151"
          landmarkName = "-receiveFromService:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1074,11 +1074,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Player/PlayerAppDelegate.m"
-         timestampString = "360056318.713451"
+         timestampString = "363833322.203363"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "983"
-         endingLineNumber = "983"
+         startingLineNumber = "1047"
+         endingLineNumber = "1047"
          landmarkName = "displayWin()"
          landmarkType = "7">
       </FileBreakpoint>
@@ -1087,11 +1087,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Streamer/Streamer.m"
-         timestampString = "359855855.154955"
+         timestampString = "363740468.149413"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "188"
-         endingLineNumber = "188"
+         startingLineNumber = "189"
+         endingLineNumber = "189"
          landmarkName = "MyScreenRefreshCallback()"
          landmarkType = "7">
       </FileBreakpoint>
@@ -1100,11 +1100,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Streamer/Streamer.m"
-         timestampString = "359870631.311887"
+         timestampString = "363740468.149413"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "184"
-         endingLineNumber = "184"
+         startingLineNumber = "185"
+         endingLineNumber = "185"
          landmarkName = "MyScreenRefreshCallback()"
          landmarkType = "7">
       </FileBreakpoint>
@@ -1113,11 +1113,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Player/PlayerAppDelegate.m"
-         timestampString = "360020649.346415"
+         timestampString = "363833322.203363"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "448"
-         endingLineNumber = "448"
+         startingLineNumber = "454"
+         endingLineNumber = "454"
          landmarkName = "-applicationDidFinishLaunching:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1631,11 +1631,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunus/Faunus.m"
-         timestampString = "362958922.090963"
+         timestampString = "363820327.52141"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "250"
-         endingLineNumber = "250"
+         startingLineNumber = "263"
+         endingLineNumber = "263"
          landmarkName = "-addAttr:andValue:forName:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1644,11 +1644,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunus/Faunus.m"
-         timestampString = "362958922.090963"
+         timestampString = "363820327.52141"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "271"
-         endingLineNumber = "271"
+         startingLineNumber = "284"
+         endingLineNumber = "284"
          landmarkName = "-addAttr:andValue:forName:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1670,11 +1670,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunus/Faunus.m"
-         timestampString = "362958922.090963"
+         timestampString = "363820327.52141"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "423"
-         endingLineNumber = "423"
+         startingLineNumber = "436"
+         endingLineNumber = "436"
          landmarkName = "-listAttrs:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1748,11 +1748,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunus/Faunus.m"
-         timestampString = "362967911.92989"
+         timestampString = "363820327.52141"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "448"
-         endingLineNumber = "448"
+         startingLineNumber = "461"
+         endingLineNumber = "461"
          landmarkName = "-mergeToWallet:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1813,11 +1813,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunus/Faunus.m"
-         timestampString = "363047551.57063"
+         timestampString = "363820327.52141"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "514"
-         endingLineNumber = "514"
+         startingLineNumber = "527"
+         endingLineNumber = "527"
          landmarkName = "-cloneCapability:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1845,6 +1845,45 @@
          startingLineNumber = "1145"
          endingLineNumber = "1145"
          landmarkName = "-HTTPConnection:didReceiveRequest:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "OSX/Streamer/Streamer.m"
+         timestampString = "363818305.185646"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "347"
+         endingLineNumber = "347"
+         landmarkName = "-init"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "OSX/Streamer/Streamer.m"
+         timestampString = "363818393.079129"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "386"
+         endingLineNumber = "386"
+         landmarkName = "-init"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "OSX/Streamer/StreamerAppDelegate.m"
+         timestampString = "363833394.573758"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "86"
+         endingLineNumber = "86"
+         landmarkName = "-menuNeedsUpdate:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

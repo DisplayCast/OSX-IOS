@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7617690515A3B16A00AE8553"
+               BlueprintIdentifier = "767EAD9315A3B88D00B956C0"
                BuildableName = "FaunusTest"
                BlueprintName = "FaunusTest"
                ReferencedContainer = "container:Faunus.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7617690515A3B16A00AE8553"
+            BlueprintIdentifier = "767EAD9315A3B88D00B956C0"
             BuildableName = "FaunusTest"
             BlueprintName = "FaunusTest"
             ReferencedContainer = "container:Faunus.xcodeproj">
@@ -47,11 +47,12 @@
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+      enableOpenGLFrameCaptureMode = "0"
       allowLocationSimulation = "YES">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7617690515A3B16A00AE8553"
+            BlueprintIdentifier = "767EAD9315A3B88D00B956C0"
             BuildableName = "FaunusTest"
             BlueprintName = "FaunusTest"
             ReferencedContainer = "container:Faunus.xcodeproj">
@@ -69,7 +70,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7617690515A3B16A00AE8553"
+            BlueprintIdentifier = "767EAD9315A3B88D00B956C0"
             BuildableName = "FaunusTest"
             BlueprintName = "FaunusTest"
             ReferencedContainer = "container:Faunus.xcodeproj">

@@ -9,7 +9,6 @@
 HTTPServer *server;
 NameServer *nm;
 
-
 - (id) initWithNameServer: (NameServer *) nserver {
 	self = [super init];
 

@@ -238,6 +238,19 @@ Wallet *personalWallet;
 	return NO;
 }
 
+- (BOOL) addAttrs:(NSMutableDictionary *)keys forName:(NSString *)nm {
+	__block BOOL retValue = YES;
+
+		// Return failure if adding any key fails
+	[keys enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+		if ([self addAttr:key andValue:obj forName:nm] == NO)
+			retValue = NO;
+	}];
+
+	return retValue;
+}
+
+
 - (BOOL) addAttr:(NSString *)key andValue:(NSString *)value forName:(NSString *)nm {
 	NSMutableArray *capabilities = [self listCapabilities:nm];
 

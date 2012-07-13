@@ -5,6 +5,9 @@
 #import <Foundation/Foundation.h>
 #import <Cocoa/Cocoa.h>
 
+#import <Faunus/Faunus.h>
+#import <Faunus/Wallet.h>
+
 #import "Globals.h"
 #import "HTTPServer.h"
 #import "GetUniqueID.h"
@@ -25,6 +28,7 @@
 }
 
 @property (nonatomic, retain, readwrite) NSString *streamerID;
+@property (nonatomic, retain) Faunus *faunus;
 
 #ifdef USE_BLUETOOTH
 - (void) nearbyDevices:(NSString *)names;

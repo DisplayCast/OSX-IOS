@@ -15,7 +15,7 @@
 #import "XMPPRoom.h"
 #endif /* USE_XMPP */
 
-@interface StreamerAppDelegate : NSObject <NSApplicationDelegate, NSNetServiceDelegate, NSNetServiceBrowserDelegate> {
+@interface StreamerAppDelegate : NSObject <NSApplicationDelegate, NSNetServiceDelegate, NSNetServiceBrowserDelegate, NSMenuDelegate> {
 	IBOutlet NSMenu *statusMenu;
 	
 	NSTextField *name;

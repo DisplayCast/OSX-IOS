@@ -600,7 +600,7 @@ HTTPServer *server;
 	[rc setCapabilityToken:[rc createRandomNumber]];
 	
 		// Autoreleasing parent causes a segfault in release()!!
-	redisCapability *parent = [[redisCapability alloc] initWithString:capability];
+	redisCapability *parent = [[[redisCapability alloc] initWithString:capability] autorelease];
 	NSNumber *p = [[NSNumber alloc] initWithUnsignedLongLong:[[parent capabilityToken] unsignedLongLongValue]];
 	[rc setParentToken:p];
 	[p release];
