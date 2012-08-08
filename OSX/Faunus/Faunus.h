@@ -36,7 +36,7 @@
 @end
 
 @interface Faunus (Postit)
-- (BOOL) rememberName:(NSString *)nm forType:(NSString *)type;
+- (BOOL) rememberName:(NSString *)nm forType:(NSString *)type;	// Type could be streamer or 129.123.343.2112.streamer (ie, a specific streamer on host 129.123.343.2112)
 - (NSMutableArray *)listNames:(NSString *)type;
 - (BOOL) forgetName:(NSString *)nm forType:(NSString *)type;
 @end
