@@ -690,10 +690,13 @@ void drawWin(UInt32 *winData, int width, int height, int x, int y, int w, int h,
                     NSLog(@"Setting window of size %dx%d", width, height);
                 pWidth = width;
                 pHeight = height;
-                // winData = calloc(width * height, sizeof(UInt32));
-                updateData = malloc(width * height * sizeof(UInt32));   // Allocate once and reuse
-                tmpUpdateData = malloc(width * height * sizeof(UInt32));    // Needed for bitmap encoding
-				
+
+					// Xcode was giving a warning for this
+					// updateData = malloc(width * height * sizeof(UInt32));   // Allocate once and reuse
+					// tmpUpdateData = (UInt8 *)malloc(width * height * sizeof(UInt32));    // Needed for bitmap encoding
+				updateData = [[NSMutableData dataWithLength:(width * height * sizeof(UInt32))] mutableBytes];
+				tmpUpdateData = [[NSMutableData dataWithLength:(width * height * sizeof(UInt32))] mutableBytes];
+
                 NSDictionary *keys = [NSNetService dictionaryFromTXTRecordData:[ns TXTRecordData]];
                 NSData *data = [keys objectForKey:@"name"];
                 NSString *name = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];

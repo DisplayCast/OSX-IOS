@@ -13,7 +13,6 @@
 		761768FD15A3B13100AE8553 /* Wallet.h in Resources */ = {isa = PBXBuildFile; fileRef = 761768F115A3B13100AE8553 /* Wallet.h */; };
 		7617690015A3B13100AE8553 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 761768F515A3B13100AE8553 /* InfoPlist.strings */; };
 		7617690115A3B13100AE8553 /* Faunus-Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = 761768F615A3B13100AE8553 /* Faunus-Prefix.pch */; };
-		7663C11C15A435A60026704F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7663C11B15A435A60026704F /* libsqlite3.dylib */; };
 		767EAD9615A3B88D00B956C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7617690815A3B16A00AE8553 /* Foundation.framework */; };
 		767EADA515A3B90F00B956C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 767EADA415A3B90F00B956C0 /* main.m */; };
 		767EADAE15A3BA6E00B956C0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767EADAD15A3BA6E00B956C0 /* CoreData.framework */; };
@@ -167,7 +166,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7663C11C15A435A60026704F /* libsqlite3.dylib in Frameworks */,
 				76BDE78E15A3B32100BDB261 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -638,7 +636,9 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../hiredis\"",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -656,7 +656,9 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../hiredis\"",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -668,7 +670,7 @@
 				DSTROOT = /tmp/Faunus_iOS.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "../OSX/Faunus/Faunus-iOS-Prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -684,7 +686,7 @@
 				DSTROOT = /tmp/Faunus_iOS.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "../OSX/Faunus/Faunus-iOS-Prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;

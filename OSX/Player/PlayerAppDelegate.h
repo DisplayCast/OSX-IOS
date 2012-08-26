@@ -29,6 +29,7 @@
     NSOperationQueue *      _queue;
     
 	NSString *myUniqueID;
+	NSString *_playerID;
 
 	NSStatusItem *trayItem;
     
@@ -67,6 +68,8 @@
 @property (nonatomic, retain, readonly ) NSMutableSet *     services;
 @property (nonatomic, retain, readonly ) NSArray *          sortDescriptors;
 @property (nonatomic, copy,   readonly ) NSString *         serviceName;
+
+@property (retain) NSString *playerID;
 
 @property (nonatomic, retain) Faunus *faunus;
 

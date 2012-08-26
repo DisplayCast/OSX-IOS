@@ -25,6 +25,8 @@
 #include <sys/time.h>
 #include <zlib.h>
 
+#include <stdlib.h>
+
 @interface PlayerAppDelegate () <NSNetServiceBrowserDelegate, NSNetServiceDelegate, NSWindowDelegate>
 
 @property (nonatomic, retain, readwrite) NSNetServiceBrowser *  browser;
@@ -32,8 +34,6 @@
 @property (nonatomic, retain, readonly ) NSMutableSet *         pendingServicesToRemove;
 @property (nonatomic, copy,   readwrite) NSString *             serviceName;
 @property (nonatomic, copy,   readonly ) NSString *             defaultServiceName;
-
-@property (nonatomic, retain) NSString *	playerID;
 
 // forward declarations
 - (void)receiveFromService:(NSNetService *)service;
@@ -53,7 +53,7 @@ void catchallExceptionHandler(NSException *exception);
 @synthesize servicesArray = _servicesArray;
 @synthesize browser = _browser;
 
-@synthesize playerID;
+@synthesize playerID = _playerID;
 
 // Generating the Windows from the XIB file.
 @synthesize rw0;
@@ -502,22 +502,23 @@ static NSMutableDictionary *myKeys = NULL;         // Advertise myself using the
 			// Register our service with Bonjour.
 		in_port_t chosenPort = [self createServerSocketWithAcceptCallBack:ListeningSocketCallback];
 		
-		playerID = [[NSUserDefaults standardUserDefaults] stringForKey:myUniqueID];
-		if (playerID == nil) {	// First time
-			playerID = [faunus createName:PLAYER publicP:YES];	// Try Faunus
+		_playerID = [[NSUserDefaults standardUserDefaults] stringForKey:myUniqueID];
+		if (_playerID == nil) {	// First time
+			_playerID = (NSString *)[faunus createName:PLAYER publicP:YES];	// Try Faunus
 
 				// Faunus was successful
-			if (playerID != nil) {
-				[[NSUserDefaults standardUserDefaults] setObject:playerID forKey:myUniqueID];
-				[[NSUserDefaults standardUserDefaults] synchronize];
-			} else {	// Create a temporary ID - will be replaced the next time we contact Faunus service
+			if (_playerID == nil) {
+				// Create a temporary ID - will be replaced the next time we contact Faunus service
 				CFUUIDRef	uuidObj = CFUUIDCreate(nil);
 				CFStringRef uidStr = CFUUIDCreateString(nil, uuidObj);
 				[[NSUserDefaults standardUserDefaults] setObject:(id)uidStr forKey:myUniqueID];
 				CFRelease(uidStr);
 				CFRelease(uuidObj);
 
-				playerID = [[NSUserDefaults standardUserDefaults] objectForKey:myUniqueID];
+				_playerID = [[NSUserDefaults standardUserDefaults] stringForKey:myUniqueID];
+			} else {
+				[[NSUserDefaults standardUserDefaults] setObject:_playerID forKey:myUniqueID];
+				[[NSUserDefaults standardUserDefaults] synchronize];
 			}
 
 			NSString *nm = NSFullUserName();
@@ -533,7 +534,7 @@ static NSMutableDictionary *myKeys = NULL;         // Advertise myself using the
 			NSMutableArray *names = [faunus browseLocal:PLAYER];
 
 			for (NSString *name in names) {
-				if ([name isEqualToString:playerID]) {
+				if ([name isEqualToString:_playerID]) {
 					known = YES;
 
 					break;
@@ -541,17 +542,17 @@ static NSMutableDictionary *myKeys = NULL;         // Advertise myself using the
 			}
 
 			if (known == NO) {
-				playerID = [faunus createName:PLAYER publicP:YES];
+				_playerID = [faunus createName:PLAYER publicP:YES];
 
 					// Faunus was successful
-				if (playerID != nil) {
-					[[NSUserDefaults standardUserDefaults] setObject:playerID forKey:myUniqueID];
+				if (_playerID != nil) {
+					[[NSUserDefaults standardUserDefaults] setObject:_playerID forKey:myUniqueID];
 					[[NSUserDefaults standardUserDefaults] synchronize];
 				}
 					// The -Name component is reused
 			}
 		}
-		assert(playerID != nil);
+		assert(_playerID != nil);
 
 #ifdef OLD
 		if (playerID == nil) {  // Generate a new player ID
@@ -573,7 +574,7 @@ static NSMutableDictionary *myKeys = NULL;         // Advertise myself using the
 #endif /* OLD */
 
 			// Register ourselves in Bonjour
-		netService = [[NSNetService alloc] initWithDomain:BONJOUR_DOMAIN type:PLAYER name:playerID port:chosenPort];
+		netService = [[NSNetService alloc] initWithDomain:BONJOUR_DOMAIN type:PLAYER name:_playerID port:chosenPort];
 		if (netService != nil) {
 				// Deprecated in 10.8
 				// SInt32 major, minor, bugfix;
@@ -598,7 +599,7 @@ static NSMutableDictionary *myKeys = NULL;         // Advertise myself using the
 			[netService setDelegate:self];
 			[netService publishWithOptions:NSNetServiceNoAutoRename];
 
-			[faunus addAttrs:myKeys forName:playerID];
+			[faunus addAttrs:myKeys forName:_playerID];
 			
 #ifdef USE_BLUETOOTH
 				// This code used to work synchronously and then it was deprecated in 10.6 and now it just hangs when I compile in Lion+. Apple developer forum has no answer on why this fails!!
@@ -626,7 +627,7 @@ static NSMutableDictionary *myKeys = NULL;         // Advertise myself using the
     
     [netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:myKeys]];
 
-	[faunus addAttrs:myKeys forName:playerID];
+	[faunus addAttrs:myKeys forName:_playerID];
 }
 #endif /* USE_BLUETOOTH */
 	
@@ -1092,8 +1093,8 @@ void displayWin(NSImageView *player, int width, int height, int maskX, int maskY
     // NSRect geom = [window frame];
     
     // NSLog(@"Window state changed");
-    playerID = [[NSUserDefaults standardUserDefaults] stringForKey:myUniqueID];
-    NSString *session = [[[NSString alloc] initWithFormat:@"%@ %@ %.0f %.0f %.0f %.0f %d %d", [ns name], playerID, geom.origin.x, geom.origin.y, geom.size.width, geom.size.height, ([window isMiniaturized] ? 1:0), ([window isZoomed] ? 1:0)] autorelease];
+    _playerID = [[NSUserDefaults standardUserDefaults] stringForKey:myUniqueID];
+    NSString *session = [[[NSString alloc] initWithFormat:@"%@ %@ %.0f %.0f %.0f %.0f %d %d", [ns name], _playerID, geom.origin.x, geom.origin.y, geom.size.width, geom.size.height, ([window isMiniaturized] ? 1:0), ([window isZoomed] ? 1:0)] autorelease];
     
     NSString *myObjID = [[[NSString alloc] initWithFormat:@"%lu", [window hash]] autorelease];
     [myKeys removeObjectForKey:myObjID];
@@ -1101,7 +1102,7 @@ void displayWin(NSImageView *player, int width, int height, int maskX, int maskY
     
     [netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:myKeys]];
 
-	[faunus addAttrs:myKeys forName:playerID];
+	[faunus addAttrs:myKeys forName:_playerID];
 }
 
 #pragma mark -
@@ -1112,7 +1113,7 @@ void displayWin(NSImageView *player, int width, int height, int maskX, int maskY
     @autoreleasepool {
 		UInt8 *receiveBuf = NULL;        // Buffer for receiving network datagrams
 		UInt32 *winData = NULL;          // Backing store for the window. 
-		int pWidth = -1, pHeight = -1;   // Previous width and height to detect and perhaps 
+		int pWidth = -1, pHeight = -1;   // Previous width and height to detect and perhaps
 		unsigned int pmaskX = -1, pmaskY = -1, pmaskWidth = -1, pmaskHeight = -1;
 		UInt8 *updateData = NULL, *tmpUpdateData = NULL;       // Buffer for receiving updates
 		
@@ -1245,9 +1246,14 @@ void displayWin(NSImageView *player, int width, int height, int maskX, int maskY
 						NSLog(@"Setting window of size %dx%d", width, height);
 					pWidth = width;
 					pHeight = height;
-						// winData = calloc(width * height, sizeof(UInt32));
-					updateData = malloc(width * height * sizeof(UInt32));   // Allocate once and reuse
-					tmpUpdateData = malloc(width * height * sizeof(UInt32));    // Needed for bitmap encoding
+
+						// Xcode was warning that malloc is converted to a pointer of type UInt8 whih is incompatible with sizeof operarand type 'UInt32'. WTF
+						//				updateData = malloc(width * height * sizeof(UInt32));   // Allocate once and reuse
+						// tmpUpdateData = malloc(width * height * sizeof(UInt32));    // Needed for bitmap encoding
+
+					updateData = [[NSMutableData dataWithLength:(width * height * sizeof(UInt32))] mutableBytes];
+					tmpUpdateData = [[NSMutableData dataWithLength:(width * height * sizeof(UInt32))] mutableBytes];
+
 					assert(updateData != NULL);
 					assert(tmpUpdateData != NULL);
 					
@@ -1305,7 +1311,7 @@ void displayWin(NSImageView *player, int width, int height, int maskX, int maskY
 					
 					[netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:myKeys]];
 
-					[faunus addAttrs:myKeys forName:playerID];
+					[faunus addAttrs:myKeys forName:_playerID];
 					
 					[self updateKey:window andNSNetService:ns];
 					
@@ -1490,7 +1496,7 @@ void displayWin(NSImageView *player, int width, int height, int maskX, int maskY
 				[myKeys removeObjectForKey:myID];
 				[netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:myKeys]];
 
-				[faunus addAttrs:myKeys forName:playerID];
+				[faunus addAttrs:myKeys forName:_playerID];
 			}
             break;
         }

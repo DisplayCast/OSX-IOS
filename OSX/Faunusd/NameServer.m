@@ -918,7 +918,7 @@ Name *newName = [[Name alloc] initWithEntity:nameEntity insertIntoManagedObjectC
 
 #ifdef USE_REDIS
 - (redisReply *)issueCommand: (NSString *)command {
-	NSLog(@"Issuing: %@", command);
+		// NSLog(@"Issuing: %@", command);
 
 	redisReply *reply = redisCommand(rContext, [command UTF8String]);
 	if (reply == NULL) {
@@ -1103,7 +1103,7 @@ Name *newName = [[Name alloc] initWithEntity:nameEntity insertIntoManagedObjectC
 	NSData *json = [NSJSONSerialization dataWithJSONObject:jsonDict options:0 error:&error];
 	NSString *jsonStr = [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];
 	
-	NSLog(@"DEBUG: Storing JSON object %@", jsonStr);
+		// NSLog(@"DEBUG: Storing JSON object %@", jsonStr);
 	
 	redisReply *reply = redisCommand(rContext, "SET %s %s", [[rn id] UTF8String], [jsonStr UTF8String]);
 	if (reply == NULL)
@@ -1144,7 +1144,7 @@ Name *newName = [[Name alloc] initWithEntity:nameEntity insertIntoManagedObjectC
 			
 			id responseObj = nil;
 
-			NSLog(@"Command is: %@", command);
+				// NSLog(@"Command is: %@", command);
 
 			if ([command localizedCaseInsensitiveCompare:@"/CREATENAME"] == NSOrderedSame) {
 				responseObj = [self createName];

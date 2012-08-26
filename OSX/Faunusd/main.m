@@ -7,9 +7,12 @@
 
 #include <unistd.h>
 
-#define REDIS_SERVER "127.0.0.1"
+	// #define REDIS_SERVER "127.0.0.1"
+	// #define REDIS_SERVER "192.168.25.158"	// "redis.xcloud.fxpal.net"
+#define REDIS_SERVER "192.168.22.69"	// mac mini i7
+
 #define REDIS_PORT 6379
-#define REDIS_DB   0
+#define REDIS_DB   6
 
 int main(int argc, char * const argv[]) {
 	int ch;

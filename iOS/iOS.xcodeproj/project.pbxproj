@@ -78,7 +78,7 @@
 		766BF66215642AFE0088E361 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.txt; path = ../README.txt; sourceTree = "<group>"; };
 		766BF66415642B0C0088E361 /* License.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = License.rtf; path = ../License.rtf; sourceTree = "<group>"; };
 		766BF66615642B980088E361 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = Credits.rtf; path = ../Credits.rtf; sourceTree = "<group>"; };
-		76BDE7A015A3B39900BDB261 /* libFaunus-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "libFaunus-iOS.a"; path = "../Faunus/build/Release-iphoneos/libFaunus-iOS.a"; sourceTree = "<group>"; };
+		76BDE7A015A3B39900BDB261 /* libFaunus-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libFaunus-iOS.a"; path = "../Faunus/build/Release-iphoneos/libFaunus-iOS.a"; sourceTree = "<group>"; };
 		76C86D39159B9C9000D77C54 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		76C86D3C159B9C9000D77C54 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		76C86D3D159B9C9000D77C54 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };

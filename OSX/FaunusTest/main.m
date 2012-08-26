@@ -15,8 +15,16 @@ int main(int argc, const char * argv[]) {
 
 	@autoreleasepool {
 	    Faunus *fn = [[Faunus alloc] init];
+		NSString *nm;
 
-		NSString *nm = [fn createName:@"streamer" publicP:YES];
+		NSDate *methodStart = [NSDate date];
+		for (int i = 0; i < 1000; i++)
+			 nm = [fn createName:@"streamer" publicP:NO];
+		NSDate *methodFinish = [NSDate date];
+		NSTimeInterval executionTime = [methodFinish timeIntervalSinceDate:methodStart];
+		NSLog(@"Created in: %fs %@", executionTime/1000, nm);
+
+		return 0;
 
 		NSMutableArray *names = [fn browseLocal:@"streamer"];
 		NSLog(@"Found: %ld streamers", [names count]);

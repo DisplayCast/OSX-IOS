@@ -213,7 +213,16 @@ void MyScreenRefreshCallback (CGRectCount count, const CGRect *rectArray, void *
 				w = rectArray[ind].size.width;
 				h = rectArray[ind].size.height;
 			}
-			
+
+			if ((y+h) > height) {
+				continue;
+
+					// WTF. Noticed this in 10.8 (Mountain Lion). I guess these screen capture functions are deprecated. Even CGDisplayCreateImageForRect returns null
+					// CGImageRef *img = CGDisplayCreateImageForRect(CGMainDisplayID, rectArray[ind]);
+					//				assert(img != nil);
+			}
+
+
 			UInt32 *transformStr = (UInt32 *)malloc((w * h + 5) * sizeof(UInt32));
 			UInt8 *bmPtr = (UInt8 *)transformStr + (5 * sizeof(UInt32)), *dataPtr = bmPtr + (w * h);
 			int bufSz = w * h + (5 * sizeof(UInt32));
@@ -227,6 +236,7 @@ void MyScreenRefreshCallback (CGRectCount count, const CGRect *rectArray, void *
 			for (unsigned int iy = 0; iy < h; iy++) {
 				for (unsigned int ix = 0; ix < w; ix++) {
 					int indx = ((int) width * (y + iy)) + (x + ix);
+
 					UInt32 prev = *(prevFramebufferData + indx);
 					UInt32 cur = *(curFramebufferData + indx);
 					
@@ -394,7 +404,7 @@ void GetPrimaryIp(char* buffer, socklen_t buflen) {
 					// The -Name component is reused
 			}
 		}
-		assert(self.streamerID != nil);
+		assert(self.streamerID != nil);		// Will fail when Faunus is completely unavailable
 
 			// NSString *myAddr = [[[NSString alloc] initWithCString:ma encoding:NSASCIIStringEncoding] autorelease];
 			// NSLog(@"Address: %@:%d. MaxPacketSize: %d Name: %@\n", myAddr, myPort, maxPacketSize, self.serviceName);

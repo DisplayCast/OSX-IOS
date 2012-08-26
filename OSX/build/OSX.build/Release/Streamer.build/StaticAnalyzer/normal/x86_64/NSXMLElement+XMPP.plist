@@ -25,7 +25,7 @@
           </dict>
           <dict>
            <key>line</key><integer>17</integer>
-           <key>col</key><integer>2</integer>
+           <key>col</key><integer>3</integer>
            <key>file</key><integer>0</integer>
           </dict>
          </array>
@@ -38,7 +38,7 @@
           </dict>
           <dict>
            <key>line</key><integer>21</integer>
-           <key>col</key><integer>12</integer>
+           <key>col</key><integer>7</integer>
            <key>file</key><integer>0</integer>
           </dict>
          </array>

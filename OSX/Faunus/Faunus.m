@@ -9,8 +9,11 @@
 #include "faunusGlobals.h"
 
 @implementation Faunus
-NSString *const kFaunusdServerandPort = @"127.0.0.1:9999";
-NSString *const kWhiteBoardServerandPort = @"127.0.0.1:8888";
+	// NSString *const kFaunusdServerandPort = @"127.0.0.1:9999";
+NSString *const kFaunusdServerandPort = @"192.168.22.69:9999";
+
+	// NSString *const kWhiteBoardServerandPort = @"127.0.0.1:8888";
+NSString *const kWhiteBoardServerandPort = @"192.168.22.69:8888";
 
 Wallet *personalWallet;
 
@@ -32,7 +35,7 @@ Wallet *personalWallet;
 */
 
 - (NSString *)urlEncode:(NSString *)yourString {
-	return ((NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)yourString, NULL, NULL, kCFStringEncodingUTF8)));
+	return ((NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL, (__bridge CFStringRef)yourString, NULL, NULL, kCFStringEncodingUTF8)));
 }
 
 /*!
@@ -182,7 +185,7 @@ Wallet *personalWallet;
 		if (dict == nil) {
 			NSLog(@"FAUNUSD server down?");
 
-			return NO;
+			return nil;
 		}
 
 		NSNumber *status = [dict objectForKey:@"status"];
@@ -331,7 +334,7 @@ Wallet *personalWallet;
 		if (dict == nil) {
 			NSLog(@"FAUNUSD server down?");
 
-			return NO;
+			return nil;
 		}
 
 		NSNumber *status = [dict objectForKey:@"status"];
@@ -430,7 +433,7 @@ Wallet *personalWallet;
 		if (dict == nil) {
 			NSLog(@"FAUNUSD server down?");
 
-			return NO;
+			return nil;
 		}
 
 		NSNumber *status = [dict objectForKey:@"status"];
@@ -611,7 +614,7 @@ Wallet *personalWallet;
 
 	switch ([status intValue]) {
 		case faunusSUCCESS: {
-			NSLog(@"DEBUG: Published in white board");
+				// NSLog(@"DEBUG: Published in white board");
 
 			return YES;
 		}

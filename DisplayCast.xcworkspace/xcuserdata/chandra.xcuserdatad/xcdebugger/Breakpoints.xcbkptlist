@@ -884,8 +884,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "1109"
          endingLineNumber = "1109"
-         landmarkName = "-receiveFromService:"
-         landmarkType = "5">
+         landmarkName = "@implementation PlayerAppDelegate"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -897,8 +897,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "1106"
          endingLineNumber = "1106"
-         landmarkName = "@implementation PlayerAppDelegate"
-         landmarkType = "3">
+         landmarkName = "-updateKey:andNSNetService:"
+         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -970,11 +970,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Player/PlayerAppDelegate.m"
-         timestampString = "363833322.203363"
+         timestampString = "366843854.532278"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1317"
-         endingLineNumber = "1317"
+         startingLineNumber = "1321"
+         endingLineNumber = "1321"
          landmarkName = "-receiveFromService:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -983,11 +983,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Player/PlayerAppDelegate.m"
-         timestampString = "363833322.203363"
+         timestampString = "366843854.532278"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1393"
-         endingLineNumber = "1393"
+         startingLineNumber = "1397"
+         endingLineNumber = "1397"
          landmarkName = "-receiveFromService:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1035,11 +1035,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Streamer/Streamer.m"
-         timestampString = "363820327.52141"
+         timestampString = "366849577.333373"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "537"
-         endingLineNumber = "537"
+         startingLineNumber = "547"
+         endingLineNumber = "547"
          landmarkName = "streamListeningSocketCallback()"
          landmarkType = "7">
       </FileBreakpoint>
@@ -1527,11 +1527,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunusd/main.m"
-         timestampString = "362539069.756996"
+         timestampString = "366239258.019629"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "48"
-         endingLineNumber = "48"
+         startingLineNumber = "51"
+         endingLineNumber = "51"
          landmarkName = "main()"
          landmarkType = "7">
       </FileBreakpoint>
@@ -1553,11 +1553,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunus/Faunus.m"
-         timestampString = "362958922.090963"
+         timestampString = "366238900.502606"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "102"
-         endingLineNumber = "102"
+         startingLineNumber = "105"
+         endingLineNumber = "105"
          landmarkName = "-createName:publicP:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1579,11 +1579,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunus/Faunus.m"
-         timestampString = "362958922.090963"
+         timestampString = "366238900.502606"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "90"
-         endingLineNumber = "90"
+         startingLineNumber = "93"
+         endingLineNumber = "93"
          landmarkName = "-whiteboardRequest:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1592,11 +1592,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/FaunusTest/main.m"
-         timestampString = "363048557.555257"
+         timestampString = "366237142.636369"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "103"
-         endingLineNumber = "103"
+         startingLineNumber = "111"
+         endingLineNumber = "111"
          landmarkName = "main()"
          landmarkType = "7">
       </FileBreakpoint>
@@ -1631,11 +1631,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunus/Faunus.m"
-         timestampString = "363820327.52141"
+         timestampString = "366238900.502606"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "263"
-         endingLineNumber = "263"
+         startingLineNumber = "266"
+         endingLineNumber = "266"
          landmarkName = "-addAttr:andValue:forName:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1644,11 +1644,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunus/Faunus.m"
-         timestampString = "363820327.52141"
+         timestampString = "366238900.502606"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "284"
-         endingLineNumber = "284"
+         startingLineNumber = "287"
+         endingLineNumber = "287"
          landmarkName = "-addAttr:andValue:forName:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1657,11 +1657,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/FaunusTest/main.m"
-         timestampString = "363048557.555257"
+         timestampString = "366237142.636369"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "31"
-         endingLineNumber = "31"
+         startingLineNumber = "39"
+         endingLineNumber = "39"
          landmarkName = "main()"
          landmarkType = "7">
       </FileBreakpoint>
@@ -1670,11 +1670,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunus/Faunus.m"
-         timestampString = "363820327.52141"
+         timestampString = "366238900.502606"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "436"
-         endingLineNumber = "436"
+         startingLineNumber = "439"
+         endingLineNumber = "439"
          landmarkName = "-listAttrs:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1748,11 +1748,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunus/Faunus.m"
-         timestampString = "363820327.52141"
+         timestampString = "366238900.502606"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "461"
-         endingLineNumber = "461"
+         startingLineNumber = "464"
+         endingLineNumber = "464"
          landmarkName = "-mergeToWallet:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1813,11 +1813,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Faunus/Faunus.m"
-         timestampString = "363820327.52141"
+         timestampString = "366238900.502606"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "527"
-         endingLineNumber = "527"
+         startingLineNumber = "530"
+         endingLineNumber = "530"
          landmarkName = "-cloneCapability:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1852,11 +1852,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Streamer/Streamer.m"
-         timestampString = "363818305.185646"
+         timestampString = "366849577.333373"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "347"
-         endingLineNumber = "347"
+         startingLineNumber = "357"
+         endingLineNumber = "357"
          landmarkName = "-init"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1865,11 +1865,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "OSX/Streamer/Streamer.m"
-         timestampString = "363818393.079129"
+         timestampString = "366849577.333373"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "386"
-         endingLineNumber = "386"
+         startingLineNumber = "396"
+         endingLineNumber = "396"
          landmarkName = "-init"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1884,6 +1884,45 @@
          startingLineNumber = "86"
          endingLineNumber = "86"
          landmarkName = "-menuNeedsUpdate:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "OSX/Faunus/Faunus.m"
+         timestampString = "366247509.351077"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "12"
+         endingLineNumber = "12"
+         landmarkName = "@implementation Faunus"
+         landmarkType = "3">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "OSX/Streamer/Streamer.m"
+         timestampString = "366849577.333373"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "360"
+         endingLineNumber = "360"
+         landmarkName = "-init"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "OSX/Streamer/Streamer.m"
+         timestampString = "366849577.333373"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "350"
+         endingLineNumber = "350"
+         landmarkName = "-init"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
