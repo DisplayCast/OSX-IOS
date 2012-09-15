@@ -394,10 +394,12 @@ void GetPrimaryIp(char* buffer, socklen_t buflen) {
 			}
 
 			if (known == NO) {
-				self.streamerID = [faunus createName:STREAMER publicP:YES];
+				NSString *tmpID = [faunus createName:STREAMER publicP:YES];
 
 					// Faunus was successful
-				if (self.streamerID != nil) {
+				if (tmpID != nil) {
+					self.streamerID = tmpID;
+					
 					[[NSUserDefaults standardUserDefaults] setObject:self.streamerID forKey:myUniqueID];
 					[[NSUserDefaults standardUserDefaults] synchronize];
 				}
@@ -444,7 +446,7 @@ void GetPrimaryIp(char* buffer, socklen_t buflen) {
 			[self performSelectorInBackground:@selector(getBluetoothDeviceAddress) withObject:nil];
 #endif /* USE_BLUETOOTH */
         } else {
-            printf("FATAL: Bonjour registration failed\n");
+            NSLog(@"FATAL: Bonjour registration failed");
             exit(1);
         }
 		

@@ -23,6 +23,9 @@
     
     NSMutableSet *          _nsSessions;
 	
+	AVAssetWriter		*_videoWriter;
+	AVAssetWriterInput  *_writerInput;
+	
 	NSString *myUniqueID;
 	
     NSOperationQueue *      _queue;
@@ -35,6 +38,8 @@
 
 @property (nonatomic, retain, readwrite) IBOutlet NSArrayController *   servicesArray;
 
+@property (nonatomic, retain, readwrite) AVAssetWriter *videoWriter;
+@property (nonatomic, retain, readwrite) AVAssetWriterInput *writerInput;
 	// Actions
 
 - (IBAction)tableRowClickedAction:(id)sender;

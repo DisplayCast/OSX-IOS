@@ -80,7 +80,7 @@ int listCapabilitiesCallBack(void *a, int argc, char **argv, char **colName) {
 	if (sqlite3_exec(db, [cmd UTF8String], listCapabilitiesCallBack, (__bridge void *)array, &err) != SQLITE_OK) {
 		sqlite3_close(db);
 
-		NSAssert(0, @"Failed to insert into wallet");
+		NSLog(@"ERROR: Failed to insert into wallet");
 		return nil;
 	}
 

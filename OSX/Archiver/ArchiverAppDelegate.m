@@ -48,6 +48,9 @@ void receiveData(CFSocketRef s, CFSocketCallBackType type, CFDataRef address, co
 @synthesize faunus;
 @synthesize archiverID;
 
+@synthesize videoWriter = _videoWriter;
+@synthesize writerInput = _writerInput;
+
 NSNetService *netService;
 NSMutableData *receivedData;
 
@@ -403,11 +406,11 @@ void drawWin(UInt32 *winData, int width, int height, int x, int y, int w, int h,
 }
 
 #pragma mark Runs as a thread, processing data from a particular streamer
-- (void)updateKey:(AVAssetWriter *)videoWriter andNSNetService: (NSNetService *)ns {
+- (void)updateKey:(AVAssetWriter *)avaw andNSNetService: (NSNetService *)ns {
     // NSLog(@"Window state changed");
     archiverID = [[NSUserDefaults standardUserDefaults] stringForKey:myUniqueID];
     NSString *session = [[NSString alloc] initWithFormat:@"%@ %@", [ns name], archiverID];
-    NSString *myID = [[NSString alloc] initWithFormat:@"%lu", [videoWriter hash]];
+    NSString *myID = [[NSString alloc] initWithFormat:@"%lu", [avaw hash]];
     
     [myKeys removeObjectForKey:myID];
     [myKeys setValue:session forKey:myID];
@@ -546,8 +549,8 @@ void drawWin(UInt32 *winData, int width, int height, int x, int y, int w, int h,
 - (void)receiveFromService:(NSNetService *)ns {
     assert(ns != nil);
     
-    AVAssetWriter *videoWriter = nil;
-    AVAssetWriterInput *writerInput = nil;
+		// __block AVAssetWriter *videoWriter = nil;
+		// __block AVAssetWriterInput *writerInput = nil;
 #ifdef OCR
     OCR *ocr;
 #endif /* OCR */
@@ -719,11 +722,11 @@ void drawWin(UInt32 *winData, int width, int height, int x, int y, int w, int h,
 				
                 //----initialize compression engine
                 NSError *error = nil;
-                videoWriter = [[AVAssetWriter alloc] initWithURL:[NSURL fileURLWithPath:betaCompressionDirectory] fileType:AVFileTypeQuickTimeMovie /* AVFileTypeMPEG4 */  error:&error];
-                NSParameterAssert(videoWriter);
+                self.videoWriter = [[AVAssetWriter alloc] initWithURL:[NSURL fileURLWithPath:betaCompressionDirectory] fileType:AVFileTypeQuickTimeMovie /* AVFileTypeMPEG4 */  error:&error];
+                NSParameterAssert(self.videoWriter);
                 if(error)
                     NSLog(@"error = %@", [error localizedDescription]);
-                videoWriter.shouldOptimizeForNetworkUse = YES;
+                self.videoWriter.shouldOptimizeForNetworkUse = YES;
 				
                 NSDictionary *codecSettings = [NSDictionary dictionaryWithObjectsAndKeys:
                                                [NSNumber numberWithInt:5000000], AVVideoAverageBitRateKey,
@@ -735,32 +738,32 @@ void drawWin(UInt32 *winData, int width, int height, int x, int y, int w, int h,
                                                codecSettings, AVVideoCompressionPropertiesKey,
                                                nil];
 				
-                writerInput = [AVAssetWriterInput assetWriterInputWithMediaType:AVMediaTypeVideo outputSettings:videoSettings];
-                writerInput.expectsMediaDataInRealTime = YES;
+                self.writerInput = [AVAssetWriterInput assetWriterInputWithMediaType:AVMediaTypeVideo outputSettings:videoSettings];
+                self.writerInput.expectsMediaDataInRealTime = YES;
                 
                 NSDictionary *sourcePixelBufferAttributesDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
                                                                        [NSNumber numberWithInt:kCVPixelFormatType_32BGRA], kCVPixelBufferPixelFormatTypeKey, nil];
                 adaptor = [AVAssetWriterInputPixelBufferAdaptor 
-						   assetWriterInputPixelBufferAdaptorWithAssetWriterInput:writerInput
+						   assetWriterInputPixelBufferAdaptorWithAssetWriterInput:self.writerInput
 						   sourcePixelBufferAttributes:sourcePixelBufferAttributesDictionary];
-                NSParameterAssert(writerInput);
-                NSParameterAssert([videoWriter canAddInput:writerInput]);
+                NSParameterAssert(self.writerInput);
+                NSParameterAssert([self.videoWriter canAddInput:self.writerInput]);
 				
-				if (![videoWriter canAddInput:writerInput]) {
+				if (![self.videoWriter canAddInput:self.writerInput]) {
 					NSLog(@"FATAL: Could not add input");
 					return;
 				}
 					
-				[videoWriter addInput:writerInput];
+				[self.videoWriter addInput:self.writerInput];
 
-                [videoWriter startWriting];
-                [videoWriter startSessionAtSourceTime:kCMTimeZero];
+                [self.videoWriter startWriting];
+                [self.videoWriter startSessionAtSourceTime:kCMTimeZero];
 				
                 [netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:myKeys]];
 
 				[faunus addAttrs:myKeys forName:archiverID];
                 
-                [self updateKey:videoWriter andNSNetService:ns];
+                [self updateKey:self.videoWriter andNSNetService:ns];
                 dispatchQueue = dispatch_queue_create("com.fxpal.displaycast.archiver.encoder", NULL);
                 dispatch_queue_t high = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
 				
@@ -864,7 +867,7 @@ void drawWin(UInt32 *winData, int width, int height, int x, int y, int w, int h,
                 // [self.timer fire];
                 // ??? [self performSelector:@selector(performOCR:) withObject:ocr afterDelay:0.1];
 				
-                [writerInput requestMediaDataWhenReadyOnQueue:dispatchQueue usingBlock:^{
+                [self.writerInput requestMediaDataWhenReadyOnQueue:dispatchQueue usingBlock:^{
                     // unsigned long processedUpdate = 0;
                     // int prevtm = -1;
 					int frame = 0;
@@ -872,7 +875,7 @@ void drawWin(UInt32 *winData, int width, int height, int x, int y, int w, int h,
                     UInt32 *winDataCopy = malloc(width * height * sizeof(UInt32));
 					NSAssert(winDataCopy != NULL, @"Memory allocation failed");
                     
-                    while ([writerInput isReadyForMoreMediaData]) {
+                    while ([self.writerInput isReadyForMoreMediaData]) {
                         /*
 						int tm = ([timeStart timeIntervalSinceNow] * -ARCHIVER_FPS);
                         if (tm == prevtm)	// Too fast, not expecting the next frame right now
@@ -909,16 +912,18 @@ void drawWin(UInt32 *winData, int width, int height, int x, int y, int w, int h,
                     free(winDataCopy);
 					
 					// NSLog(@"Wrapping up");
-					[writerInput markAsFinished];
+					[self.writerInput markAsFinished];
 					
-					NSString *myID = [NSString stringWithFormat:@"%lu", [videoWriter hash]];
+					NSString *myID = [NSString stringWithFormat:@"%lu", [self.videoWriter hash]];
 					[myKeys removeObjectForKey:myID];
 					[netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:myKeys]];
 
 					[faunus addAttrs:myKeys forName:archiverID];
 
-                    if ([videoWriter finishWriting] == NO)
+                    if ([self.videoWriter finishWriting] == NO)
                         NSLog(@"Video completion failed");
+					else
+						NSLog(@"Video completion finished");
                 }];
             } else {
                 // Overlay the update onto my view of the frame
@@ -1080,10 +1085,12 @@ void drawWin(UInt32 *winData, int width, int height, int x, int y, int w, int h,
 		}
 
 		if (known == NO) {
-			archiverID = [faunus createName:ARCHIVER publicP:YES];
+			NSString *tmpID = [faunus createName:ARCHIVER publicP:YES];
 
 				// Faunus was successful
-			if (archiverID != nil) {
+			if (tmpID != nil) {
+				archiverID = tmpID;
+				
 				[[NSUserDefaults standardUserDefaults] setObject:archiverID forKey:myUniqueID];
 				[[NSUserDefaults standardUserDefaults] synchronize];
 			}

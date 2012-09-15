@@ -7,6 +7,7 @@ echo "$0: Building the project"
 (cd ..; xcodebuild -target Streamer -parallelizeTargets clean build)
 (cd ..; xcodebuild -target Player -parallelizeTargets clean build)
 (cd ..; xcodebuild -target Archiver -parallelizeTargets clean build)
+(cd ../../Faunus; xcodebuild -target Faunus clean build)
 
 echo "$0: Building package"
 tmpdest=/tmp/Pkg; export tmpdest

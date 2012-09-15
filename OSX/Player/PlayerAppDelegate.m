@@ -502,12 +502,12 @@ static NSMutableDictionary *myKeys = NULL;         // Advertise myself using the
 			// Register our service with Bonjour.
 		in_port_t chosenPort = [self createServerSocketWithAcceptCallBack:ListeningSocketCallback];
 		
-		_playerID = [[NSUserDefaults standardUserDefaults] stringForKey:myUniqueID];
-		if (_playerID == nil) {	// First time
-			_playerID = (NSString *)[faunus createName:PLAYER publicP:YES];	// Try Faunus
+		self.playerID = [[NSUserDefaults standardUserDefaults] stringForKey:myUniqueID];
+		if (self.playerID == nil) {	// First time
+			self.playerID = (NSString *)[faunus createName:PLAYER publicP:YES];	// Try Faunus
 
 				// Faunus was successful
-			if (_playerID == nil) {
+			if (self.playerID == nil) {
 				// Create a temporary ID - will be replaced the next time we contact Faunus service
 				CFUUIDRef	uuidObj = CFUUIDCreate(nil);
 				CFStringRef uidStr = CFUUIDCreateString(nil, uuidObj);
@@ -515,9 +515,9 @@ static NSMutableDictionary *myKeys = NULL;         // Advertise myself using the
 				CFRelease(uidStr);
 				CFRelease(uuidObj);
 
-				_playerID = [[NSUserDefaults standardUserDefaults] stringForKey:myUniqueID];
+				self.playerID = [[NSUserDefaults standardUserDefaults] stringForKey:myUniqueID];
 			} else {
-				[[NSUserDefaults standardUserDefaults] setObject:_playerID forKey:myUniqueID];
+				[[NSUserDefaults standardUserDefaults] setObject:self.playerID forKey:myUniqueID];
 				[[NSUserDefaults standardUserDefaults] synchronize];
 			}
 
@@ -534,7 +534,7 @@ static NSMutableDictionary *myKeys = NULL;         // Advertise myself using the
 			NSMutableArray *names = [faunus browseLocal:PLAYER];
 
 			for (NSString *name in names) {
-				if ([name isEqualToString:_playerID]) {
+				if ([name isEqualToString:self.playerID]) {
 					known = YES;
 
 					break;
@@ -542,17 +542,19 @@ static NSMutableDictionary *myKeys = NULL;         // Advertise myself using the
 			}
 
 			if (known == NO) {
-				_playerID = [faunus createName:PLAYER publicP:YES];
+				NSString *tmpID = [faunus createName:PLAYER publicP:YES];
 
 					// Faunus was successful
-				if (_playerID != nil) {
-					[[NSUserDefaults standardUserDefaults] setObject:_playerID forKey:myUniqueID];
+				if (tmpID != nil) {
+					self.playerID = tmpID;
+					
+					[[NSUserDefaults standardUserDefaults] setObject:self.playerID forKey:myUniqueID];
 					[[NSUserDefaults standardUserDefaults] synchronize];
 				}
 					// The -Name component is reused
 			}
 		}
-		assert(_playerID != nil);
+		assert(self.playerID != nil);
 
 #ifdef OLD
 		if (playerID == nil) {  // Generate a new player ID
@@ -574,7 +576,7 @@ static NSMutableDictionary *myKeys = NULL;         // Advertise myself using the
 #endif /* OLD */
 
 			// Register ourselves in Bonjour
-		netService = [[NSNetService alloc] initWithDomain:BONJOUR_DOMAIN type:PLAYER name:_playerID port:chosenPort];
+		netService = [[NSNetService alloc] initWithDomain:BONJOUR_DOMAIN type:PLAYER name:self.playerID port:chosenPort];
 		if (netService != nil) {
 				// Deprecated in 10.8
 				// SInt32 major, minor, bugfix;
@@ -599,7 +601,7 @@ static NSMutableDictionary *myKeys = NULL;         // Advertise myself using the
 			[netService setDelegate:self];
 			[netService publishWithOptions:NSNetServiceNoAutoRename];
 
-			[faunus addAttrs:myKeys forName:_playerID];
+			[faunus addAttrs:myKeys forName:self.playerID];
 			
 #ifdef USE_BLUETOOTH
 				// This code used to work synchronously and then it was deprecated in 10.6 and now it just hangs when I compile in Lion+. Apple developer forum has no answer on why this fails!!
@@ -627,7 +629,7 @@ static NSMutableDictionary *myKeys = NULL;         // Advertise myself using the
     
     [netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:myKeys]];
 
-	[faunus addAttrs:myKeys forName:_playerID];
+	[faunus addAttrs:myKeys forName:self.playerID];
 }
 #endif /* USE_BLUETOOTH */
 	
@@ -1093,8 +1095,8 @@ void displayWin(NSImageView *player, int width, int height, int maskX, int maskY
     // NSRect geom = [window frame];
     
     // NSLog(@"Window state changed");
-    _playerID = [[NSUserDefaults standardUserDefaults] stringForKey:myUniqueID];
-    NSString *session = [[[NSString alloc] initWithFormat:@"%@ %@ %.0f %.0f %.0f %.0f %d %d", [ns name], _playerID, geom.origin.x, geom.origin.y, geom.size.width, geom.size.height, ([window isMiniaturized] ? 1:0), ([window isZoomed] ? 1:0)] autorelease];
+    self.playerID = [[NSUserDefaults standardUserDefaults] stringForKey:myUniqueID];
+    NSString *session = [[[NSString alloc] initWithFormat:@"%@ %@ %.0f %.0f %.0f %.0f %d %d", [ns name], self.playerID, geom.origin.x, geom.origin.y, geom.size.width, geom.size.height, ([window isMiniaturized] ? 1:0), ([window isZoomed] ? 1:0)] autorelease];
     
     NSString *myObjID = [[[NSString alloc] initWithFormat:@"%lu", [window hash]] autorelease];
     [myKeys removeObjectForKey:myObjID];
@@ -1102,7 +1104,7 @@ void displayWin(NSImageView *player, int width, int height, int maskX, int maskY
     
     [netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:myKeys]];
 
-	[faunus addAttrs:myKeys forName:_playerID];
+	[faunus addAttrs:myKeys forName:self.playerID];
 }
 
 #pragma mark -
@@ -1311,7 +1313,7 @@ void displayWin(NSImageView *player, int width, int height, int maskX, int maskY
 					
 					[netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:myKeys]];
 
-					[faunus addAttrs:myKeys forName:_playerID];
+					[faunus addAttrs:myKeys forName:self.playerID];
 					
 					[self updateKey:window andNSNetService:ns];
 					
@@ -1496,7 +1498,7 @@ void displayWin(NSImageView *player, int width, int height, int maskX, int maskY
 				[myKeys removeObjectForKey:myID];
 				[netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:myKeys]];
 
-				[faunus addAttrs:myKeys forName:_playerID];
+				[faunus addAttrs:myKeys forName:self.playerID];
 			}
             break;
         }
@@ -1517,8 +1519,8 @@ void displayWin(NSImageView *player, int width, int height, int maskX, int maskY
 - (void)netService:(NSNetService *)sender didNotPublish:(NSDictionary *)errorDict {
 #pragma unused(sender, errorDict)
     // assert(sender == self.netService);
-    // NSLog(@"DEBUG: Did not publish - %@, %@", [sender name], errorDict);
-    NSLog(@"FATAL: Failed to publish ourselves. Duplicate?");
+    NSLog(@"DEBUG: Did not publish - %@, %@", [sender name], errorDict);
+		// NSLog(@"FATAL: Failed to publish ourselves. Duplicate?");
 
 		// Turns out that 
 		// exit(0);

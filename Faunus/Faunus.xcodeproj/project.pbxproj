@@ -91,7 +91,6 @@
 		761768F415A3B13100AE8553 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		761768F615A3B13100AE8553 /* Faunus-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Faunus-Prefix.pch"; sourceTree = "<group>"; };
 		7617690815A3B16A00AE8553 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		7663C11B15A435A60026704F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/usr/lib/libsqlite3.dylib; sourceTree = DEVELOPER_DIR; };
 		767EAD9415A3B88D00B956C0 /* FaunusTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FaunusTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		767EADA215A3B90F00B956C0 /* FaunusTest-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FaunusTest-Prefix.pch"; sourceTree = "<group>"; };
 		767EADA315A3B90F00B956C0 /* FaunusTest.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = FaunusTest.1; sourceTree = "<group>"; };
@@ -196,7 +195,6 @@
 		761768D715A3B0F900AE8553 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7663C11B15A435A60026704F /* libsqlite3.dylib */,
 				767EAE0915A3C1E700B956C0 /* libsqlite3.dylib */,
 				767EADD915A3BCA500B956C0 /* libhiredis.a */,
 				767EADD715A3BC0A00B956C0 /* CFNetwork.framework */,
@@ -544,7 +542,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -566,7 +564,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 			};
 			name = Release;
